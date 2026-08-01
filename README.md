@@ -133,3 +133,85 @@ Hey!!!
 
 ## **Types of Computers**
 
+*Computers are classified into different types based on their size, purpose, and the way they process data.*
+
+**Classification based on Size and Purpose**
+
+| Type               | Main Use                                       |
+| ------------------ | ---------------------------------------------- |
+| Supercomputer      | Scientific research & complex calculations     |
+| Mainframe Computer | Large organizations & millions of transactions |
+| Minicomputer       | Medium-sized organizations (historically)      |
+| Microcomputer      | Personal use                                   |
+| Workstation        | High-performance professional work             |
+| Server             | Provides services to other computers           |
+| Embedded System    | Dedicated task inside another device           |
+
+---
+
+1. **Supercomputer:** *A Supercomputer is the fastest and most powerful computer designed to solve extremely complex computational problems.*
+
+    **Uses**
+    - *Weather forecasting*
+    - *Space research*
+    - *AI model training*
+    - *Scientific simulations*
+    - *Nuclear research*
+
+2. **Mainframe Computer:** *A Mainframe computer is a powerful computer designed to process massive amounts of data and support thousands of users simultaneously.*
+
+    **Uses:**
+    - *Banking*
+    - *Railway reservation*
+    - *Government databases*
+    - *Insurance companies*
+
+3. **Minicomputer:** *A Minicomputer is a mid-range multi-user computer that was commonly used by medium-sized organizations.*
+   
+4. **Microcomputer:** *A Microcomputer is a general-purpose computer designed for a single user.*
+
+    **Example:** *Desktop, Laptop, Tablet*
+
+5. **Workstation:** *A Workstation is a high-performance computer designed for professionals performing resource-intensive tasks.*
+
+    **Uses**
+    - *AI*
+    - *ML*
+    - *Data Science*
+    - *Video Editing*
+    - *CAD*
+    - *3D Design*
+
+6. **Server:** *A Server is a computer that provides services, resources, or data to other computers (clients) over a network.*
+
+    **Examples:** *Google Server, Netflix Server, WhatsApp Server*
+
+7. **Embedded System:** *An Embedded System is a computer built into another device to perform a dedicated task.*
+
+    **Examples:** *Washing Machine, Smart TV, Car ECU, Microwave Oven, Printer.*
+
+---
+
+**Classification based on Data Handling**
+
+| Type             | Processes                         |
+| ---------------- | --------------------------------- |
+| Analog Computer  | Continuous data                   |
+| Digital Computer | Discrete (Binary) data            |
+| Hybrid Computer  | Both continuous and discrete data |
+
+---
+
+1. **Analog Computer:** *Processes continuous data.*
+
+    **Examples:** *Analog speedometer, Mercury thermometer*
+
+2. **Digital Computer:** *Processes binary (0 and 1) data.*
+
+    **Examples:** *Laptop, Desktop, Smartphone*
+
+3. **Hybrid Computer:** *Combines analog and digital computing.*
+
+    **Example:** *ECG Machine, MRI Machine, ICU Monitoring System*
+
+---
