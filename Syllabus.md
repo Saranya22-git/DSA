@@ -1,8 +1,4 @@
-# 🚀 COMPLETE SOFTWARE ENGINEERING ROADMAP (INTERVIEW EDITION)
-
-> **Goal:** Software Engineer | Python Developer | Data Analyst | Data Scientist | AI Engineer | ML Engineer
-
----
+# 🚀 COMPLETE SOFTWARE ENGINEERING 
 
 # 🔰 PHASE 1 — COMPUTER & PROGRAMMING FOUNDATIONS ⭐⭐⭐⭐⭐
 
