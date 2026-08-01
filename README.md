@@ -88,11 +88,11 @@ Hey!!!
 
 5. **Fifth Generation (Artificial Intelligence)**
 
-**Technology:** *Artificial Intelligence*
+    **Technology:** *Artificial Intelligence*
 
-**Focus:** *Modern computers aim to learn from data, recognize speech, understand images, assist users intelligently.*
+    **Focus:** *Modern computers aim to learn from data, recognize speech, understand images, assist users intelligently.*
 
-**Example:** *ChatGPT, Voice assistants, Self-driving car systems, AI-powered recommendation systems.*
+    **Example:** *ChatGPT, Voice assistants, Self-driving car systems, AI-powered recommendation systems.*
 
 **IMPORTANT:** *AI is a major focus of the fifth generation, but today's computers still rely on fourth-generation hardware such as microprocessors.*
 
