@@ -451,12 +451,12 @@ Input Unit        CPU          Output Unit
 
 4. **Utility Programs:** *These help maintain and optimize the computers.*
 
-**Examples**
-- *Antivirus*
-- *Disk Cleanup*
-- *Backup Software*
-- *Disk Defragmenter (mainly for HDDs)*
-- *File Compression Tools*
+    **Examples**
+    - *Antivirus*
+    - *Disk Cleanup*
+    - *Backup Software*
+    - *Disk Defragmenter (mainly for HDDs)*
+    - *File Compression Tools*
 
 ---
 
