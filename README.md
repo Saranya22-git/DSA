@@ -9,6 +9,8 @@ Hey!!!
   - [**Types of Computers**](#types-of-computers)
   - [**Components of a Computer**](#components-of-a-computer)
   - [**Hardware vs Software**](#hardware-vs-software)
+  - [**Firmware**](#firmware)
+  - [**System Software**](#system-software)
 
 
 # **Introduction to Computers**
@@ -338,4 +340,69 @@ Input Unit        CPU          Output Unit
 | Examples: CPU, RAM      | Examples: Windows, Chrome        |
 
 ---
+
+## **Firmware**
+
+*Firmware is a type of Software permanently or semi-permanently stored in non-volatile memory (such as ROM or Flash memory) that provides low-level control for hardware devices.*
+
+---
+
+**Why do we need Firmware?**
+
+- *Imagine you bought a brand-new laptop. You press the ```Power``` button.*
+- *How does the computer know what to do first?*
+- *Does windows start immediately? No.*
+- *Does Chrome start? No*
+- *Something has to Check whether the CPU is working, Check whether RAM is installed, Check whether the keyboard is connected, Find the operating system.*
+- *Who does this? ```Firmware```. Without firmware, the computer wouldn't even know how to start.*
+
+---
+
+**What does Firmware do?**
+
+*When you press the power button*
+
+**Step-1:** *Power is supplied to the motherboard*
+
+**Step-2:** *Firmware starts running*
+
+**Step-3:** *Firmware checks the hardware*
+
+**Step-4:** *Firmware finds the operating system*
+
+**Step-5:** *Firmware loads the operating system*
+
+---
+
+**Where is Firmware stored?**
+
+- *Firmware is stored in non-volatile memory such as ROM, EEPROM, Flash Memory.*
+- *Non-volatile means the data remains even when the computer is turned off.*
+
+---
+
+**Real-Life Example**
+
+*Think about a Smart TV. When you switch it on*
+- *The manufacture's logo appears*
+- *The remote starts working*
+- *The TV checks its hardware*
+- *Then the home screen appears*
+
+*This initial startup behavior is controlled by firmware*
+
+---
+
+**Examples of Firmware**
+
+- *BIOS*
+- *UEFI*
+- *Router Firmware*
+- *Printer Firmware*
+- *Camera Firmware*
+- *SSD Firmware*
+
+---
+
+## **System Software**
 
