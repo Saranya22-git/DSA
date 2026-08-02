@@ -11,6 +11,9 @@ Hey!!!
   - [**Hardware vs Software**](#hardware-vs-software)
   - [**Firmware**](#firmware)
   - [**System Software**](#system-software)
+  - [**Application Software**](#application-software)
+- [**Input and Output Devices**](#input-and-output-devices)
+  - [**Input Devices**](#input-devices)
 
 
 # **Introduction to Computers**
@@ -405,4 +408,155 @@ Input Unit        CPU          Output Unit
 ---
 
 ## **System Software**
+
+- *System Software is software that manages computer hardware and provides a platform for application software to run.*
+- *Without System Software, applications cannot use the hardware properly.*
+
+---
+
+**Main Functions of System Software**
+
+*System Software is responsible for*
+- *Managing Hardware*
+- *Managing Memory*
+- *Managing Files*
+- *Managing Input/Output Devices*
+- *Running Programs*
+- *Providing Security*
+- *Acting as a bridge betweem harware and applications.*
+
+---
+
+**Types of System Software**
+
+*There are four main types*
+
+1. **Operating System**
+
+    **Examples:** *Windows, Linux, macOS, Android, iOS*
+
+    *It manages CPU, RAM, files, runs applications, control devices.*
+
+2. **Device Drivers:** *A Device Driver is software that enables the operating system to communicate with hardware devices.*
+
+    **Example:** *You connect a printer. How does Windows know how to use that printer? Through the printer driver.*
+
+    *Other examples Graphics Driver, Wi-Fi Driver, Bluetooth Driver, Audio Driver.*
+
+3. **Language Translators:** *Computers understand only machine language (0s and 1s). But programmers write Python, C, C++.*
+
+    *A Translator converts programming languages into machine code.*
+
+    **Examples:** *Compiler, Interpreter, Assembler*
+
+4. **Utility Programs:** *These help maintain and optimize the computers.*
+
+**Examples**
+- *Antivirus*
+- *Disk Cleanup*
+- *Backup Software*
+- *Disk Defragmenter (mainly for HDDs)*
+- *File Compression Tools*
+
+---
+
+## **Application Software**
+
+*Application Software is software designed to help users perform specific tasks or solve specific problems.*
+
+---
+
+**What does Application Software do?**
+
+*Application Software helps users perform specific tasks such as*
+- *Writing documents*
+- *Browsing the internet*
+- *Watching Videos*
+- *Playing games*
+- *Programming*
+- *Editing photos*
+- *Video conferencing*
+- *Data analysis*
+
+---
+
+**Types of Application Software**
+
+*There are two main types*
+
+1. **General Purpose Application Software:** *These applications are used by almost everyone.*
+
+    **Examples**
+    - *Google Chrome*
+    - *Microsoft Word*
+    - *Microsoft Excel*
+    - *PowerPoint*
+    - *VLC Media Player*
+    - *Adobe Reader*
+
+2. **Specialized Application Software:** *These applications are built for a specific profession or industry.*
+
+    **Examples**
+    - *AutoCAD (Engineering)*
+    - *MATLAB (Research)*
+    - *Tally (Accounting)*
+    - *Photoshop (Graphic Design)*
+    - *Visual Studio Code (Programming)*
+    - *Power BI (Data Analytics)*
+
+---
+
+**Examples of Application Software**
+
+**Productivity**
+- *Microsoft Word*
+- *Microsoft Excel*
+- *PowerPoint*
+- *Google Docs*
+
+**Web Browsers**
+- *Google Chrome*
+- *Microsoft Edge*
+- *Mozilla Firefox*
+
+**Programming**
+- *VS Code*
+- *PyCharm*
+- *Jupyter Notebook*
+
+**Multimedia**
+- *VLC Media Player*
+- *Spotify*
+
+**Communication**
+- *WhatsApp*
+- *Zoom*
+- *Microsoft Teams*
+
+**Data Analytics**
+- *Power BI*
+- *Tableau*
+- *Excel*
+
+**AI&ML**
+- *Jupyter Notebook*
+- *Google Colab*
+
+---
+
+**System Software vs Application System**
+
+| System Software            | Application Software          |
+| -------------------------- | ----------------------------- |
+| Manages hardware           | Performs user tasks           |
+| Starts with the computer   | Starts when the user opens it |
+| Runs in the background     | Runs when needed              |
+| Essential for the computer | Optional                      |
+
+---
+
+# **Input and Output Devices**
+
+## **Input Devices**
+
 
