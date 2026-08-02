@@ -14,6 +14,7 @@ Hey!!!
   - [**Application Software**](#application-software)
 - [**Input and Output Devices**](#input-and-output-devices)
   - [**Input Devices**](#input-devices)
+  - [**Output Devices**](#output-devices)
 
 
 # **Introduction to Computers**
@@ -558,5 +559,61 @@ Input Unit        CPU          Output Unit
 # **Input and Output Devices**
 
 ## **Input Devices**
+
+*An Input Device is a hardware device used to enter data and instructions into a computer.*
+
+---
+
+**How does an Input Device work?**
+
+*The working process is simple*
+
+*User → Input Device → Computer (CPU) → Processing Begins*
+
+**Example:** *You press the key ```A```. The keyboard sends a signal to the computer. The CPU receives it and processes it. The monitor then displays ```A```.*
+
+---
+
+**Common Input Devices**
+
+1. **Keyboard:** *Used to enter Text, Numbers, Commands, Shortcuts.*
+
+    **Example:** *Typing ```print("Hello")*
+
+2. **Mouse:** *Used to Click, Select, Drag, Scroll.*
+
+    **Example:** *Opening VS Code*
+
+3. **Scanner:** *Converts a paper document or image into a digital format.*
+
+    **Example:** *Scanning Aadhaar Card, Resume, Passport*
+
+4. **Microphone:** *Captures audio input.*
+
+    **Example:** *Voice search, Online meetings, Speech recognition*
+
+5. **Webcam:** *Captures images and videos.*
+
+    **Example:** *Zoom, Google Meet, Face Recognition*
+
+6. **Touchscreen:** *A Touchscreen acts as both Input Device and Output Device. When you touch it (Input). When it displays information (Output).*
+
+7. **Barcode Reader:** *Reads barcode information.*
+
+    **Example:** *Supermarket billing*
+
+8. **Biometric Scanner:** *Captures biometric data*
+
+    **Example:** *Fingerprint Scanner, Iris Scanner, Face Scanner*
+
+---
+
+## **Output Devices**
+
+*An Output device is a hardware device that receives processed data from the computer and presents the result to the user.*
+
+---
+
+
 
 
