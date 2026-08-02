@@ -8,6 +8,7 @@ Hey!!!
   - [**Characteristics of a Computer**](#characteristics-of-a-computer)
   - [**Types of Computers**](#types-of-computers)
   - [**Components of a Computer**](#components-of-a-computer)
+  - [**Hardware vs Software**](#hardware-vs-software)
 
 
 # **Introduction to Computers**
@@ -288,4 +289,53 @@ Input Unit        CPU          Output Unit
 
 ---
 
+## **Hardware vs Software**
+
+**Hardware:** *Hardware refers to the physical components of a computer that can be seen and touched.*
+
+**Software:** *Software is a collection of programs and instructions that tells the hardware what to do.*
+
+---
+
+**Why do we need both?**
+
+- *Imagine you bought a brand-new laptop. It has CPU, RAM, SSD, Monitor, Keyboard. But windows is not installed.*
+- *Can you use it? No.*
+- *Now imagine you have Windows on a USB drive but no laptop. Can Windows run by itself? No.*
+
+*Hardware and Software depend on each other.*
+- *Hardware without software is useless.*
+- *Software without hardware cannot run.*
+
+---
+
+**Hardware Examples**
+
+- **Internal Hardware:** *CPU, RAM, Motherboard, SSD, HDD, GPU*
+- **External Hardware:** *Keyboard, Mouse, Monitor, Printer, Speakers*
+
+**Software Examples**
+
+- **System Software:** *Windows, Linux, macOS*
+- **Application Software:** *Google Chrome, Microsoft Word, VS Code, WhatsApp, Spotify*
+
+---
+
+**Example:** *Suppose you open Google Chrome. What actually happens?*
+
+*You Click Chrome → Windows loads Chrome → CPU executes instructions → RAM stores temporary data → Monitor displays Chrome.*
+
+---
+
+**Hardware vs Software**
+
+| Hardware                | Software                         |
+| ----------------------- | -------------------------------- |
+| Physical components     | Programs & instructions          |
+| Can be touched          | Cannot be touched                |
+| Manufactured            | Developed by programmers         |
+| Can wear out physically | Can have bugs or become outdated |
+| Examples: CPU, RAM      | Examples: Windows, Chrome        |
+
+---
 
