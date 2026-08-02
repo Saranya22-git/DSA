@@ -15,6 +15,7 @@ Hey!!!
 - [**Input and Output Devices**](#input-and-output-devices)
   - [**Input Devices**](#input-devices)
   - [**Output Devices**](#output-devices)
+  - [**Input-Output Devices**](#input-output-devices)
 
 
 # **Introduction to Computers**
@@ -614,6 +615,84 @@ Input Unit        CPU          Output Unit
 
 ---
 
+**How does an Output device work?**
 
+*The working process is*
 
+*User → Input Device → CPU (Processes Data) → Output Device → User sees the result.*
 
+---
+
+**Common Output Devices**
+
+1. **Monitor:** *Displays Text, Images, Videos, Graphical User Interface (GUI).*
+
+    **Example:** *Watching YouTube, Programming in VS Code, Browsing websites.*
+
+2. **Printer:** *Produces a hard copy of digital documents.*
+
+    **Types:** *Inkjet Printer, Laser Printer*
+
+    **Example:** *Resume, Assignment, Invoice, Certificate*
+
+3. **Speakers:** *Convert digital audio into sound.*
+
+    **Example:** *Songs, Movies, Online Meetings, Notifications*
+
+4. **Headphones:** *Provide audio output privately to one user.*
+
+    **Examples:** *Online Classes, Music, Gaming, Video Calls*
+
+5. **Projector:** *Projects the computer screen onto a larger surface.*
+
+    **Example:** *Collge classrooms, Office presentations, Conferences*
+
+---
+
+**Input vs Output Device**
+
+| Input Device                   | Output Device                                 |
+| ------------------------------ | --------------------------------------------- |
+| Sends data **to** the computer | Receives processed data **from** the computer |
+| Used before processing         | Used after processing                         |
+| Examples: Keyboard, Mouse      | Examples: Monitor, Printer                    |
+
+---
+
+## **Input-Output Devices**
+
+*An Input-Output (I/O) Device is a hardware device that can both receive data from the computer and send data to the computer.*
+
+---
+
+**Common Input-Output Devices**
+
+1. **Touchscreen:** *A touchscreen both accepts touch input and displays information.*
+
+    **Example:** *Smartphone*
+
+2. **SSD:** *Stores data permanently.*
+
+    **Input Operation:** *CPU reads data from SSD.*
+
+    **Output Operation:** *CPU writes data into SSD.*
+
+3. **HDD:** *Works exactly like SSD.*
+
+4. **Pen Drive:** *You copy files → Write operation. Later open files → Read operation.*
+
+5. **Memory Card:** *Exactly the same Read, Write*
+
+6. **Network Interface Card (NIC):** *A NIC is used for communication over a network.*
+
+    **Input:** *Receives data packets*
+
+    **Output:** *Sends data packets*
+
+    **Example:** *While watching YouTube, Receives video data, Sends your requests to YouTube.*
+
+7. **Modem:** *Works similaryly. It sends internet data, receives internet data.*
+
+8. **Multifunction Printer:** *Prints + Scan*
+
+---
