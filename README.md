@@ -7,6 +7,7 @@ Hey!!!
   - [**Evolution \& Generations of Computers**](#evolution--generations-of-computers)
   - [**Characteristics of a Computer**](#characteristics-of-a-computer)
   - [**Types of Computers**](#types-of-computers)
+  - [**Components of a Computer**](#components-of-a-computer)
 
 
 # **Introduction to Computers**
@@ -215,3 +216,76 @@ Hey!!!
     **Example:** *ECG Machine, MRI Machine, ICU Monitoring System*
 
 ---
+
+## **Components of a Computer**
+
+*The components of a computer are the major hardware units that work together to accept input, process data, store information, and produce output.*
+
+---
+
+**Five Basic Components of a Computer**
+
+*Every computer has these five major components.*
+
+```txt
+                Computer
+                    │
+    ┌───────────────┼───────────────┐
+    │               │               │
+Input Unit        CPU          Output Unit
+                    │
+            ┌───────┴────────┐
+            │                │
+         Memory          Storage
+```
+
+---
+
+1. **Input Unit:** *The Input Unit is responsible for receiving data and instructions from the user.*
+
+    **Examples:** *Keyboard, Mouse, Scanner, Microphone, Webcam*
+
+    **Example:** *You type ```10 + 12``` The Keyboard sends this data to the computer. The keyboard does not calculate the answer. It only sends the input.*
+
+2. **CPU (Central Processing Unit):** *The CPU is the processing unit of the computer.*
+
+   - *It executes instructions, performs calculations, makes logical decisions, controls other components.*
+   - *The CPU is often called the Brain of the Computer.*
+
+   **Example:** *You type ```10 + 20``` The CPU performs the calculation. Result ```30```*
+
+3. **Memory:** *Memory (RAM) temporarily stores the data and instructions that the CPU is currently using.*
+
+    **Example:** *When you open Google Chrome. Chrome is first loaded into RAM. The CPU then executes it. If the power goes off, everything in RAM is lost.*
+
+4. **Storage:** *Storage permanently stores files and programs.*
+
+    **Example:** *SSD, HDD, Pen Drive*
+
+    **Example:** *Suppose you save ```Resume.pdf``` Even after shutting down your laptop, the file is still there because it is stored in SSD/HDD, not RAM.*
+
+5. **Output Unit:** *The Output Unit presents the processed result to the user.*
+
+    **Examples:** *Monitor, Printer, Speakers, Projector*
+
+    **Example:** *You type ```10 + 20``` → CPU calculates → Monitor displays ```30```*
+
+---
+
+**How all components work together?**
+
+*Suppose you search ```Python Tutorial```*
+
+**Step-1:** *Keyboard → Input*
+
+**Step-2:** *CPU → Processes the request*
+
+**Step-3:** *RAM → Temporarily stores the required data*
+
+**Step-4:** *SSD → Provides Chrome and required files*
+
+**Step-5:** *Monitor → Displays Google Search results*
+
+---
+
+
