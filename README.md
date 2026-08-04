@@ -21,6 +21,8 @@ Hey!!!
     - [**What is CPU?**](#what-is-cpu)
     - [**Why is the CPU called the Brain of the Computer?**](#why-is-the-cpu-called-the-brain-of-the-computer)
     - [**CPU Architecture**](#cpu-architecture)
+    - [**Instruction Cycle**](#instruction-cycle)
+    - [**ALU**](#alu)
 
 
 # **Computer and Programming Foundations**
@@ -772,7 +774,7 @@ Input Unit        CPU          Output Unit
 
 **Basic CPU Architecture**
 
-*The CPU mainly consists of 3 components*
+*The CPU mainly consists of 3 components. These 3 components work together every time the CPU executes an instruction.*
 
 ```txt
         +-----------------------+
@@ -793,3 +795,71 @@ Input Unit        CPU          Output Unit
         |  +-----------------+  |
         +-----------------------+
 ```
+
+---
+
+1. **Control Unit (CU):** *The Control Unit manages and coordinates the entire CPU. It fetches instructions, decodes instructions, controls data flow, coordinates ALU and registers.*
+
+2. **Arithmetic Logic Unit (ALU):** *The ALU performs Arithmetic Operations (Addition, Subtraction, Multiplication, Division) and Logical Operations (<, >, ==, !=, AND, OR, NOT).*
+
+3. **Registers:** *Registers are very small, extremely fast memory locations inside the CPU. They temporarily hold data, instructions, addresses.*
+
+---
+
+**How they work together?**
+
+*Let's execute ```25+15```*
+
+**Step-1:** *The instruction reaches the CPU.*
+
+**Step-2:** *The Control Unit fetches and decodes the instruction.*
+
+**Step-3:** *The numbers are placed in Registers.*
+
+**Step-4:** *The ALU performs ```25+15``` Result ```40```*
+
+**Step-5:** *The result is stored temporarily and then sent to the monitor.*
+
+---
+
+### **Instruction Cycle**
+
+*The Instruction Cycle is the sequence of steps the CPU follows to execute every instruction in a program.*
+
+---
+
+**The Three Main Stages**
+
+*Every instruction follows these three stages*
+
+```txt
+Fetch
+   ↓
+Decode
+   ↓
+Execute
+```
+
+**Fetch:** *Fetch is the process of reading the next instruction from memory (RAM) into the CPU.*
+
+**Decode:** *Decode is the process of interpreting the fetched instruction to determine what operation must be performed.*
+
+**Execute:** *Execute is the process of performing the operation specified by the instruction.*
+
+---
+
+**Example:** *Let's execute ```print(5+3)```*
+
+**Step-1:** *The instruction is stored in RAM*
+
+**Step-2:** *CPU fetches ```ADD 5,3```*
+
+**Step-3:** *Control Unit understands and decode it*
+
+**Step-4:** *ALU performs ```5+3``` Result ```8```*
+
+**Step-5:** *The result is sent to the output*
+
+---
+
+### **ALU**
