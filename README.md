@@ -766,4 +766,30 @@ Input Unit        CPU          Output Unit
 
 ### **CPU Architecture**
 
-**
+*CPU Architecture is the internal organization of the CPU that defines how its components work together to execute instructions.*
+
+---
+
+**Basic CPU Architecture**
+
+*The CPU mainly consists of 3 components*
+
+```txt
+                 +-----------------------+
+                 |         CPU           |
+                 |                       |
+                 |  +-----------------+  |
+                 |  |  Control Unit   |  |
+                 |  +-----------------+  |
+                 |           │           |
+                 |           ▼           |
+                 |  +-----------------+  |
+                 |  |       ALU       |  |
+                 |  +-----------------+  |
+                 |           ▲           |
+                 |           │           |
+                 |  +-----------------+  |
+                 |  |    Registers    |  |
+                 |  +-----------------+  |
+                 +-----------------------+
+```
