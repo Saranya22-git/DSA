@@ -863,3 +863,49 @@ Execute
 ---
 
 ### **ALU**
+
+*The Arithmetic Logic Unit (ALU) is the part of the CPU that performs arithmetic operations and logical operations on data.*
+
+---
+
+**What does the ALU do?**
+
+*The ALU performs two types of operations*
+1. *Arithmetic Operations*
+2. *Logical Operations*
+
+**Arithmetic Operations:** *These involve mathematical calculations.*
+
+| Operation      | Example |
+| -------------- | ------- |
+| Addition       | 10 + 20 |
+| Subtraction    | 20 - 5  |
+| Multiplication | 5 × 6   |
+| Division       | 20 ÷ 4  |
+| Modulus        | 20 % 3  |
+
+---
+
+**Logical Operations:** *Logical operations compare values. They return ```True``` ```False```*
+
+| Expression | Result |
+| ---------- | ------ |
+| 20 > 10    | True   |
+| 15 < 5     | False  |
+| 10 == 10   | True   |
+| 20 != 20   | False  |
+
+---
+
+**ALU Flags**
+
+*After an operation, the ALU stores information about the result in status flags. These help the CPU decide what to do next.*
+
+| Flag         | Meaning                                   |
+| ------------ | ----------------------------------------- |
+| Zero (Z)     | Result is 0                               |
+| Carry (C)    | Carry occurred in addition                |
+| Overflow (O) | Result exceeded the allowed range         |
+| Sign (S)     | Result is negative (in signed arithmetic) |
+
+---
