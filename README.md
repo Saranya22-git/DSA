@@ -2,25 +2,30 @@ Hey!!!
 
 # **Table of Contents**
 - [**Table of Contents**](#table-of-contents)
-- [**Introduction to Computers**](#introduction-to-computers)
-  - [**Computer**](#computer)
-  - [**Evolution \& Generations of Computers**](#evolution--generations-of-computers)
-  - [**Characteristics of a Computer**](#characteristics-of-a-computer)
-  - [**Types of Computers**](#types-of-computers)
-  - [**Components of a Computer**](#components-of-a-computer)
-  - [**Hardware vs Software**](#hardware-vs-software)
-  - [**Firmware**](#firmware)
-  - [**System Software**](#system-software)
-  - [**Application Software**](#application-software)
-- [**Input and Output Devices**](#input-and-output-devices)
-  - [**Input Devices**](#input-devices)
-  - [**Output Devices**](#output-devices)
-  - [**Input-Output Devices**](#input-output-devices)
+- [**Computer and Programming Foundations**](#computer-and-programming-foundations)
+  - [**Introduction to Computers**](#introduction-to-computers)
+    - [**Computer**](#computer)
+    - [**Evolution \& Generations of Computers**](#evolution--generations-of-computers)
+    - [**Characteristics of a Computer**](#characteristics-of-a-computer)
+    - [**Types of Computers**](#types-of-computers)
+    - [**Components of a Computer**](#components-of-a-computer)
+    - [**Hardware vs Software**](#hardware-vs-software)
+    - [**Firmware**](#firmware)
+    - [**System Software**](#system-software)
+    - [**Application Software**](#application-software)
+  - [**Input and Output Devices**](#input-and-output-devices)
+    - [**Input Devices**](#input-devices)
+    - [**Output Devices**](#output-devices)
+    - [**Input-Output Devices**](#input-output-devices)
+  - [**CPU**](#cpu)
+    - [**What is CPU?**](#what-is-cpu)
 
 
-# **Introduction to Computers**
+# **Computer and Programming Foundations**
 
-## **Computer**
+## **Introduction to Computers**
+
+### **Computer**
 
 **What is a Computer?**
 
@@ -37,7 +42,7 @@ Hey!!!
 
 ---
 
-## **Evolution & Generations of Computers**
+### **Evolution & Generations of Computers**
 
 **What is a Computer Generation?**
 
@@ -108,7 +113,7 @@ Hey!!!
 
 ---
 
-## **Characteristics of a Computer**
+### **Characteristics of a Computer**
 
 1. **Speed:** *A Computer can execute millions or billions of instructions per second.*
 
@@ -140,7 +145,7 @@ Hey!!!
 
 ---
 
-## **Types of Computers**
+### **Types of Computers**
 
 *Computers are classified into different types based on their size, purpose, and the way they process data.*
 
@@ -225,7 +230,7 @@ Hey!!!
 
 ---
 
-## **Components of a Computer**
+### **Components of a Computer**
 
 *The components of a computer are the major hardware units that work together to accept input, process data, store information, and produce output.*
 
@@ -296,7 +301,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **Hardware vs Software**
+### **Hardware vs Software**
 
 **Hardware:** *Hardware refers to the physical components of a computer that can be seen and touched.*
 
@@ -346,7 +351,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **Firmware**
+### **Firmware**
 
 *Firmware is a type of Software permanently or semi-permanently stored in non-volatile memory (such as ROM or Flash memory) that provides low-level control for hardware devices.*
 
@@ -409,7 +414,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **System Software**
+### **System Software**
 
 - *System Software is software that manages computer hardware and provides a platform for application software to run.*
 - *Without System Software, applications cannot use the hardware properly.*
@@ -462,7 +467,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **Application Software**
+### **Application Software**
 
 *Application Software is software designed to help users perform specific tasks or solve specific problems.*
 
@@ -557,9 +562,9 @@ Input Unit        CPU          Output Unit
 
 ---
 
-# **Input and Output Devices**
+## **Input and Output Devices**
 
-## **Input Devices**
+### **Input Devices**
 
 *An Input Device is a hardware device used to enter data and instructions into a computer.*
 
@@ -609,7 +614,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **Output Devices**
+### **Output Devices**
 
 *An Output device is a hardware device that receives processed data from the computer and presents the result to the user.*
 
@@ -659,7 +664,7 @@ Input Unit        CPU          Output Unit
 
 ---
 
-## **Input-Output Devices**
+### **Input-Output Devices**
 
 *An Input-Output (I/O) Device is a hardware device that can both receive data from the computer and send data to the computer.*
 
@@ -696,3 +701,59 @@ Input Unit        CPU          Output Unit
 8. **Multifunction Printer:** *Prints + Scan*
 
 ---
+
+## **CPU**
+
+### **What is CPU?**
+
+*The CPU (Central Processing Unit) is the primary processing unit of a computer that executes instructions, processes data, and controls the operations of all other hardware components.*
+
+---
+
+**What does the CPU do?**
+
+1. **Execute Instructions:** *Every program contains instructions.*
+
+    **Example:**
+    ```python
+    print("Hello!!")
+    ```
+
+2. **Process Data:** *The CPU performs calculations. It also performs logical operations.*
+
+    **Examples:** ```10+20```, ```10×12```, ```10>7```, ```20==20```
+
+3. **Control other hardware:** *The CPU coordinates almost every hardware component.*
+
+    **Examples:** *RAM, SSD, HDD, Keyboard, Mouse, Monitor, Printer, GPU.*
+
+---
+
+**Real-World Example**
+
+*Suppose you open VS Code*
+
+**Step-1:** *You double-click the VS Code icon*
+
+**Step-2:** *The Operating System loads VS Code into RAM*
+
+**Step-3:** *The CPU begins executing VS code's instructions.*
+
+**Step-4:** *The monitor displays the VS Code window*
+
+---
+
+**Is the CPU always busy?**
+
+*Yes, even when you're not actively using the computer, the CPU id busy with tasks like Running the Operating System, Managing background services, Handling keyboard and mouse events, Monitoring hardware, Running antivirus scans, Checking for updates.*
+
+---
+
+**Where is the CPU located?**
+
+- *The CPU is mounted on the motherboard inside a special CPU socket.*
+- *It is usually covered by Heat Sink, Cooling Fan. These keep the CPU from overheating.*
+
+---
+
+
