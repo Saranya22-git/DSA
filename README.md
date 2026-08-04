@@ -19,6 +19,8 @@ Hey!!!
     - [**Input-Output Devices**](#input-output-devices)
   - [**CPU**](#cpu)
     - [**What is CPU?**](#what-is-cpu)
+    - [**Why is the CPU called the Brain of the Computer?**](#why-is-the-cpu-called-the-brain-of-the-computer)
+    - [**CPU Architecture**](#cpu-architecture)
 
 
 # **Computer and Programming Foundations**
@@ -756,4 +758,12 @@ Input Unit        CPU          Output Unit
 
 ---
 
+### **Why is the CPU called the Brain of the Computer?**
 
+*The CPU is called the brain of the computer because it executes instructions, processes data, makes logical decisions, and controls the operations of all other hardware components.*
+
+---
+
+### **CPU Architecture**
+
+**
