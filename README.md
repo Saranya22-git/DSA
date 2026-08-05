@@ -23,6 +23,7 @@ Hey!!!
     - [**CPU Architecture**](#cpu-architecture)
     - [**Instruction Cycle**](#instruction-cycle)
     - [**ALU**](#alu)
+    - [**Control Unit (CU)**](#control-unit-cu)
 
 
 # **Computer and Programming Foundations**
@@ -909,3 +910,57 @@ Execute
 | Sign (S)     | Result is negative (in signed arithmetic) |
 
 ---
+
+### **Control Unit (CU)**
+
+*The Control Unit (CU) is the part of the CPU that controls and coordinates all operations of the computer. It fetches instructions, decodes them, and directs other components to perform the required tasks.*
+
+---
+
+**Main Functions of the Control Unit**
+
+*The Control Unit has four major responsibilities*
+
+1. **Fetch Instructions:** *The first job of the CPU is to fetch the next instruction from memory (RAM).*
+
+**Example:**
+    ```txt
+    ADD A,B
+    ```
+
+2. **Decode Instructions:** *After fetching, the Control Unit interprets the instruction.*
+
+**Example:**
+    ```txt
+    ADD A,B
+    ```
+
+*The CU understands "The ALU must add A and B". The CU itself does not perform the addition. It only understands what needs to happen.*
+
+3. **Control Data Flow:** *The Control Unit decides Which data goes to the ALU, Which register is used, When data moves to RAM, When data moves to Output Devices.*
+
+4. **Coordinate CPU Components:** *The CU coordinates ALU, Registers, Cache Memory, RAM, Input Devices, Output Devices. Every operation inside the CPU starts with the Control Unit.*
+
+---
+
+**How the Control Unit works?**
+
+*Suppose you write ```print(10+20)```*
+
+**Step-1:** *Instruction reaches RAM*
+
+**Step-2:** *Control Unit fetches the instruction*
+
+**Step-3:** *Control Unit decodes and understands it ```Add 10 and 20```*
+
+**Step-4:** *Control Unit sends the numbers to the ALU*
+
+**Step-5:** *ALU performs ```10 + 20 = 30```*
+
+**Step-6:** *Control Unit stores the result in a register*
+
+**Step-7:** *Control Unit sends the result to the Output device*
+
+
+
+
