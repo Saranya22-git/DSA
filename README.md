@@ -24,6 +24,7 @@ Hey!!!
     - [**Instruction Cycle**](#instruction-cycle)
     - [**ALU**](#alu)
     - [**Control Unit (CU)**](#control-unit-cu)
+    - [**Registers**](#registers)
 
 
 # **Computer and Programming Foundations**
@@ -961,6 +962,96 @@ Execute
 
 **Step-7:** *Control Unit sends the result to the Output device*
 
+---
 
+### **Registers**
+
+*Registers are very small, extremely fast memory locations inside the CPU that temporarily store data, isntructions, memory addresses, and intermediate results while the CPU is executing a program.*
+
+---
+
+**Characteristics of CPU**
+
+| Property    | Registers      |
+| ----------- | -------------- |
+| Location    | Inside the CPU |
+| Speed       | Fastest Memory |
+| Size        | Very Small     |
+| Storage     | Temporary      |
+| Accessed By | CPU Only       |
+
+---
+
+**Types of Registers**
+
+1. **Program Counter (PC):** *Stores the address of the next instruction to execute.*
+
+    **Example:** *Suppose memory contains*
+    ```txt
+    Address 100 → LOAD A
+    Address 101 → ADD B
+    Address 102 → PRINT
+    ```
+
+    *If the Program Counter contains 101. The CPU knows the next instruction is at address 101.*
+
+2. **Instruction Register (IR):** *Stores the current instruction being executed.*
+
+    **Example:**
+    ```txt
+    ADD A,B
+    ```
+
+    *During execution, this instruction is stored in the Instruction Register.*
+
+3. **Memory Address Register (MAR):** *Stores the memory address that the CPU wants to access.*
+
+    **Example:**
+    ```txt
+    Address 250
+    ```
+
+    *MAR holds 250 before the CPU reads or writes data.*
+
+4. **Memory Data Register (MDR):** *Also called Memory Buffer Register in some architecture. Stores the actual data being transferred between RAM and the CPU.*
+
+    **Example:** *Suppose*
+    ```txt
+    RAM Address 250
+
+    Value=75
+    ```
+
+    *MAR stores 250. MDR stores 75*
+
+5. **Accumulator (ACC):** *Stores the intermediate result of calculations.*
+
+    **Example:** ```20 + 30```
+
+    *ALU calculates ```50```*
+
+    *Before sending the result elsewhere, it may temporarily store it in the Accumulator.*
+
+---
+
+**How Registers work together?**
+
+*Suppose you execute ```print(10 + 20)```*
+
+**Step-1:** *Program Counter points to the next instruction*
+
+**Step-2:** *Instruction is fetched Instruction Register stores ADD 10, 20*
+
+**Step-3:** *MAR stores the memory address*
+
+**Step-4:** *MDR stores the data*
+
+**Step-5:** *ALU calculates ```10 + 20 = 30```*
+
+**Step-6:** *Accumulator temporarily stores ```30```*
+
+**Step-7:** *Result goes to output*
+
+---
 
 
