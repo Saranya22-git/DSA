@@ -935,7 +935,7 @@ Execute
     ADD A,B
     ```
 
-*The CU understands "The ALU must add A and B". The CU itself does not perform the addition. It only understands what needs to happen.*
+    *The CU understands "The ALU must add A and B". The CU itself does not perform the addition. It only understands what needs to happen.*
 
 3. **Control Data Flow:** *The Control Unit decides Which data goes to the ALU, Which register is used, When data moves to RAM, When data moves to Output Devices.*
 
