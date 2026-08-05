@@ -924,16 +924,16 @@ Execute
 1. **Fetch Instructions:** *The first job of the CPU is to fetch the next instruction from memory (RAM).*
 
     **Example:**
-        ```txt
-        ADD A,B
-        ```
+    ```txt
+    ADD A,B
+    ```
 
 2. **Decode Instructions:** *After fetching, the Control Unit interprets the instruction.*
 
     **Example:**
-        ```txt
-        ADD A,B
-        ```
+    ```txt
+    ADD A,B
+    ```
 
 *The CU understands "The ALU must add A and B". The CU itself does not perform the addition. It only understands what needs to happen.*
 
