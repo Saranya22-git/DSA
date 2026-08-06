@@ -25,6 +25,8 @@ Hey!!!
     - [**ALU**](#alu)
     - [**Control Unit (CU)**](#control-unit-cu)
     - [**Registers**](#registers)
+    - [**Cache Memory**](#cache-memory)
+    - [**Instruction Set**](#instruction-set)
 
 
 # **Computer and Programming Foundations**
@@ -1053,5 +1055,87 @@ Execute
 **Step-7:** *Result goes to output*
 
 ---
+
+### **Cache Memory**
+
+*Cache Memory is a small, extremely fast memory located inside or very close to the CPU that stores frequently used data and instructions to reduce the time required to access RAM.*
+
+---
+
+**How Cache works?**
+
+*Suppose you're editing a Python file. The CPU repeatedly needs the same instructions. Instead of asking RAM every time. The CPU first checks the Cache. If the data is already in the Cache, the CPU gets it much faster.*
+
+---
+
+**Types of Cache Memory**
+
+*Modern CPUs usually have three levels of cache.*
+
+1. **L1 Cache (Level 1):** *Stores the most frequently used instructions and data.*
+
+    **Features:** *Fastest Cache, Smallest Size, Located inside each CPU core.*
+
+    **Typical Size:** *32KB to 128KB per core (varies by processor).*
+
+2. **L2 Cache (Level 2):** 
+
+    **Features:** *Larger than L1, Slightly slower than L1, Usually dedicated to a core (depends on CPU design).*
+
+    **Typical Size:** *Hundreds of KB to a few MB.*
+
+3. **L3 Cache (Level 3):**
+
+    **Features:** *Largest Cache, Slower than L1 and L2, Usually shared among multiple CPU cores.*
+
+    **Typical Size:** *Several MB to tens of MB.*
+
+---
+
+**Memory Speed Hierarchy:** *This is from fastest to slowest.*
+
+```txt
+Registers
+      ↓
+L1 Cache
+      ↓
+L2 Cache
+      ↓
+L3 Cache
+      ↓
+RAM
+      ↓
+SSD/HDD
+```
+
+---
+
+**How Cache works during Program Execution?**
+
+*Suppose you execute ```print(a+b)```. The CPU needs  Value of a and b.*
+
+**Step-1:** *CPU checks Registers. Not found*
+
+**Step-2:** *Checks L1 Cache. If found, use it immediately.*
+
+**Step-3:** *If not, check L2 Cache.*
+
+**Step-4:** *If not, check L3 Cache.*
+
+**Step-5:** *If still not found, fetch from RAM. The fetched data is often placed into the cache because the CPU may need it again soon.*
+
+---
+
+**Cache Hit vs Cache Miss**
+
+**Cache Hit:** *The required data is found in the Cache. Very fast access.*
+
+**Cache Miss:** *The required data is not in the Cache. The CPU must fetch it from RAM. Slower than a cache hit.*
+
+---
+
+### **Instruction Set**
+
+
 
 
