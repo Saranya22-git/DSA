@@ -1145,21 +1145,21 @@ SSD/HDD
 *An Instruction is a command given to the CPU.*
 
 **Examples:** *These are machine-level instructions, not Python or Java commands.*
-    ```txt
-    ADD
-    SUB
-    LOAD
-    STORE
-    JUMP
-    COMPARE
-    ```
+```txt
+ADD
+SUB
+LOAD
+STORE
+JUMP
+COMPARE
+```
 
 *Suppose you write*
-    ```python
-    a = 10
-    b = 20
-    print(a + b)
-    ```
+```python
+a = 10
+b = 20
+print(a + b)
+```
 
 *The CPU does not understand Python. Python is first translated into machine instructions.*
 
