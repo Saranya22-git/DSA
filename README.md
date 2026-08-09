@@ -1136,6 +1136,41 @@ SSD/HDD
 
 ### **Instruction Set**
 
+*An Instruction Set (Instruction Set Architecture - ISA) is the complete set of machine language instructions that a CPU is designed to understand and execute.*
 
+---
 
+**What is an Instruction?**
 
+*An Instruction is a command given to the CPU.*
+
+**Examples:** *These are machine-level instructions, not Python or Java commands.*
+    ```txt
+    ADD
+    SUB
+    LOAD
+    STORE
+    JUMP
+    COMPARE
+    ```
+
+*Suppose you write*
+    ```python
+    a = 10
+    b = 20
+    print(a + b)
+    ```
+
+*The CPU does not understand Python. Python is first translated into machine instructions.*
+
+    ```txt
+    LOAD A
+    LOAD B
+    ADD
+    STORE
+    PRINT
+    ```
+
+*These instructions belong to the CPU's Instruction Set.*
+
+---
