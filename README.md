@@ -1163,13 +1163,13 @@ SSD/HDD
 
 *The CPU does not understand Python. Python is first translated into machine instructions.*
 
-    ```txt
-    LOAD A
-    LOAD B
-    ADD
-    STORE
-    PRINT
-    ```
+```txt
+LOAD A
+LOAD B
+ADD
+STORE
+PRINT
+```
 
 *These instructions belong to the CPU's Instruction Set.*
 
