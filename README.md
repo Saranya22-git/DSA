@@ -27,6 +27,7 @@ Hey!!!
     - [**Registers**](#registers)
     - [**Cache Memory**](#cache-memory)
     - [**Instruction Set**](#instruction-set)
+    - [**Pipeline**](#pipeline)
 
 
 # **Computer and Programming Foundations**
@@ -1230,4 +1231,109 @@ PRINT
 *Because ARM processors consume less power, generate less heat, have better battery life, offer excellent performance per watt. This is why many modern devices use ARM-based processors.*
 
 ---
+
+### **Pipeline**
+
+*Pipelining is a CPU technique that divides instruction execution into multiple stages so that different instructions can be processed in different stages simultaneously.*
+
+---
+
+**With Pipelining:** *Different instructions are being processed at different stages simultaneously.*
+
+```txt
+             Clock Cycle
+             1    2    3    4    5
+             
+Instruction 1
+Fetch        ✓
+Decode            ✓
+Execute                 ✓
+
+Instruction 2
+Fetch             ✓
+Decode                 ✓
+Execute                      ✓
+
+Instruction 3
+Fetch                  ✓
+Decode                      ✓
+Execute                           ✓
+```
+
+---
+
+**Basic CPU Pipeline Stages:** *A simplified CPU pipeline can have ```Fetch → Decode → Execute → Memory → Write Back```.*
+
+1. **Fetch (IF):** *The CPU fetches the next instruction from memory.*
+2. **Decode (ID):** *The CPU determines what the instruction means. The Control Unit interprets it.*
+3. **Execute (EX):** *The required operation is performed. For example ```10 + 20```. The ALU performs the calculation.*
+4. **Memory (MEM):** *If the instruction needs memory access, the CPU performs a read/write operation. For example ```LOAD STORE```.*
+5. **Write Back (WB):** *The result is written back to a register.*
+
+---
+
+**Without Pipeline vs With Pipeline**
+
+*Suppose we have 3 instructions ```I1 I2 I3```.*
+
+**Without Pipelining:** *The stages don't overlap*
+```txt
+I1: Fetch → Decode → Execute
+I2:                   Fetch → Decode → Execute
+I3:                                     Fetch → Decode → Execute
+```
+
+**With Pipelining:** *Now several instructions are being processed simultaneously*
+```txt
+Cycle:     1       2       3       4       5
+
+I1:       Fetch   Decode   Execute  MEM     WB
+I2:               Fetch    Decode   Execute MEM
+I3:                        Fetch    Decode  Execute
+```
+
+---
+
+**Does Pipelining make one Instruction faster?**
+
+*Not necessarily. Pipelining mainly improves Instruction throughput rather than necessarily reducing the latency of an individual instruction.*
+
+**Throughput:** *Number of instructions completed per unit of time.*
+
+**Latency:** *Time taken for one instruction to go from start to finish.*
+
+---
+
+**Pipeline Hazards:** *Sometimes instructions cannot smoothly move through the pipeline. These situations are called Pipeline Hazards.*
+
+1. **Structural Hazard:** *Occurs when two instructions need the same hardware resource at the same time.*
+
+**Example:** *Two instructions both need the same memory resource.*
+
+2. **Data Hazard:** *Occurs when one instruction depends on the result of an earlier instruction.*
+
+    **Example:** *Instruction 2 needs the result produced by Instruction 1.*
+    ```txt
+    I1: ADD R1, R2
+    I2: SUB R3, R1
+    ```
+
+3. **Control Hazard:** *Occurs because of branches or jumps. The CPU may not immediately know which instruction should execute next.*
+
+    **Example:**
+    ```python
+    if x > 10:
+        ...
+    ```
+
+---
+
+**How CPUs deal with Hazards?**
+
+*Modern CPUs use techniques such as Stalling, Forwarding, Branch prediction, Speculative execution.*
+
+---
+
+
+
 
