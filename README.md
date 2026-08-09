@@ -592,7 +592,7 @@ Input Unit        CPU          Output Unit
 
 1. **Keyboard:** *Used to enter Text, Numbers, Commands, Shortcuts.*
 
-    **Example:** *Typing ```print("Hello")*
+    **Example:** *Typing ```print("Hello")```*
 
 2. **Mouse:** *Used to Click, Select, Drag, Scroll.*
 
