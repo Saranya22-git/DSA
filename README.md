@@ -1174,3 +1174,60 @@ PRINT
 *These instructions belong to the CPU's Instruction Set.*
 
 ---
+
+**Types of Instruction Sets**
+
+*There are two major architectures.*
+
+1. **CISC (Complex Instruction Set Computer):** *A CPU architecture with a large number of complex instructions.*
+
+    **Examples:** *Intel, AMD*
+
+    **Characteristics** 
+    - *Large instruction set*
+    - *One instruction can perform multiple operations*
+    - *Complex hardware*
+    - *Widely used in desktop and laptop computers*
+
+    **Example:** *One instruction may ```LOAD + ADD + STORE``` all together.*
+
+2. **RISC (Reduced Instruction Set Computer):** *A CPU architecture with a small number of simple instructions.*
+
+    **Examples:** *ARM, Apple M-series, Qualcomm Snapdragon.*
+
+    **Characteristics**
+    - *Small instruction set*
+    - *Simple instructions*
+    - *Faster execution of individual instructions*
+    - *Better power efficiency*
+    - *Common in smartphones and tablets*
+
+    **Example:** *Instead of ```LOAD + ADD + STORE```. RISC performs ```LOAD ADD STORE``` as separate instructions.*
+
+---
+
+**CISC vs RISC**
+
+| CISC                      | RISC                      |
+| ------------------------- | ------------------------- |
+| Complex Instructions      | Simple Instructions       |
+| Large Instruction Set     | Small Instruction Set     |
+| More work per instruction | Less work per instruction |
+| More complex hardware     | Simpler hardware          |
+| Intel, AMD                | ARM, Apple M-Series       |
+
+---
+
+**x86 vs ARM**
+
+- *```x86``` uses CISC (Intel Core i5, i7, AMD Ryzen) mostly used in Laptops, Desktops, Servers.*
+- *```ARM``` uses RISC (Apple M1, M2, M3, Snapdragon, MediaTek) mostly used in Smartphones, Tablets, Modern MacBooks.*
+
+---
+
+**Why is ARM becoming popular?**
+
+*Because ARM processors consume less power, generate less heat, have better battery life, offer excellent performance per watt. This is why many modern devices use ARM-based processors.*
+
+---
+
