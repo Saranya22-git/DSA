@@ -28,6 +28,7 @@ Hey!!!
     - [**Cache Memory**](#cache-memory)
     - [**Instruction Set**](#instruction-set)
     - [**Pipeline**](#pipeline)
+    - [**Hyperthreading**](#hyperthreading)
 
 
 # **Computer and Programming Foundations**
@@ -1234,41 +1235,36 @@ PRINT
 
 ### **Pipeline**
 
-*Pipelining is a CPU technique that divides instruction execution into multiple stages so that different instructions can be processed in different stages simultaneously.*
+*Pipelining is a CPU technique where multiple instructions are processed at the same time, but at different stages of execution.*
 
----
+**Simple Real-Life Examples:** *Imagine washing clothes ```Wash → Dry → Fold```*
 
-**With Pipelining:** *Different instructions are being processed at different stages simultaneously.*
+**Without pipelining:** *You wait for Clothes 1 to completely finish before starting Clothes 2.*
+
+    ```txt
+    Clothes 1 → Wash → Dry → Fold
+    Clothes 2 → Wash → Dry → Fold
+    Clothes 3 → Wash → Dry → Fold
+    ```
+
+**With pipelining:** *While Clothes 1 is drying, Clothes 2 can be washing.*
 
 ```txt
-             Clock Cycle
-             1    2    3    4    5
-             
-Instruction 1
-Fetch        ✓
-Decode            ✓
-Execute                 ✓
-
-Instruction 2
-Fetch             ✓
-Decode                 ✓
-Execute                      ✓
-
-Instruction 3
-Fetch                  ✓
-Decode                      ✓
-Execute                           ✓
+             Wash    Dry     Fold
+Clothes 1 →   ███     ███     ███
+Clothes 2 →           ███     ███     ███
+Clothes 3 →                   ███     ███     ███
 ```
 
 ---
 
-**Basic CPU Pipeline Stages:** *A simplified CPU pipeline can have ```Fetch → Decode → Execute → Memory → Write Back```.*
+**Basic CPU Pipeline Stages:** *A simplified CPU pipeline can have ```Instruction Fetch → Instruction Decode → Execute → Memory Access → Write Back```.*
 
-1. **Fetch (IF):** *The CPU fetches the next instruction from memory.*
-2. **Decode (ID):** *The CPU determines what the instruction means. The Control Unit interprets it.*
-3. **Execute (EX):** *The required operation is performed. For example ```10 + 20```. The ALU performs the calculation.*
-4. **Memory (MEM):** *If the instruction needs memory access, the CPU performs a read/write operation. For example ```LOAD STORE```.*
-5. **Write Back (WB):** *The result is written back to a register.*
+1. **Instruction Fetch (IF):** *The CPU fetches the next instruction from memory. For example, ```ADD R1, R2, R3```*
+2. **Instruction Decode (ID):** *The CPU determines what the instruction means. The Control Unit interprets it. For ```ADD R1, R2, R3``` CPU understands ```Operation → ADD Operands → R2, R3 Result → R1.*
+3. **Execute (EX):** *The required operation is performed. For example ```R2 + R3```. The ALU performs the calculation.*
+4. **Memory Access(MEM):** *If the instruction needs memory access, the CPU performs a read/write operation. For example ```LOAD R1, [1000]```.*
+5. **Write Back (WB):** *The result is written back to a register. ```R1 = R2 + R3```*
 
 ---
 
@@ -1296,7 +1292,7 @@ I3:                        Fetch    Decode  Execute
 
 **Does Pipelining make one Instruction faster?**
 
-*Not necessarily. Pipelining mainly improves Instruction throughput rather than necessarily reducing the latency of an individual instruction.*
+*Pipelining does not mean one instruction becomes faster. Instead, it increases the number of instructions completed per unit of time. This is called throughput.*
 
 **Throughput:** *Number of instructions completed per unit of time.*
 
@@ -1304,11 +1300,21 @@ I3:                        Fetch    Decode  Execute
 
 ---
 
+**Pipelining Timing:** *Suppose there are 5 stages and each stage takes 1 cycle.*
+- *For 1 instruction ```5 cycles```*
+- *For 2 instructions without pipelining ```5 + 5 = 10 cycles```*
+- *For 3 instructions ```5 + 5 + 5 = 15 cycles```*
+- *With pipelining ```Instruction 1 → 5 cycles Instruction 2 → +1 cycle Instruction 3 → +1 cycle```.*
+- *So for 3 instructions ```5 + (3 - 1) = 7 cycles```.*
+- *General formula ```Total cycles = k + (n - 1)``` where k stage pipeline processing, n - instructions.*
+
+---
+
 **Pipeline Hazards:** *Sometimes instructions cannot smoothly move through the pipeline. These situations are called Pipeline Hazards.*
 
 1. **Structural Hazard:** *Occurs when two instructions need the same hardware resource at the same time.*
 
-**Example:** *Two instructions both need the same memory resource.*
+    **Example:** *Two instructions both need the same memory resource.*
 
 2. **Data Hazard:** *Occurs when one instruction depends on the result of an earlier instruction.*
 
@@ -1334,6 +1340,16 @@ I3:                        Fetch    Decode  Execute
 
 ---
 
+### **Hyperthreading**
 
+- *Hyperthreading is a CPU technology that allows a single physical CPU code to appear to the operating system as two logical processors (threads).*
+- *In simple words One physical core can handle two instructions streams at the same time by sharing the core's resources.*
+- *Intel uses the term Hyper-Threading Technology (HTT) for it's implementation of Simultaneous Multithreading (SMT).*
+
+---
+
+**What is CPU Core?**
+
+*A CPU core is an independent processing unit inside a CPU.*
 
 
