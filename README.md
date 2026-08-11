@@ -31,6 +31,7 @@ Hey!!!
     - [**Hyper-threading**](#hyper-threading)
     - [**Clock Speed**](#clock-speed)
     - [**Multi-Core Processors**](#multi-core-processors)
+    - [**CPU Socket**](#cpu-socket)
 
 
 # **Computer and Programming Foundations**
@@ -1485,4 +1486,36 @@ Core 4 → Thread 7 + Thread 8
 
 ### **Multi-Core Processors**
 
-**
+*A multi-core processors is a CPU that contains two or more physical CPU cores on a single processor chip/package.*
+
+---
+
+**Why do we need multiple cores?**
+
+- *Suppose you're doing several things Chrome, VS Code, Python program, Background processes.*
+- *A multi-core CPU can distribute work across different cores*
+
+---
+
+**Types of Multi-Core processors**
+
+| Cores | Name        |
+| ----- | ----------- |
+|     1 | Single-core |
+|     2 | Dual-core   |
+|     4 | Quad-core   |
+|     6 | Hexa-core   |
+|     8 | Octa-core   |
+
+---
+
+**Does more cores always means faster?**
+
+- *Suppose ```CPU A → 4 cores``` ```CPU B → 8 cores``` you cannot automatically say CPU B is twice as fast*
+- *Because performance also depends on Architecture, Clock speed, IPC, Cache, Memory performance, Software optimization, Workload.*
+
+---
+
+### **CPU Socket**
+
+
