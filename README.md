@@ -30,6 +30,7 @@ Hey!!!
     - [**Pipeline**](#pipeline)
     - [**Hyper-threading**](#hyper-threading)
     - [**Clock Speed**](#clock-speed)
+    - [**Multi-Core Processors**](#multi-core-processors)
 
 
 # **Computer and Programming Foundations**
@@ -1408,5 +1409,80 @@ Core 4 → Thread 7 + Thread 8
 
 ### **Clock Speed**
 
+- *Clock speed is the frequency at which a CPU's clock generates cycles, usually measured in Hertz (Hz), GHz, or MHz.*
+- *For example ```3.5 GHz``` means the CPU's clock operates at approximately ```3.5 billion cycles per second```*
 
+---
 
+**What is a Clock Cycle?**
+
+- *A clock cycle is one period of the CPU's clock signal*
+- *One clock cycle does not necessarily mean one instruction is completed*
+
+---
+
+**What does 3 GHz mean?**
+
+- *Suppose a CPU has ```3 GHz```*
+- *```1 GHz = 1 billion cycles per second```*
+- *```3 GHz = 3 billion cycles per second```*
+
+---
+
+**MHz vs GHz**
+
+- *```1 GHz = 1000 MHz```*
+
+---
+
+**Does one cycle equal one instruction?**
+
+- *No. An instruction may require multiple clock cycles and modern CPUs can sometimes complete more than one instruction per cycle using techniques such as Pipelining, Superscalar execution, Out--of-order execution.*
+- *Clock cycles and instructions are not the same thing*
+
+---
+
+**Base Clock vs Boost Clock**
+
+- *Modern CPUs often have different clock speeds*
+- *For example, a processor might advertise something like ```Base Clock = 3.2 GHz``` ```Boost Clock = 4.8 GHz```*
+
+**Base Clock:** *The approximate normal operating frequency under suitable sustained conditions*
+
+**Boost Clock:** *A higher frequency the CPU may reach temporarily when conditions such as Temperature, Power, Workload allow it.*
+
+---
+
+- *If a CPU says ```4.8 GHz``` it doesn't mean this CPU always runs at 4.8 Ghz.*
+- *The actual frequency can change dynamically depending on workload and other conditions.*
+
+---
+
+**Is a higher clock speed always better?**
+
+- *No. Suppose ```CPU A - 4 GHz``` ```CPU B - 3.5 GHz```*
+- *You cannot automatically conclude CPU A is faster*
+- *Because performance depends on many other factors CPU architecture, Instructions per cycle (IPC), number of core, number of threads, cache, memory performance, workload, power and thermal limits.*
+
+---
+
+**Clock Speed vs IPC**
+
+**Clock Speed:** *How many clock cycles occur per second*
+
+**IPC:** *How many instructions the CPU can complete per clock cycle under a particular workload*
+
+*A simplified performance relationship is ```Performance ≈ Clock Speed × IPC```*
+
+**Example:** *Suppose*
+
+- *CPU A ```4 GHz``` ```IPC = 1``` Approximate ```4 × 1 = 4```*
+- *CPU B ```3 GHz``` ```IPC = 2``` Approximate ```3 × 2 = 6```*
+- *Even though CPU B has a lower clock speed, it may perform more work per second*
+- *So Higher GHz ≠ automatically faster CPU*
+
+---
+
+### **Multi-Core Processors**
+
+**
