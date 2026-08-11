@@ -1518,4 +1518,77 @@ Core 4 → Thread 7 + Thread 8
 
 ### **CPU Socket**
 
+- *A CPU Socket is the physical connector on the motherboard that holds and electrically connects the CPU to the motherboard*
+- *In simple words, CPU socket is the place on the motherboard where the CPU is installed*
+
+---
+
+**Why do we need a CPU socket?**
+
+- *The CPU needs to communicate with other computer components such as RAM, Storage, GPU, Chipset, Other motherboard devices*
+- *The motherboard provides the connections needed for this communication*
+- *The CPU socket provides the physical and elctrical connection between the CPU and motherboard*
+
+---
+
+**Where is the CPU socket?**
+
+*The CPU socket is located on the Motherboard. The CPU is installed into this socket.*
+
+```txt
+              MOTHERBOARD
+┌───────────────────────────────────┐
+│                                   │
+│       ┌─────────────────┐         │
+│       │   CPU SOCKET    │         │
+│       │                 │         │
+│       │      CPU        │         │
+│       └─────────────────┘         │
+│                                   │
+│   RAM Slots       Expansion Slots │
+│                                   │
+└───────────────────────────────────┘
+```
+
+---
+
+**What does the Socket actually provide?**
+
+*The socket provides connections for*
+
+1. **Power:** *The CPU needs electrical power*
+2. **Data communication:** *The CPU needs to communicate with RAM, Storage-related components, GPU, Other devices*
+3. **Control/Signaling:** *The CPU and motherboard need electrical signals to coordinate operations*
+
+---
+
+**CPU Socket types**
+
+1. **Land Grid Array (LGA):** *In LGA, the electrical contacts/pins are primarily located in the socket on the motherboard, while the CPU has flat contact pads.*
+
+    ```txt
+    Motherboard
+    ┌───────────────┐
+    │ • • • • • • • │ ← Socket contacts
+    │ • • • • • • • │
+    └───────────────┘
+            ↑
+        CPU
+    ```
+
+    *Examples include many modern Intel desktop sockets*
+
+2. **Pin Grid Array (PGA):** *In PGA, the CPU itself has pins that fit into holes in the socket.*
+
+    ```txt
+    CPU
+    ↓↓↓↓↓↓↓↓
+    ||||||||
+    ↓
+    Socket holes
+    ```
+
+    *Some AMD desktop processors have historically used PGA designs.*
+
+---
 
