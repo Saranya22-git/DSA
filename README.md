@@ -28,7 +28,8 @@ Hey!!!
     - [**Cache Memory**](#cache-memory)
     - [**Instruction Set**](#instruction-set)
     - [**Pipeline**](#pipeline)
-    - [**Hyperthreading**](#hyperthreading)
+    - [**Hyper-threading**](#hyper-threading)
+    - [**Clock Speed**](#clock-speed)
 
 
 # **Computer and Programming Foundations**
@@ -1340,16 +1341,72 @@ I3:                        Fetch    Decode  Execute
 
 ---
 
-### **Hyperthreading**
+### **Hyper-threading**
 
-- *Hyperthreading is a CPU technology that allows a single physical CPU code to appear to the operating system as two logical processors (threads).*
-- *In simple words One physical core can handle two instructions streams at the same time by sharing the core's resources.*
-- *Intel uses the term Hyper-Threading Technology (HTT) for it's implementation of Simultaneous Multithreading (SMT).*
+- *Hyper-Threading is Intel's implementation of Simultaneous Multithreading (SMT).*
+- *It allows one physical CPU core to handle two hardware threads and appear as two logical processors to the operating system.*
 
 ---
 
-**What is CPU Core?**
+**Core vs Thread**
 
-*A CPU core is an independent processing unit inside a CPU.*
+**Core:** *A physical processing unit inside the CPU*
+
+**Thread:** *An instruction/work stream that the CPU can execute*
+
+---
+
+**Example:**
+- *If a CPU has ```4 cores/8 Threads```*
+- *It generally means ```Physical cores = 4``` ```Logical Processors = 8```*
+- *Conceptually*
+```txt
+Core 1 → Thread 1 + Thread 2
+Core 2 → Thread 3 + Thread 4
+Core 3 → Thread 5 + Thread 6
+Core 4 → Thread 7 + Thread 8
+```
+
+---
+
+**Why is Hyper-Threading used?**
+
+- *The main goal is to improve utilization of the CPU core's resources.*
+- *If one thread is waiting or not fully using certain execution resources, another thread may use those resources.*
+- *This can improve overall throughput/performance depending on the workload.*
+
+---
+
+**How can one core handle two threads?**
+
+- *A CPU core contains many internal resources used during instruction execution.*
+- *For example*
+    ```txt
+                Physical Core
+            ┌─────────────────┐
+    Thread 1 ─►                 │
+            │ CPU Resources   │
+    Thread 2 ─►                 │
+            └─────────────────┘
+    ```
+- *Both hardware threads share many of the core's physical resources*
+- *If Thread 1 isn't using some resource at a particular moment, Thread 2 may be able to use it.*
+- *So Hyper-Threading tries to keep the core's resources busy.*
+
+---
+
+**Multi-Core vs Hyper-Threading**
+
+| Multi-Core                                | Hyper-Threading                               |
+| ----------------------------------------- | --------------------------------------------- |
+| Adds physical cores                       | Adds logical processors                       |
+| More physical processing units            | Multiple hardware threads per core            |
+| Cores have their own core-level resources | Threads share many resources of the same core |
+| Example: 4 physical cores                 | Example: 4 cores → 8 logical processors       |
+
+---
+
+### **Clock Speed**
+
 
 
