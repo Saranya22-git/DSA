@@ -32,6 +32,10 @@ Hey!!!
     - [**Clock Speed**](#clock-speed)
     - [**Multi-Core Processors**](#multi-core-processors)
     - [**CPU Socket**](#cpu-socket)
+  - [**Memory**](#memory)
+    - [**What is Memory?**](#what-is-memory)
+    - [**Primary Memory**](#primary-memory)
+    - [**Secondary Memory**](#secondary-memory)
 
 
 # **Computer and Programming Foundations**
@@ -1592,3 +1596,114 @@ Core 4 → Thread 7 + Thread 8
 
 ---
 
+## **Memory**
+
+### **What is Memory?**
+
+- *Computer memory is the storage area used by a computer to hold data, instructions, and results that are needed for processing.*
+- *In simple words, memory allows the computer to store information that it needs to use*
+
+---
+
+**CPU vs Memory**
+
+- *```CPU - Worker``` The CPU performs the actual processing*
+- *```Memory - Workspace``` Memory holds the data and instructions the CPU needs*
+- *The CPU and memory work together*
+
+```txt
+             COMPUTER
+                 │
+        ┌────────┴────────┐
+        ↓                 ↓
+       CPU              MEMORY
+    Processes          Holds data
+      data           & instructions
+```
+
+---
+
+**Main Types of Computer Memory**
+
+```txt
+             Computer Memory
+                    │
+          ┌─────────┴─────────┐
+          ↓                   ↓
+     Primary Memory      Secondary Memory
+          │                   │
+     RAM / ROM          SSD / HDD etc.
+```
+
+---
+
+**Primary Memory**
+
+- *Primary memory is memory that the CPU can access directly or through the system's memory interface during normal execution*
+- **Examples:** *RAM, ROM*
+
+**Secondary Memory**
+
+- *Secondary storage is used for long-term storage*
+- **Examples:** *SSD, HDD, Pen Drive, Memory Card*
+
+---
+
+**Volatile vs Non-Volatile**
+
+**Volatile Memory:** *Loses it stored contents when power is removed.*
+
+**Example:** *RAM*
+
+```txt
+Power ON
+   ↓
+Data available
+
+Power OFF
+   ↓
+Data lost
+```
+
+**Non-Volatile:** *Retains stored information even when power is removed.*
+
+**Examples:** *SSD, HDD, ROM*
+
+```txt
+Power ON  → Data available
+Power OFF → Data remains
+```
+
+---
+
+**Memory:** *Usually refers to fast working storage used during processing*
+
+**Example:** *RAM*
+
+**Storage:** *Used for persistent, long-term data*
+
+**Example:** *SSD/HDD*
+
+---
+
+### **Primary Memory**
+
+- *Primary memory is the memory that the CPU can directly access to obtain the data and instructions needed for current processing*
+- *In simple words, primary memory is the computer's main working memory, directly involved in CPU processing*
+
+---
+
+**Types of Primary Memory**
+
+1. **Random Access Memory (RAM):** *RAM is the main volatile working memory of a computer. It holds currently running programs, data being actively used, temporary results.*
+
+    **Example:** *You open ```Chrome VS Code Python```. The operating system loads the required parts into RAM.*
+
+2. **Read Only Memory (ROM):** *ROM is non-volatile memory traditionally used to store firmware or other information that should persist without power.*
+
+- *For example, firmware used during the computer's startup process is stored in non-volatile memory.*
+- *Modern systems commonly use flash-based firmware storage so ROM is often used as a broad historical/functional term rather than meaning literally read-only hardware.*
+
+---
+
+### **Secondary Memory**
