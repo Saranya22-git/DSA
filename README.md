@@ -36,6 +36,7 @@ Hey!!!
     - [**What is Memory?**](#what-is-memory)
     - [**Primary Memory**](#primary-memory)
     - [**Secondary Memory**](#secondary-memory)
+    - [**RAM**](#ram)
 
 
 # **Computer and Programming Foundations**
@@ -1707,3 +1708,39 @@ Power OFF → Data remains
 ---
 
 ### **Secondary Memory**
+
+*Secondary memory, more accurately called Secondary storage, is non-volatile storage used to store data and programs permanently, even when the computer is turned off.*
+
+**Example:** *SSD, HDD, Pen Drive, Memory Card, Optical Disc*
+
+---
+
+**Primary Memory vs Secondary Memory**
+
+| Primary Memory                                      | Secondary Storage                                   |
+| --------------------------------------------------- | --------------------------------------------------- |
+| Used during active processing                       | Used for long-term storage                          |
+| RAM is volatile                                     | Usually non-volatile                                |
+| Faster                                              | Generally slower                                    |
+| Smaller capacity                                    | Usually much larger                                 |
+| CPU accesses working data through the memory system | Data is loaded into RAM before normal CPU execution |
+| Example: RAM                                        | Examples: SSD, HDD                                  |
+
+---
+
+**Types of Secondary Storage**
+
+1. **Solid State Drive (SSD):** *Uses flash memory. Fast persistent storage.*
+2. **Hard Disk Drive (HDD):** *Uses magnetic disks to store data. Magnetic persistent storage.*
+3. **Pen Drive:** *A portable flash-storage device.*
+4. **Memory Card:** *Small removable flash storage commonly used in devices such as cameras and phones. For example, SD card, microSD card.*
+5. **Optical Storage:** *Uses lasers to read/write information on optical discs. For example, CD, DVD, Blu-ray. These are much less common in modern computers.*
+
+---
+
+**IMPORTANT POINT:** *Secondary storage is generally slower than RAM but it has much larger capacity and retains data without power.*
+
+---
+
+### **RAM**
+
