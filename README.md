@@ -38,6 +38,7 @@ Hey!!!
     - [**Secondary Memory**](#secondary-memory)
     - [**RAM**](#ram)
     - [**ROM**](#rom)
+    - [**Cache Memory**](#cache-memory-1)
 
 
 # **Computer and Programming Foundations**
@@ -1798,4 +1799,47 @@ Address     Data
 
 ### **ROM**
 
-**
+*ROM (Read-Only Memory) is non-volatile memory traditionally used to store firmware or other information that must be retained even when power is turned off.*
+
+---
+
+**Why do we need ROM?**
+
+- *Think about what happens when you press the computer's power button.*
+- *Before Windows or Linux starts, the computer needs some low-level instructions to Initialize hardware, Check hardware, Start the bott process, Locate and load the operating system. Those low-level instructions are firmware.*
+- *Firmware needs to remain available even when the computer is powered off.*
+
+---
+
+**Types of ROM**
+
+1. **Programmable Read-Only Memory (PROM):** *It can be programmed once after manufacturing.*
+
+```txt
+Blank PROM
+   ↓
+Program it
+   ↓
+Cannot normally erase/reprogram it
+```
+
+2. **Erasable Programmable Read-Only Memory (EPROM):** *It can be erased and programmed again. Historically, erasing was done using ultraviolet (UV) light.*
+3. **Electrically Erasable Programmable Read-Only Memory (EEPROM):** *It can be erased and reprogrammed electrically. This is more flexible than EPROM.*
+4. **Flash Memory:** *Flash is a type of non-volatile memory derived from the EEPROM family. It can be electrically erased and rewritten, typicallu in blocks. Flash is widely used today in SSDs, USB flash drives, Memory cards, Firmware storage.*
+
+---
+
+**ROM vs RAM**
+
+| RAM                                                 | ROM                                                                 |
+| --------------------------------------------------- | ------------------------------------------------------------------- |
+| Volatile                                            | Non-volatile                                                        |
+| Working memory                                      | Traditionally stores firmware/instructions                          |
+| Contents normally lost when power is removed        | Contents retained                                                   |
+| Frequently read and written during normal operation | Traditionally read-mostly; modern firmware storage can be rewritten |
+| Used for running programs/data                      | Used for persistent low-level software such as firmware             |
+
+---
+
+### **Cache Memory**
+
