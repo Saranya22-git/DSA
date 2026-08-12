@@ -37,6 +37,7 @@ Hey!!!
     - [**Primary Memory**](#primary-memory)
     - [**Secondary Memory**](#secondary-memory)
     - [**RAM**](#ram)
+    - [**ROM**](#rom)
 
 
 # **Computer and Programming Foundations**
@@ -1744,3 +1745,57 @@ Power OFF → Data remains
 
 ### **RAM**
 
+*RAM (Random Access Memory) is volatile primary memory that temporarily stores the data, programs, and instructions currently being used by the computer.*
+
+---
+
+**Why is RAM called Random Access Memory?**
+
+*Random Access means the computer can access a memory location directly using its address, rather than having to read all the locations before it.*
+
+- *Imagine RAM contains*
+```txt
+Address     Data
+
+1000        A
+1001        B
+1002        C
+1003        D
+1004        E
+```
+- *If the CPU needs the data at address ```1003``` it can directly access that location.*
+- *It doesn't have to read ```1000 → 1001 → 1002 → 1003``` first*
+
+---
+
+**Why can't RAM keep data after shutdown?**
+
+*RAM is designed as temporary working memory and requires electrical power to maintain its stored state.*
+
+---
+
+**RAM Capacity**
+
+*This represents the amount of RAM available. You commonly see:*
+
+```txt
+4 GB
+8 GB
+16 GB
+32 GB
+64 GB
+```
+
+*For example, ```16 GB RAM``` means the computer has approximately 16 gigabytes of main memory capacity.*
+
+---
+
+**What happens when RAM is full?**
+
+*Suppose your computer has ```RAM = 8 GB``` and you're running many memory-heavy applications. The operating system may use ```Virtual Memory``` using part of the storage device to extend the available memory space.*
+
+---
+
+### **ROM**
+
+**
