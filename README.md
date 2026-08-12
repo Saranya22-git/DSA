@@ -39,6 +39,7 @@ Hey!!!
     - [**RAM**](#ram)
     - [**ROM**](#rom)
     - [**Cache Memory**](#cache-memory-1)
+    - [**Registers**](#registers-1)
 
 
 # **Computer and Programming Foundations**
@@ -1842,4 +1843,59 @@ Cannot normally erase/reprogram it
 ---
 
 ### **Cache Memory**
+
+*Cache Memory is a small. high-speed memory located inside or close to the CPU that stores frequently accessed data and instructions so the CPU can access them faster than accessing RAM.*
+
+---
+
+**How Cache works?**
+
+*Suppose the CPU needs some data.*
+
+**Step-1:** *CPU checks cache*
+
+**Step-2:** *Data found. If yes, the CPU gets the data quickly. If no, the CPU has to get the data from a lower level, usually RAM.*
+
+---
+
+**Cache Levels**
+
+1. **L1 Cache:** *Smallest, Fastest cache, Closest to the execution core.*
+2. **L2 Cache:** *Larger than L1, Slower than L1, Usually associated with a core, depending on processor design.*
+3. **L3 Cache:** *Larger than L1/L2, Slower than them, Often shared by multiple cores.*
+
+---
+
+**Cache vs RAM**
+
+| Cache                                  | RAM                            |
+| -------------------------------------- | ------------------------------ |
+| Smaller                                | Larger                         |
+| Faster                                 | Slower than cache              |
+| Closer to CPU                          | Main system memory             |
+| Stores frequently/recently useful data | Holds active programs and data |
+| More expensive per bit                 | Less expensive per bit         |
+
+---
+
+**Cache Hit vs Cache Miss**
+
+**Cache Hit:** *The CPU requests data and finds it in the code. Result: Fast access.*
+
+**Cache Miss:** *The CPU requests data but it isn't in the cache. Result: Higher access latency.*
+
+---
+
+**Why does Cache store "frequently used" data?**
+
+**Temporal Locality** → *Recently used data may be used again.*
+
+**Spatial Locality** → *Nearby data may be used soon.*
+
+---
+
+### **Registers**
+
+
+
 
