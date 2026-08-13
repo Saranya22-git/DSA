@@ -40,6 +40,7 @@ Hey!!!
     - [**ROM**](#rom)
     - [**Cache Memory**](#cache-memory-1)
     - [**Registers**](#registers-1)
+    - [**Virtual Memory**](#virtual-memory)
 
 
 # **Computer and Programming Foundations**
@@ -1896,6 +1897,83 @@ Cannot normally erase/reprogram it
 
 ### **Registers**
 
+*Registers are very small and extremely fast storage locations inside the CPU that temporarily hold data, instructions, memory addresses, and intermediate results during instruction execution.*
 
+---
 
+**Why does the CPU need registers?**
+
+- *Suppose the CPU needs to calculate ```25 + 35```*
+- *The ALU performs the calculation, but it needs the values ```25 35``` available for processing.*
+- *Registers can temporarily hold these values*
+    ```txt
+    Register → 25
+    Register → 35
+            ↓
+        ALU
+            ↓
+        60
+    ```
+- *So registers provide the CPU with very fast working locations.*
+  
+---
+
+**Where do registers fit?**
+
+```txt
+FASTEST
+   ↓
+Registers
+   ↓
+L1 Cache
+   ↓
+L2 Cache
+   ↓
+L3 Cache
+   ↓
+RAM
+   ↓
+SSD/HDD
+   ↓
+SLOWEST
+```
+
+---
+
+**Why are Registers faster than Cache?**
+
+- *Because registers are part of the CPU's execution machinery and are directly available to the processor's instruction execution.*
+- *Cache is also extremely close to the CPU, but it is a separate level of the memory hierarchy.*
+
+```txt
+CPU
+├── Registers → immediate working data
+└── Cache     → frequently/recently useful data
+```
+
+---
+
+**Registers vs Cache vs RAM**
+
+| Feature   | Registers                | Cache                           | RAM                  |
+| --------- | ------------------------ | ------------------------------- | -------------------- |
+| Location  | Inside CPU               | Inside/very close to CPU        | Main memory          |
+| Speed     | Fastest                  | Very fast                       | Slower than cache    |
+| Capacity  | Tiny                     | Small                           | Much larger          |
+| Purpose   | Current instruction/data | Frequently/recently useful data | Active programs/data |
+| Volatile? | Temporary                | Temporary                       | Yes                  |
+
+---
+
+**Common Registers**
+
+1. **Program Counter (PC):** *Stores the address of the next instruction to execute.*
+2. **Instruction Register (IR):** *Stores the Current instruction being processed.*
+3. **Memory Address Register (MAR):** *Stores the memory address being accessed.*
+4. **Memory Data Register (MDR):** *Stores the data being transferred to or from memory.*
+5. **Accumulator:** *Can hold intermediate results of arithmetic or logical operations.*
+
+---
+
+### **Virtual Memory**
 
