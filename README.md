@@ -44,6 +44,8 @@ Hey!!!
   - [**Storage Devices**](#storage-devices)
     - [**HDD**](#hdd)
     - [**SSD**](#ssd)
+    - [**NVMe SSD**](#nvme-ssd)
+    - [**Pen Drive**](#pen-drive)
 
 
 # **Computer and Programming Foundations**
@@ -2253,3 +2255,206 @@ Data stored on platter
 ---
 
 ### **SSD**
+
+*An SSD (Solid State Drive) is a non-volatile storage device that uses flash memory to store data electronically, without moving mechanical parts.*
+
+---
+
+**How does an SSD store data?**
+
+*It uses ```NAND flash memory```*
+
+```txt
+Computer
+   ↓
+SSD Controller
+   ↓
+NAND Flash Memory
+   ↓
+Stored Data
+```
+
+---
+
+**What is NAND Flash?**
+
+- *NAND flash is a type of non-volatile memory used to store data in SSDs and other flash-based storage devices.*
+- *It can retain data even when power is removed*
+
+---
+
+**How does an SSD read data?**
+
+- *Suppose you open ```resume.pdf```*
+- *The computer sends a request to the SSD*
+    ```txt
+    CPU / OS
+    ↓
+    SSD Controller
+    ↓
+    NAND Flash
+    ↓
+    Data
+    ```
+- *The SSD controller manages where data is located and coordinates the read/write operations*
+
+---
+
+**What does the SSD controller do?**
+
+- *The SSD controller acts as the management system between the computer and the flash memory*
+- *It handles things such as Readind data, Writing data, Mapping logical addresses to flash locations, Managing flash memory, Error correction, Wear management*
+
+---
+
+**HDD vs SSD**
+
+| HDD                              | SSD                            |
+| -------------------------------- | ------------------------------ |
+| Magnetic storage                 | Flash storage                  |
+| Rotating platters                | No rotating platters           |
+| Mechanical parts                 | No moving mechanical parts     |
+| Higher access latency            | Lower access latency           |
+| Generally slower                 | Generally faster               |
+| Mechanical noise                 | Silent                         |
+| More sensitive to physical shock | Generally more shock-resistant |
+| Usually cheaper per GB           | Usually more expensive per GB  |
+
+---
+
+**SSD Capacity**
+
+- *You commonly see ```256 GB, 512 GB, 1 TB, 2 TB, 4 TB```. This is the amount of persistent storage available*
+- *For example ```1 TB SSD``` can store operating system, applications, documents, photos, videos, projects*
+
+---
+
+**SSD Types**
+
+```txt
+SSD
+│
+├── SATA SSD
+└── NVMe SSD
+```
+
+**SATA SSD:** *A SATA SSD uses the SATA interface to commuincates with the computer*
+
+```txt
+SSD
+ ↓
+SATA Interface
+ ↓
+Motherboard
+```
+
+*It is much faster in access latency than an HDD but is limited by the SATA interface compare with modern NVMe SSDs*
+
+---
+
+### **NVMe SSD**
+
+*NVMe (Non-Volatile Memory Express) is a storage protocol designed specifically for high-speed non-volatile memory devices, typically SSDs and commonly operates over the PCIe interface.*
+
+---
+
+```txt
+NAND Flash → How the SSD stores data
+NVMe       → Protocol used to communicate with the SSD
+PCIe       → High-speed bus/interface used to connect it
+```
+
+```txt
+Computer
+   ↓
+PCIe
+   ↓
+NVMe
+   ↓
+SSD Controller
+   ↓
+NAND Flash
+```
+
+---
+
+**SATA SSD vs NVMe SSD**
+
+**SATA SSD**
+
+```txt
+CPU/OS
+   ↓
+SATA
+   ↓
+SSD Controller
+   ↓
+NAND Flash
+```
+
+**NVMe SSD**
+
+```txt
+CPU/OS
+   ↓
+PCIe
+   ↓
+NVMe
+   ↓
+SSD Controller
+   ↓
+NAND Flash
+```
+
+*NVMe was designed specifically for fast solid-state storage and takes advantage of the capabilities of PCIe*
+
+---
+
+**Why is NVMe faster?**
+
+*The biggest reason is that NVMe is designed for modern flash storage and PCIe provides a much higher-bandwidth path than the older SATA interface.*
+
+**SATA:** *SATA was originally designed around storage technologies such as HDDs and has limitations in bandwidth and command handling*
+
+**NVMe:** *NVMe was designed specifically for non-volatile memory such as SSDs. It supports high parallelism, Many command queues, Many commands per queue, Lower protocol overhead, Efficient communication over PCIe.*
+
+---
+
+**What does PCIe have to do with NVMe?**
+
+**PCIe:** *PCI Express is a high-speed bus/interface used to connect components such as GPUs and high-speed storage devices to the system.*
+
+**NVMe:** *NVMe is the storage protocol designed for accessing non-volatile memory over interface such as PCIe.*
+
+*So ```PCIe = communication pathway``` ```NVMe = storage communication protocol```*
+
+---
+
+**What does an NVMe SSD look like?**
+
+- *A common NVMe SSD is an ```M.2 SSD```(physical form factor)*
+- *It often looks like*
+    ```txt
+    ┌───────────────────────────────┐
+    │   NAND     Controller    NAND │
+    └───────────────────────────────┘
+            M.2 SSD
+    ```
+
+---
+
+**NVMe SSD vs SATA SSD**
+
+| Feature                          | SATA SSD        | NVMe SSD        |
+| -------------------------------- | --------------- | --------------- |
+| Storage technology               | NAND flash      | NAND flash      |
+| Interface                        | SATA            | Usually PCIe    |
+| Protocol                         | SATA/AHCI stack | NVMe            |
+| Designed specifically for flash? | No              | Yes             |
+| Typical performance              | Lower           | Higher          |
+| Parallelism                      | More limited    | Much higher     |
+| Latency                          | Low             | Generally lower |
+
+---
+
+### **Pen Drive**
