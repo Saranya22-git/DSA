@@ -41,6 +41,9 @@ Hey!!!
     - [**Cache Memory**](#cache-memory-1)
     - [**Registers**](#registers-1)
     - [**Virtual Memory**](#virtual-memory)
+  - [**Storage Devices**](#storage-devices)
+    - [**HDD**](#hdd)
+    - [**SSD**](#ssd)
 
 
 # **Computer and Programming Foundations**
@@ -2135,3 +2138,118 @@ CPU
 - *The ```MMU``` helps translate virtual addresses into physical addresses*
 
 ---
+
+## **Storage Devices**
+
+### **HDD**
+
+*HDD (Hard Disk Drive) is a non-volatile storage device that stores data magnetically on rotating disks called platters.*
+
+---
+
+**How does an HDD store data?**
+
+*Inside an HDD are several important components*
+
+```txt
+HDD
+│
+├── Platters
+├── Spindle
+├── Read/Write Heads
+└── Actuator Arm
+```
+
+1. **Platters:** *Platters are circular disks where data is stored magnetically.*
+
+    ```txt
+        _________
+        /           \
+    |   PLATTER   |
+        \___________/
+    ```
+
+    - *The platters rotate at high speed.*
+    - *Common rotational speeds include ````5400 RPM 7200 RPM``` RPM = Revolutions Per Minute*
+    - *S o a 7200 RPM HDD platter rotates approximately 7200 times per minute*
+
+2. **Spindle:** *The spindle is the mechanism that rotates the platters*
+
+    ```txt
+        Platter
+            │
+            │
+        Spindle
+            │
+            ▼
+        Rotation
+    ```
+
+3. **Read/Write Head:** *The read/write head reads data from and write data to the magnetic surface of the platter*
+
+    ```txt
+    Platter
+    ──────────────
+        ↑
+        │
+    Read/Write
+    Head
+    ```
+
+    - *The head doesn't simply touch the platter surface during normal operation*
+
+4. **Actuator Arm:** *The Actuator arm moves the read/write head to the required position on the platter*
+
+    ``txt
+                Head
+                ↓
+            ───────●
+                /
+                /
+        Actuator Arm
+    ```
+
+---
+
+**How does an HDD read data?**
+
+- *Suppose you want to open ```resume.pdf```*
+- *The operating system requests the data*
+- *The HDD*
+    ```txt
+    1. Platters rotate
+        ↓
+    2. Actuator moves the head
+        ↓
+    3. Head reaches the required location
+        ↓
+    4. Magnetic data is read
+        ↓
+    5. Data is sent to the computer
+    ```
+- *Because physical movement is involved, HDD access has mechanical delays*
+
+---
+
+**How does an HDD write data?**
+
+*When saving data*
+
+```txt
+
+Computer
+   ↓
+HDD
+   ↓
+Actuator positions head
+   ↓
+Read/write head changes magnetic state
+   ↓
+Data stored on platter
+```
+
+*The data is stored magnetically*
+
+---
+
+### **SSD**
