@@ -1977,3 +1977,161 @@ CPU
 
 ### **Virtual Memory**
 
+*Virtual Memory is a memory-management technique in which the operating system uses part of secondary storage as an extension of RAM, allowing programs to use more memory space than the available physical RAM.*
+
+---
+
+**Why do we need Virtual Memory?**
+
+- *Suppose your computer has ```RAM = 8 GB```*
+- *Now imagine your running programs need more memory than is currently available*
+- *For example ```Programs need → 10 GB``` ```Physical RAM → 8 GB```*
+- *The operating system use some space on the SSD/HDD as virtual memory*
+- *This gives the system additional address space to work with*
+
+---
+
+**Is SSD becoming actual RAM?**
+
+- *No, if the OS uses SSD space as virtual memory SSD ≠ RAM*
+- *The SSD remains storage*
+- *The OS is simply using part of that storage to hold memory pages that don't currently fit in physical RAM.*
+
+---
+
+**Pages**
+
+- *Virtual memory usually works with fixed-size blocks called ```pages```*
+- *The operating system divides a process's virtual address space into pages*
+- *Physical RAM is divided into corresponding units called ```page frames```*
+    ```txt
+    Virtual Memory
+    ┌────┬────┬────┬────┐
+    │ P1 │ P2 │ P3 │ P4 │
+    └────┴────┴────┴────┘
+
+    Physical RAM
+    ┌────┬────┬────┐
+    │ F1 │ F2 │ F3 │
+    └────┴────┴────┘
+    ```
+- *Not every virtual page has to be in RAM at the same time*
+- *Some pages may be kept in secondary storage*
+
+---
+
+**What happens when RAM is full?**
+
+- *Suppose RAM has 4 pages (Page 1, Page 2, Page 3, Page 4)*
+- *RAM becomes heavily occupied*
+- *The OS may move a less-needed page from RAM to storage*
+- *Now RAM has space for another page*
+    ```txt
+    RAM                  SSD
+    │                     │
+    │ Page D ───────────→ │
+    │                     │
+    ```
+- *Later, if the CPU needs Page D*
+    ```txt
+    SSD
+    │
+    │ Page D
+    ↓
+    RAM
+    ↓
+    CPU
+    ```
+- *This movement is called ```paging``` when pages are moved between memory and storage*
+
+---
+
+**Page Fault**
+
+- *Suppose the CPU requests a page that is not currently in physical RAM*
+- *That's called a ```Page Fault```*
+- *The operating system must locate the required page in backing storage and load it into RAM*
+    ```txt
+    CPU requests Page X
+            ↓
+    Is Page X in RAM?
+            ↓
+        NO
+            ↓
+    Page Fault
+            ↓
+    Find Page X in storage
+            ↓
+    Load Page X into RAM
+            ↓
+    Continue execution
+    ```
+
+---
+
+**Why is Virtual Memory Slower?**
+
+- *Because RAM is much faster than SSD/HDD*
+- *Accessing storage introduces much greater latency*
+- *Heavy use of virtual memory can significantly slow down a computer*
+
+---
+
+**What is Thrashing?**
+
+- *If the system doesn't have enough physical RAM and keeps moving pages between RAM and storage repeatedly the computer spends a lot of time moving pages instead of doing useful work*
+- *This situation is called ```Thrashing```*
+    ```txt
+    RAM
+    ↓
+    SSD
+    ↑
+    RAM
+    ↓
+    SSD
+    ↑
+    RAM
+    ```
+
+---
+
+**Virtual Memory vs RAM**
+
+| RAM                      | Virtual Memory                                   |
+| ------------------------ | ------------------------------------------------ |
+| Physical hardware memory | Memory-management technique                      |
+| Fast                     | Slower when backed by storage                    |
+| Volatile                 | Uses storage as backing                          |
+| Limited by installed RAM | Provides a larger virtual address space          |
+| Direct physical memory   | Uses virtual addresses mapped to physical memory |
+
+---
+
+**Virtual Memory vs Storage**
+
+- *SSD - Physical storage device*
+- *Virtual Memory - OS memory management technique*
+- *So virtual memory is not a physical device*
+- *It is a mechanism implemented by the operating system and hardware memory-management system*
+
+---
+
+**Virtual Address**
+
+- *Programs generally don't work directly with raw physical RAM addresses*
+- *They use ```virtual addresses```*
+- *For example*
+    ```txt
+    Program
+    ↓
+    Virtual Address
+    ↓
+    Memory Management Unit (MMU)
+    ↓
+    Physical Address
+    ↓
+    RAM
+    ```
+- *The ```MMU``` helps translate virtual addresses into physical addresses*
+
+---
