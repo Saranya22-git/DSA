@@ -46,6 +46,7 @@ Hey!!!
     - [**SSD**](#ssd)
     - [**NVMe SSD**](#nvme-ssd)
     - [**Pen Drive**](#pen-drive)
+    - [**Memory Card**](#memory-card)
 
 
 # **Computer and Programming Foundations**
@@ -2458,3 +2459,47 @@ NAND Flash
 ---
 
 ### **Pen Drive**
+
+*A pen drive, also called a USB flash drive, is a portable non-volatile storage device that uses NAND flash memory and connects to a computer through USB.*
+
+---
+
+**How does a Pen Drive work?**
+
+```txt
+Computer
+   ↓
+USB
+   ↓
+Pen Drive Controller
+   ↓
+NAND Flash Memory
+```
+
+---
+
+**Why does the data remain after removing the Pen Drive?**
+
+*Because NAND flash is non-volatile. So a pen drive is storage, not temporary memory.*
+
+```txt
+Copy file
+   ↓
+Remove USB
+   ↓
+Plug it in later
+   ↓
+File still exists
+```
+
+---
+
+**What does USB do?**
+
+- *USB - Universal Serial Bus*
+- *USB provides the connection between the computer and the pen drive*
+- *It allows Data transfer, Device communication, Power to the pen drive*
+
+---
+
+### **Memory Card**
