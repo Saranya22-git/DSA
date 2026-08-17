@@ -2554,3 +2554,18 @@ Data
 ---
 
 ### **Optical Storage**
+
+*Optical storage is a non-volatile storage technology that uses a laser to read and/or write data on an optical disc*
+
+**Example:** *CD, DVD, Blu-ray Disc*
+
+**Compact Disc (CD):** *Commonly associated with around 700 MB of storage for a standard disc*
+
+**Digital Versatile Disc (DVD):** *Can store significantly more than a CD. A common single-layer DVD holds about 4.7 GB*
+
+**Blu-ray:** *Uses a blue-violet laser and can store much more data than standard CDs and DVDs. A common single-layer Blu-ray disc holds about 25 GB*
+
+---
+
+**How does Optical Storage work?**
+
