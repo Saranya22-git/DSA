@@ -47,6 +47,7 @@ Hey!!!
     - [**NVMe SSD**](#nvme-ssd)
     - [**Pen Drive**](#pen-drive)
     - [**Memory Card**](#memory-card)
+    - [**Optical Storage**](#optical-storage)
 
 
 # **Computer and Programming Foundations**
@@ -2503,3 +2504,53 @@ File still exists
 ---
 
 ### **Memory Card**
+
+*A Memory Card is a small, removable, non-volatile storage device that uses flash memory to store digital data.*
+
+**Examples:** *SD card, microSD card, CompactFlash*
+
+---
+
+**How does a memory card work?**
+
+```txt
+Device
+  ↓
+Memory Card Interface
+  ↓
+Controller
+  ↓
+Flash Memory
+  ↓
+Data
+```
+
+---
+
+**Capacity**
+
+*Memory cards come in different capacities ```32 GB 64 GB 128 GB 256 GB 512 GB 1 TB```*
+
+---
+
+**SD vs microSD**
+
+**SD card:** *Larger physical card*
+```txt
+┌──────────────────┐
+│      SD          │
+└──────────────────┘
+```
+
+**microSD:** *Much smaller version*
+```txt
+┌───────────┐
+│ microSD   │
+└───────────┘
+```
+
+*They use the same general flash-storage concept but have different physical size/form factors.*
+
+---
+
+### **Optical Storage**
