@@ -48,6 +48,9 @@ Hey!!!
     - [**Pen Drive**](#pen-drive)
     - [**Memory Card**](#memory-card)
     - [**Optical Storage**](#optical-storage)
+    - [**Cloud Storage**](#cloud-storage)
+  - [**Motherboard**](#motherboard)
+    - [**Motherboard**](#motherboard-1)
 
 
 # **Computer and Programming Foundations**
@@ -2569,3 +2572,77 @@ Data
 
 **How does Optical Storage work?**
 
+- *The disc contains a data-recording layer*
+- *A laser is used to read the information encoded on the disc*
+
+```txt
+Computer
+   ↓
+Optical Drive
+   ↓
+Laser
+   ↓
+Optical Disc
+   ↓
+Data
+```
+
+---
+
+**Read-Only vs Writable Discs**
+
+**CD-ROM/DVD-ROM (Read Only Memory):** *Data is already recorded and the disc is intended to be read rather than rewritten.*
+
+**CD-R/DVD-R (Recordable):** *Can generally be written once*
+
+**CD-RW/DVD-RW (ReWritable):** *Can be erased and rewritten multiple times, within the technology's limits*
+
+---
+
+**Why don't we commonly use optical discs today?**
+
+*Optical storage has largely become less common because modern flash storage and online/cloud storage offer much greater convenience, speed and capacity for many everyday uses.*
+
+---
+
+### **Cloud Storage**
+
+*Cloud Storage is a service that stores data on remote servers accessed over a network, typically the internet, instead of storing it only on the user's local device.*
+
+**Examples:** *Google Drive, OneDrive, Dropbox, iCloud*
+
+---
+
+**Cloud Storage vs Local Storage**
+
+**Local Storage:** *Your data is stored on a device you directly have access to Computer - SSD - resume.pdf*
+
+**Cloud Storage:** *Your data is stored on remote infrastructure Your computer - Internet - Remote storage - resume.pdf*
+
+---
+
+**Cloud Storage vs SSD**
+
+| Cloud Storage                             | SSD                                        |
+| ----------------------------------------- | ------------------------------------------ |
+| Remote storage service                    | Local storage device                       |
+| Accessed through network                  | Directly connected to computer             |
+| Provider manages infrastructure           | You/your system manages the device         |
+| Usually accessible from multiple devices  | Usually tied to the physical device        |
+| Requires network access for remote access | Does not require internet for local access |
+
+---
+
+**Cloud Storage vs Cloud Computing**
+
+**Cloud Storage:** *Provides storage of data remotely*
+
+**Cloud Computing:** *Provides computing resources/services remotely*
+
+**Examples:** *Virtual machines, databases, servers, compute instances*
+
+---
+
+## **Motherboard**
+
+### **Motherboard**
