@@ -55,6 +55,8 @@ Hey!!!
     - [**Chipset**](#chipset)
     - [**Buses**](#buses)
     - [**Ports**](#ports)
+    - [**Expansion Slots**](#expansion-slots)
+    - [**BIOS**](#bios)
 
 
 # **Computer and Programming Foundations**
@@ -2916,6 +2918,115 @@ Control Bus → WHAT TO DO?
 
 ### **Ports**
 
+*A port is a physical connection point on a computer that allows external devices to connect and communicate with the computer.*
 
+---
+
+**Important Ports**
+
+1. **Universal Serial Bus (USB):** *USB is a general-purpose interface used for connecting peripherals and transferring data and power.*
+
+    **Examples:** *Keyboard, Mouse, Pen Drive, External SSD, Phone*
+
+    ```txt
+    Device
+    ↓
+    USB
+    ↓
+    Computer
+    ```
+
+    - *USB can carry Data and Power*
+    - *Different USB versions support different speeds and capabilities*
+
+2. **High-Definition Multimedia Interface (HDMI):** *Used mainly for transmitting Digital video + audio*
+
+3. **DisplayPort:** *DisplayPort is another digital display interface. It is commonly used to connect*
+
+    ```txt
+    Computer
+    ↓
+    DisplayPort
+    ↓
+    Monitor
+    ```
+
+    - *It can carry Digital Video + Digital audio*
+
+    **HDMI vs DisplayPort:** *Both can carry digital video and audio they are different display-interface standards.*
+
+4. **Ethernet Port:** *Also commonly called RJ-45 Ethernet port. Used for wired network connections.*
+
+5. **Audio Jack:** *Used for connecting audio devices such as Headphones, Speakers, Microphones.*
+
+6. **USB-C:** *USB-C refers to the physcial connector shape. It can support different capabilities on the implementation, including data transfer, power delivery, display output.*
+
+---
+
+**Port vs Connector**
+
+**Port:***The connection point on the computer/device.*
+
+**Connector:** *The plug at the end of a cable/device.*
+
+*Port = socket on the device. Connector = plug that goes into it.*
+
+---
+
+### **Expansion Slots**
+
+*An expansion slot is a physical slot on the motherboard used to install additional hardware components (expansion cards) to increase the computer's functionality.*
+
+**Example:** *Suppose your computer doesn't have good graphics. You can insert a graphics card (GPU) into an expansion slot on the motherboard.*
+
+```txt
+        MOTHERBOARD
+┌───────────────────────────────┐
+│                               │
+│   CPU                         │
+│   ┌───────┐                   │
+│   │       │                   │
+│   └───────┘                   │
+│                               │
+│   ┌───────────────────────┐   │
+│   │ PCIe Expansion Slot   │◄──┼── Graphics Card
+│   └───────────────────────┘   │
+│                               │
+│   ┌───────────────────────┐   │
+│   │ PCIe Expansion Slot   │◄──┼── Wi-Fi Card
+│   └───────────────────────┘   │
+└───────────────────────────────┘
+```
+
+---
+
+**Common Expansion Slots**
+
+| Slot         | Common Use                        |
+| ------------ | --------------------------------- |
+| **PCIe x16** | Graphics card (GPU)               |
+| **PCIe x4**  | NVMe adapter, network cards, etc. |
+| **PCIe x1**  | Wi-Fi, sound, USB expansion cards |
+| **PCI**      | Older expansion cards             |
+| **AGP**      | Older graphics cards              |
+
+---
+
+**PCIe**
+
+- *PCIe (Peripheral Component Interconnect Express) is the modern standard for expansion slots.*
+- *PCIe slots come in different sizes ```x1 → x4 → x8 → x16```*
+- *The number indicates the number of PCIe lanes available*
+
+```txt
+PCIe x1   → small bandwidth
+PCIe x4   → more bandwidth
+PCIe x8   → more bandwidth
+PCIe x16  → highest among these
+```
+
+---
+
+### **BIOS**
 
 
