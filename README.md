@@ -52,6 +52,7 @@ Hey!!!
   - [**Motherboard**](#motherboard)
     - [**Motherboard**](#motherboard-1)
     - [**Motherboard Components**](#motherboard-components)
+    - [**Chipset**](#chipset)
 
 
 # **Computer and Programming Foundations**
@@ -2711,6 +2712,96 @@ Components
 
 ### **Motherboard Components**
 
+*Motherboard components are the physical ports, connectors, slots, and circuits present on the motherboard that allow the computer's hardware to connect, communicate, receive power, and operate.*
+
+--- 
+
+**Main Motherboard Components**
+
+```txt
+┌──────────────────────────────────────────────┐
+│                 MOTHERBOARD                  │
+│                                              │
+│  ┌─────────────┐        ┌──────────────┐     │
+│  │ CPU SOCKET  │        │   RAM SLOTS  │     │
+│  └─────────────┘        └──────────────┘     │
+│                                              │
+│  ┌─────────────┐                             │
+│  │  CHIPSET    │                             │
+│  └─────────────┘                             │
+│                                              │
+│  ┌──────────────────────────────┐            │
+│  │     PCIe EXPANSION SLOTS     │            │
+│  └──────────────────────────────┘            │
+│                                              │
+│  SATA / M.2     BIOS/UEFI      POWER         │
+│  CONNECTORS                    CONNECTORS    │
+│                                              │
+│              REAR I/O PORTS                  │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+1. **CPU Socket:** *The CPU Socket is where the processor is installed. It provides the elctrical connection between the CPU and motherboard.*
+
+2. **RAM Slots:** *RAM modules are installed into memory slots on the motherboard. The exact number of slots depends on the motherboard. RAM slots connect system memory to the motherboard's memory subsystem.*
+
+3. **Chipset:** *The chipset is a collection of controller logic on the motherboard that helps manage communication between the CPU and various peripherals/components.*
+
+4. **Expansion Slots:** *Expansion slots allow you to install additional hardware. The most important modern example is ```PCIe - Peripheral Component Interconnect Express```. Common expansion devices include Dedicated GPU, Network card, Sound card, Storage expansion cards.*
+
+5. **Storage Connectors:** *The motherboard provides connections for storage devices.*
+
+**SATA:** *Used to connect devices such as ```HDD, SATA SDD```*
+
+**M.2:** *An M.2 slot can accommodate certain compact storage devices.*
+
+6. **BIOS/UEFI Firmware:** *The motherboard contains non-volatile storage for its firmware. This firmware helps initialize hardware and start the boot process.*
+
+7. **Power Connectors:** *The motherboard has power connectors through which it receives power from the power supply.*
+
+8. **I/O Parts:** *The motherboard provides external ports for connecting peripherals.*
+
+9. **Buses/Interconnects:** *The motherboard contains communication pathways/interconnects that allow components to exchange data and signals.*
+
+---
+
+```txt
+                         CPU
+                          │
+                    CPU Socket
+                          │
+        ┌─────────────────┼─────────────────┐
+        ↓                 ↓                 ↓
+       RAM              GPU              Storage
+    RAM Slots         PCIe Slot        SATA / M.2
+        │                 │                 │
+        └─────────────────┼─────────────────┘
+                          ↓
+                     Motherboard
+                          │
+             ┌────────────┼────────────┐
+             ↓            ↓            ↓
+          Chipset       Ports      Firmware
+```
+
+---
+
+| Component        | Purpose                                             |
+| ---------------- | --------------------------------------------------- |
+| CPU Socket       | Connects CPU                                        |
+| RAM Slots        | Connect RAM                                         |
+| Chipset          | Provides system/peripheral control and connectivity |
+| PCIe Slots       | Connect expansion devices                           |
+| SATA Connectors  | Connect SATA storage                                |
+| M.2 Slot         | Connect compatible M.2 devices                      |
+| I/O Ports        | Connect external devices                            |
+| Power Connectors | Supply power                                        |
+| Firmware Storage | Stores BIOS/UEFI firmware                           |
 
 
+---
+
+### **Chipset**
 
