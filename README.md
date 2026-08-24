@@ -53,6 +53,7 @@ Hey!!!
     - [**Motherboard**](#motherboard-1)
     - [**Motherboard Components**](#motherboard-components)
     - [**Chipset**](#chipset)
+    - [](#)
 
 
 # **Computer and Programming Foundations**
@@ -2804,4 +2805,48 @@ Components
 ---
 
 ### **Chipset**
+
+*A chipset is a set of controller logic that manages or enables communication between the CPU and various devices connected to the motherboard.*
+
+---
+
+**Older Architecture**
+
+```txt
+CPU
+ ↓
+Northbridge
+ ↓
+High-speed components
+
+Southbridge
+ ↓
+I/O devices
+```
+
+---
+
+**Modern Architecture**
+
+```txt
+             CPU
+        ┌────┴─────┐
+        ↓          ↓
+ Memory Controller  PCIe
+        │
+        ↓
+       RAM
+
+        CPU
+         │
+         ↓
+      Chipset
+         ↓
+   I/O / Connectivity
+```
+
+---
+
+### 
+
 
