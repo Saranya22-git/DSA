@@ -51,6 +51,7 @@ Hey!!!
     - [**Cloud Storage**](#cloud-storage)
   - [**Motherboard**](#motherboard)
     - [**Motherboard**](#motherboard-1)
+    - [**Motherboard Components**](#motherboard-components)
 
 
 # **Computer and Programming Foundations**
@@ -169,7 +170,7 @@ Hey!!!
 
     **Example:** *The same laptop can be used for Python programming, Watching movies, Playing games, Video editing, SQL development, AI model training.*
 
-*The hardware remains the same, but the software changes.*
+    *The hardware remains the same, but the software changes.*
 
 7. **Reliability:** *A Computer can perform tasks consistently and produce dependable results over long periods.*
 
@@ -2646,3 +2647,70 @@ Data
 ## **Motherboard**
 
 ### **Motherboard**
+
+*A Motherboard is the main printed circuit board (PCB) of a computer that connects and allows communication between major hardware components such as the ```CPU, RAM, Storage devices, GPU, Expansion Cards and other peripherals```.*
+
+---
+
+**Why do we need a Motherboard?**
+
+- *Imagine you have ```CPU RAM SSD GPU Keyboard Mouse```*
+- *These components need to communicate with each other*
+- *The motherboard provides the physical conncetions and electrical pathways that allow them to work together*
+
+```txt
+                 MOTHERBOARD
+                      │
+       ┌──────────────┼──────────────┐
+       ↓              ↓              ↓
+      CPU            RAM            GPU
+       │              │              │
+       └──────────────┼──────────────┘
+                      ↓
+                    Storage
+```
+
+---
+
+**What does the Motherboard actually provide?**
+
+*The motherboard provides*
+
+1. **CPU Socket:** *Where the CPU is installed*
+2. **RAM Slots:** *Where RAM modules are installed*
+3. **Expansion Slots:** *Used to install expansion cards such as Dedicated GPU, Network cards, Sound cards*
+4. **Storage connections:** *The motherboard provides interfaces/connectors for storage devices such as SATA drives, NVMe SSDs*
+5. **Ports:** *Ports allow external devices to connect. For example, USB, HDMI, Ethernet, Audio*
+6. **Buses/Interconnects:** *These provide communication pathways between components. For example CPU ↔ RAM, CPU ↔ GPU, CPU ↔ Storage*
+
+---
+
+**Motherboard and Power**
+
+- *The motherboard also distributes power from the computer's power supply to various components through appropriate power-delivery circuitry and connectors.*
+
+```txt
+Power Supply
+      ↓
+Motherboard
+      ↓
+Components
+```
+
+- *The motherboard also contains voltage-regulation circuitry, especially for supplying the CPU and other components with appropriate power*
+
+---
+
+**What is a PCB?**
+
+- *The motherboard is a Printed Circuit Board*
+- *A PCB is a board containing Electrical pathways, Components, Connectors, Chips, Slots.* 
+- *Those pathways allow electrical signals to travel between components*
+
+---
+
+### **Motherboard Components**
+
+
+
+
