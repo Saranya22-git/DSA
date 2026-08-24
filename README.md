@@ -53,7 +53,8 @@ Hey!!!
     - [**Motherboard**](#motherboard-1)
     - [**Motherboard Components**](#motherboard-components)
     - [**Chipset**](#chipset)
-    - [](#)
+    - [**Buses**](#buses)
+    - [**Ports**](#ports)
 
 
 # **Computer and Programming Foundations**
@@ -2754,9 +2755,9 @@ Components
 
 5. **Storage Connectors:** *The motherboard provides connections for storage devices.*
 
-**SATA:** *Used to connect devices such as ```HDD, SATA SDD```*
+    **SATA:** *Used to connect devices such as ```HDD, SATA SDD```*
 
-**M.2:** *An M.2 slot can accommodate certain compact storage devices.*
+    **M.2:** *An M.2 slot can accommodate certain compact storage devices.*
 
 6. **BIOS/UEFI Firmware:** *The motherboard contains non-volatile storage for its firmware. This firmware helps initialize hardware and start the boot process.*
 
@@ -2847,6 +2848,74 @@ I/O devices
 
 ---
 
-### 
+### **Buses**
+
+*A bus is a communication pathway that carries data, addresses, and control signlas between different components of a computer.*
+
+---
+
+**Three Traditional Types of Bus**
+
+1. **Data Bus:** *Carries the actual data between components.*
+
+    **Example:**
+    ```txt
+    CPU
+    ↓
+    Data Bus
+    ↓
+    RAM
+    ```
+
+    *If the CPU needs ```101101101``` the data bus carries the data.*
+
+2. **Address Bus:** *Carries the address of the memory location that the CPU wants to access.*
+
+   - *Suppose the CPU wants data stored at ```Address = 50000```*
+   - *The address bus carries*
+   ```txt
+   CPU
+    ↓
+   Address = 5000
+    ↓
+   RAM
+   ```
+
+3. **Control Bus:** *Carries control and coordination signals that tell components what operation should be performed.*
+
+*Control signals include Read, Write, Interrupt, Clock/Control signals.*
+
+```txt
+CPU
+ ↓
+"READ from this address"
+ ↓
+RAM
+```
+
+---
+
+```txt
+Address Bus
+→ "I want location 5000"
+
+Control Bus
+→ "READ"
+
+Data Bus
+→ "Here is the data"
+```
+
+```txt
+Data Bus    → WHAT?
+Address Bus → WHERE?
+Control Bus → WHAT TO DO?
+```
+
+---
+
+### **Ports**
+
+
 
 
