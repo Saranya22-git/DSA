@@ -64,6 +64,8 @@ Hey!!!
     - [**Parallel Processing**](#parallel-processing)
     - [**GPU in AI**](#gpu-in-ai)
     - [**GPU in Gaming**](#gpu-in-gaming)
+  - [**Operating System Basics**](#operating-system-basics)
+    - [**Operating System**](#operating-system)
 
 
 # **Computer and Programming Foundations**
@@ -3517,6 +3519,136 @@ CPU → Other application/control tasks
 ---
 
 ### **GPU in Gaming**
+
+*A GPU in gaming is responsible for performing the graphics computations required to render images and frames, including 2D/3D graphics, lighting, textures, shadows, and visual effects.*
+
+---
+
+**What happens when you play a game?**
+
+```txt
+Game
+ ↓
+CPU
+ ↓
+Game logic / physics / instructions
+ ↓
+GPU
+ ↓
+Rendering
+ ↓
+Frame
+ ↓
+Monitor
+```
+
+---
+
+**What does the GPU actually calculate?**
+
+*The GPU performs many operations involved in rendering a scene.*
+
+1. **Textures:** *Textures give objects their visual appearance.*
+   
+    ```txt
+    Wall
+    ↓
+    Texture
+    ↓
+    Brick appearance
+    ```
+
+2. **Lighting:** *The GPU calculates how light affects objects.*
+
+    ```txt
+    Light
+    ↓
+    Objects
+    ↓
+    Shadows / brightness / reflections
+    ```
+
+3. **Shading:** *Shaders are programs that determine how graphics are rendered. For example, they can help calculate Color, Lighting, Shadows, Surface appearance, Visual effects.*
+
+4. **Geometry:** *Games contain 3D objects represented using geometric data, commonly including vertices and triangles.*
+
+    ```txt
+    3D Model
+    ↓
+    Vertices / Triangles
+    ↓
+    GPU processing
+    ↓
+    Rendered object
+    ```
+
+5. **Frames:** *The GPU produces individual images called frames. Displaying them rapidly creates the appearance of motion.*
+
+---
+
+**What is FPS?**
+
+*FPS (Frames Per Second) It represents how many farmes are rendered/displayed per second.*
+
+```txt
+60 FPS
+↓
+About 60 frames per second
+```
+
+---
+
+**GPU vs CPU in gaming**
+
+```txt
+        GAME
+          │
+     ┌────┴────┐
+     ↓         ↓
+   CPU        GPU
+     ↓         ↓
+ Game logic   Graphics
+     │         │
+     └────┬────┘
+          ↓
+        Frame
+          ↓
+       Monitor
+```
+
+---
+
+**What is Ray Tracing?**
+
+*Ray tracing is a rendering technique that simulates the paths of light rays to produce more realistic lighting, reflections, and shadows.*
+
+```txt
+Light
+  ↓
+Surface
+  ↓
+Reflection / Shadow
+  ↓
+Realistic image
+```
+
+---
+
+**GPU Memory in Gaming**
+
+```txt
+Textures
+Frame buffers
+Shaders/data
+3D assets
+```
+
+---
+
+## **Operating System Basics**
+
+### **Operating System**
+
 
 
 
