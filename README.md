@@ -57,6 +57,7 @@ Hey!!!
     - [**Ports**](#ports)
     - [**Expansion Slots**](#expansion-slots)
     - [**BIOS**](#bios)
+    - [**UEFI**](#uefi)
 
 
 # **Computer and Programming Foundations**
@@ -3028,5 +3029,69 @@ PCIe x16  → highest among these
 ---
 
 ### **BIOS**
+
+*BIOS (Basic Input/Output System) is firmware stored in non-volatile memory on the motherboard that initializes hardware during startup and begins the boot process.*
+
+---
+
+**What happens when you press the Power Button?**
+
+```txt
+Power ON
+   ↓
+BIOS firmware starts
+   ↓
+Initializes/checks hardware
+   ↓
+Finds bootable device
+   ↓
+Starts boot process
+   ↓
+Operating System loads
+```
+
+---
+
+**What does BIOS do?**
+
+1. **Hardware Initialization:** *BIOS initializes essential hardware when the computer starts such as CPU, RAM, Keyboard, Storage, etc.,*
+2. **POST:** *BIOS performs or initiates POST (Power-On Self-Test). POST checks whether essential hardware is functioning sufficiently for the system to continue booting. For example, it can detect certain hardware problems during startup.*
+3. **Find a Bootable Device:** *After initialization, the firmware determines where to continue the boot process. For example, SSD, USB, Network depending on the configured boot options.*
+4. **Start the Boot Process:** *BIOS loads or transfers control to the appropriate boot code, which eventually leads to the operating system loading.*
+
+---
+
+**BIOS vs Operating System**
+
+**BIOS**
+
+```txt
+Firmware
+Runs before the OS
+Initializes hardware
+Starts boot process
+```
+
+**Operating System**
+
+```txt
+System software
+Runs after boot
+Manages CPU, memory, processes, files, devices, etc.
+```
+
+---
+
+**Can BIOS be updated?**
+
+- *Yes. Modern motherboard firmware is commonly stored in flash memory, so it can generally be updated.*
+- *A BIOS update is commonly called BIOS flashing*
+- *The update may fix bugs, improve hardware compatibility, add support for newer CPUs, address security issues.*
+
+---
+
+### **UEFI**
+
+**
 
 
