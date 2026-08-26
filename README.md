@@ -63,6 +63,7 @@ Hey!!!
     - [**CPU vs GPU**](#cpu-vs-gpu)
     - [**Parallel Processing**](#parallel-processing)
     - [**GPU in AI**](#gpu-in-ai)
+    - [**GPU in Gaming**](#gpu-in-gaming)
 
 
 # **Computer and Programming Foundations**
@@ -3352,6 +3353,173 @@ D
 ---
 
 ### **GPU in AI**
+
+*GPUs are used in AI to accelerate highly parallel mathematical computations, especially the matric and tensor operations used extensively in neural networks.*
+
+OR
+
+*AI involves huge amounts of mathematical computation → GPUs can perform many of these operations in parallel → training and inference can become much faster.*
+
+---
+
+**Why does AI need GPUs?**
+
+*Consider a neural network. A neural network performs enormous numbers of calculations such as Matrix multiplication, Vector operations, Tensor operations.*
+
+```txt
+Input
+  ↓
+Matrix multiplication
+  ↓
+Activation
+  ↓
+Matrix multiplication
+  ↓
+Activation
+  ↓
+Output
+```
+
+*A large neural network may perform millions or billions of numerical operations. Many of those operations can be parallelized. That's where the GPU helps.*
+
+---
+
+**GPU in Neural Network Training**
+
+*A simplified training process looks like*
+
+```txt
+Training Data
+      ↓
+    Model
+      ↓
+Forward Pass
+      ↓
+Prediction
+      ↓
+Calculate Error
+      ↓
+Backward Pass
+      ↓
+Update Weights
+      ↓
+Repeat
+```
+
+*the forward and backward computations involve large numerical operations.*
+
+---
+
+**What are Tensors?**
+
+*A tensor is a general mathematical data structure that can represent data in multiple dimensions.*
+
+**Example:**
+```txt
+Scalar → 0D
+Vector → 1D
+Matrix → 2D
+Tensor → General multi-dimensional array
+```
+
+---
+
+**GPU in Training vs Inference**
+
+**Training:** *The model learns from data. Training can require enormous amounts of computation. GPUs can provide substantial acceleration.*
+
+```txt
+Data
+ ↓
+Model
+ ↓
+Prediction
+ ↓
+Error
+ ↓
+Update weights
+ ↓
+Repeat
+```
+
+**Inference:** *The trained model is used to make predictions. GPUs can also accelerate inference, especially when processing many inputs or using large models.*
+
+```txt
+New Input
+   ↓
+Trained Model
+   ↓
+Prediction
+```
+
+---
+
+**GPU Memory - VRAM**
+
+*During AI worloads, VRAM may contain*
+
+```txt
+Model parameters
+Input data
+Intermediate activations
+Gradients during training
+```
+
+```txt
+          GPU
+           │
+           ↓
+          VRAM
+      ┌────┼─────┐
+      ↓    ↓     ↓
+   Model  Data  Activations
+```
+
+---
+
+**Why is VRAM important?**
+
+- *Suppose your model requires ```20 GB``` but your GPU has ```8 GB VRAM```. The entire model may not fit in VRAM at once.*
+- *This can limit performance or require techniques such as smaller batch sizes, model partitioning, offloading data, quantization.*
+
+*GPU memory capacity can limit the size and performance of AI workloads that can be handled efficiently on the GPU.*
+
+---
+
+**CPU + GPU in AI**
+
+```txt
+CPU
+ ↓
+Load / prepare data
+ ↓
+Send data to GPU
+ ↓
+GPU
+ ↓
+Parallel computation
+ ↓
+Return results
+ ↓
+CPU
+```
+
+```txt
+Dataset
+   ↓
+CPU → Data preparation
+   ↓
+GPU → Neural-network computation
+   ↓
+CPU → Other application/control tasks
+```
+
+---
+
+### **GPU in Gaming**
+
+
+
 
 
 
