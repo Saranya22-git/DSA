@@ -58,6 +58,11 @@ Hey!!!
     - [**Expansion Slots**](#expansion-slots)
     - [**BIOS**](#bios)
     - [**UEFI**](#uefi)
+  - [**GPU**](#gpu)
+    - [**GPU**](#gpu-1)
+    - [**CPU vs GPU**](#cpu-vs-gpu)
+    - [**Parallel Processing**](#parallel-processing)
+    - [**GPU in AI**](#gpu-in-ai)
 
 
 # **Computer and Programming Foundations**
@@ -3092,6 +3097,264 @@ Manages CPU, memory, processes, files, devices, etc.
 
 ### **UEFI**
 
-**
+*UEFI (Unified Extensible Firmware Interface) is modern system firmware that initializes hardware and provides the interface between the computer's firmware and the operating system during the boot process.*
+
+---
+
+**Why was UEFI introduced?**
+
+*Traditional BIOS has several limitations because it comes from an older PC architecture. UEFI was designed as a more firmware environment.*
+
+---
+
+**BIOS vs UEFI**
+
+| Traditional BIOS                      | UEFI                                 |
+| ------------------------------------- | ------------------------------------ |
+| Older firmware standard               | Modern firmware standard             |
+| Legacy design                         | Modern design                        |
+| More limited environment              | More capable firmware environment    |
+| Uses traditional boot mechanisms      | Supports modern boot mechanisms      |
+| Typically associated with MBR booting | Commonly works with GPT              |
+| Limited pre-boot functionality        | Can provide richer pre-boot features |
+
+---
+
+## **GPU**
+
+### **GPU**
+
+*GPU (Graphics Processing Unit) is a specialized processor designed to perform many computations in parallel, especially for graphics and other highly parallel workloads.*
+
+---
+
+**Why was GPU created?**
+
+- *Originally, GPUs were designed mainly to handle graphics calculations*
+- *When a game displays millions of pixels, the computer needs to perform huge numbers of similar calculations.*
+- *Many of these calculations can be performed independently.*
+- *A GPU is designed to handle this kind of workload efficiently*
+
+---
+
+**What does a GPU do?**
+
+*A GPU can perform calculations needed for things such as*
+- *Rendering images*
+- *Rendering 3D graphics*
+- *Video processing*
+- *Image processing*
+- *Machine learning*
+- *Scientific computing*
+- *Other parallel workloads*
+
+---
+
+**GPU vs Graphics Card**
+
+**GPU:** *The processor/chip that performs graphics and parallel computations*
+
+**Graphics card:** *A complete hardware board containing a GPU plus other components such as memory, power circuitry, cooling and connectors.*
+
+```txt
+Graphics Card
+┌─────────────────────────┐
+│                         │
+│   GPU                   │
+│   VRAM                  │
+│   Power circuitry       │
+│   Cooling               │
+│   Display connectors    │
+│                         │
+└─────────────────────────┘
+```
+
+---
+
+**Integrated GPU vs Dedicated GPU**
+
+**Integrated GPU:** *An integrated GPU is built into the CPU package/chip or system-on-chip and typically uses system RAM rather than having separate dedicated graphics memory.*
+
+```txt
+CPU
+┌──────────────────┐
+│ CPU cores        │
+│ Integrated GPU   │
+└──────────────────┘
+       ↓
+   System RAM
+```
+
+*Examples include integrated graphics in many laptops and desktop processors.*
+
+**Dedicated GPU:** *A dedicated GPU is a separate graphics processor, commonly installed as a discrete graphics card. It typically has its own dedicated memory called ```VRAM - Video Random Access Memory```*
+
+```txt
+CPU ─────── RAM
+ │
+ │
+PCIe
+ │
+ ↓
+Dedicated GPU
+     │
+     ↓
+    VRAM
+```
+
+---
+
+**What is VRAM?**
+
+*VRAM is memory used by the GPU to store data needed for graphics and GPU workloads.*
+
+```txt
+GPU
+ ↓
+VRAM
+ ├── Textures
+ ├── Frame data
+ ├── Graphics data
+ └── Other GPU working data
+```
+
+*A dedicated GPU commonly has its own high-speed memory.*
+
+---
+
+**Why does a GPU have many Processing Units?**
+
+*Because GPUs are designed for parallel workloads.*
+
+---
+
+**GPU is not just for Graphics**
+
+*Although GPUs were orginally developed primarily for graphics they are now widely used for general-purpose parallel computation.*
+
+```txt
+GPU
+├── Graphics
+├── AI / Machine Learning
+├── Scientific Computing
+├── Image Processing
+└── Video Processing
+```
+
+---
+
+### **CPU vs GPU**
+
+*CPU is designed for general-purpose processing and complex sequential tasks, while a GPU is designed to perform many similar operations in parallel.*
+
+---
+
+**Why are they designed differently?**
+
+*Imagine you have ```Task A B C D```*
+
+**CPU:** *A CPU is optimized to handle different kinds of tasks with sophisticated control and low latency.*
+
+```txt
+CPU
+ ├── Task A
+ ├── Task B
+ ├── Task C
+ └── Task D
+```
+
+*It is good when tasks have different instructions, branching, sequential dependencies, complex control logic.*
+
+**GPU:** *A GPU is optimized when you have a huge number of similar operations.*
+
+```txt
+GPU
+ ├── Operation 1
+ ├── Operation 2
+ ├── Operation 3
+ ├── Operation 4
+ ├── Operation 5
+ ├── ...
+ └── Operation 10000
+```
+
+*If those operations can happen independently, the GPU can process many of them concurrently.*
+
+---
+
+**CPU vs GPU**
+
+| CPU                                         | GPU                                            |
+| ------------------------------------------- | ---------------------------------------------- |
+| General-purpose processor                   | Specialized parallel processor                 |
+| Smaller number of powerful cores            | Large number of parallel processing units      |
+| Excellent for sequential/branch-heavy tasks | Excellent for highly parallel tasks            |
+| Strong control-flow capabilities            | Optimized for throughput on parallel workloads |
+| Runs OS and general applications            | Graphics, AI, scientific/parallel workloads    |
+| Large caches are important                  | High memory bandwidth is often important       |
+
+---
+
+### **Parallel Processing**
+
+*Parallel Processing is a computing technique where multiple operations are performed at the same time or concurrently to improve performance.*
+
+---
+
+**Sequential vs Parallel Processing**
+
+**Sequential Processing:** *Tasks are handled one after another*
+
+```txt
+Task 1
+  ↓
+Task 2
+  ↓
+Task 3
+  ↓
+Task 4
+```
+
+**Parallel Processing:** *Independent tasks can be handled concurrently.*
+
+```txt
+       ┌→ Task 1 ─┐
+       ├→ Task 2 ─┤
+Start ─┼→ Task 3 ─┼→ Finish
+       └→ Task 4 ─┘
+```
+
+---
+
+**Independentvs Dependent Tasks**
+
+**Independent:** *These can potentially run concurrently.*
+
+```txt
+A ─────→
+B ─────→
+C ─────→
+D ─────→
+```
+
+**Dependent:** *These have dependencies, limiting parallelism.*
+
+```txt
+A
+↓
+B
+↓
+C
+↓
+D
+```
+
+---
+
+### **GPU in AI**
+
+
+
+
 
 
