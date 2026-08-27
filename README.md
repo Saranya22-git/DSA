@@ -3649,7 +3649,43 @@ Shaders/data
 
 ### **Operating System**
 
+*An Operating System (OS) is system software that manages computer hardware and provides services and an interface for applications and users.*
 
+---
+
+**Why do we need an Operating System?**
+
+- *Imagine you have CPU, RAM, SSD, Keyboard, Mouse, GPU, Network. Applications need to use there resources.*
+- *For example Chrome → Operating System → CPU/RAM/Network/Storage. The application generally doesn't directly control the hardware itself.*
+- *The OS manages access to system resources*
+
+---
+
+**Main Responsibilities of OS**
+
+```txt
+Operating System
+│
+├── Process Management
+├── Memory Management
+├── File Management
+├── Device Management
+├── Resource Management
+└── Security / Access Control
+```
+
+---
+
+1. **Process Management:** *The OS manages running programs/processes. For example Chrome, Python, VS Code, Spotify may all be running at the same time. The OS manages their execution and resource usage.*
+
+```txt
+OS
+├── Process A
+├── Process B
+└── Process C
+```
+
+2. 
 
 
 
