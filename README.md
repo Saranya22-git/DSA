@@ -66,6 +66,7 @@ Hey!!!
     - [**GPU in Gaming**](#gpu-in-gaming)
   - [**Operating System Basics**](#operating-system-basics)
     - [**Operating System**](#operating-system)
+    - [**Types of Operating Systems**](#types-of-operating-systems)
 
 
 # **Computer and Programming Foundations**
@@ -3651,6 +3652,8 @@ Shaders/data
 
 *An Operating System (OS) is system software that manages computer hardware and provides services and an interface for applications and users.*
 
+**Examples of Operating Systems:** *Windows, Linux, macOS, Android, iOS*
+
 ---
 
 **Why do we need an Operating System?**
@@ -3678,14 +3681,132 @@ Operating System
 
 1. **Process Management:** *The OS manages running programs/processes. For example Chrome, Python, VS Code, Spotify may all be running at the same time. The OS manages their execution and resource usage.*
 
+    ```txt
+    OS
+    ├── Process A
+    ├── Process B
+    └── Process C
+    ```
+
+2. **Memory Management:** *The OS manages the system's memory resources. The OS keeps track of memory used by different processes and helps provide each process with its required memory.*
+
+    ```txt
+    Application
+        ↓
+    Requests memory
+        ↓
+    Operating System
+        ↓
+    RAM
+    ```
+
+3. **File Management:** *The OS manages files and directories. The OS provides mechanisms for Creating files, Reading files, Writing files, Deleting files, Organizing directories, Controlling access.*
+
+    ```txt
+    Documents
+    ├── resume.pdf
+    ├── project.py
+    └── notes.txt
+    ```
+
+4. **Device Management:** *The OS manages communication with hardware devices. For example, Keyboard, Mouse, Printer, Storage, Network adapter. The OS provides the software layer through which applications can interact with hardware.*
+
+    ```txt
+    Application
+        ↓
+    Operating System
+        ↓
+    Device Driver
+        ↓
+    Hardware
+    ```
+
+5. **Resource Management:** *The computer has limited resources CPU, RAM, Storage, Network. Multiple applications may want to use them. The OS coordinates their usage. The OS decides how system resources are allocated and managed.*
+
+    ```txt
+    Chrome ──┐
+    VS Code ─┼──→ OS → CPU
+    Python ──┘
+    ```
+
+6. **Security and Access Control:** *Modern operating systems control access to resources. Examples include User permission, File permissions, Process isolation, Access Control.*
+
+    ```txt
+    Application
+        ↓
+    Request access
+        ↓
+    Operating System
+        ↓
+    Allow / Deny
+    ```
+
+---
+
+**OS as a Layer**
+
+*The OS acts as an important layer between applications/users and the hardware.*
+
 ```txt
-OS
-├── Process A
-├── Process B
-└── Process C
+┌──────────────────────────┐
+│        Applications      │
+│ Chrome / Python / VS Code│
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│    Operating System      │
+│ Process / Memory / Files │
+│ Devices / Resources      │
+└────────────┬─────────────┘
+             ↓
+┌──────────────────────────┐
+│         Hardware         │
+│ CPU / RAM / SSD / GPU    │
+└──────────────────────────┘
 ```
 
-2. 
+---
+
+**Kernel**
+
+*The Kernel is the core component of an operating system that manages hardware resources and provides fundamental services to software.*
+
+```txt
+Applications
+     ↓
+System calls
+     ↓
+Kernel
+     ↓
+Hardware
+```
+
+*Examples of things the kernel manages include*
+- *CPU/Processes*
+- *Memory*
+- *Devices*
+- *File-system operations*
+
+---
+
+**OS vs Kernel**
+
+**OS:** *The complete system software environment.*
+
+**Kernel:** *The core part of the operating system*
+
+```txt
+Operating System
+├── Kernel
+├── System utilities
+├── Libraries
+├── Services
+└── Other components
+```
+
+---
+
+### **Types of Operating Systems**
 
 
 
