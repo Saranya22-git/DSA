@@ -67,6 +67,7 @@ Hey!!!
   - [**Operating System Basics**](#operating-system-basics)
     - [**Operating System**](#operating-system)
     - [**Types of Operating Systems**](#types-of-operating-systems)
+    - [**Kernel**](#kernel)
 
 
 # **Computer and Programming Foundations**
@@ -3807,6 +3808,128 @@ Operating System
 ---
 
 ### **Types of Operating Systems**
+
+*Operating Systems can be classified based on how they manage users, tasks, processors, and timing requirements.*
+
+```txt
+1. Single-user OS
+2. Multi-user OS
+3. Single-tasking OS
+4. Multitasking OS
+5. Multiprocessing OS
+6. Real-time OS
+7. Distributed OS
+8. Embedded OS
+```
+
+1. **Single-User Operating System:** *A single-user OS is designed primarily for one user to use the system at a time.*
+
+    ```txt
+    Personal computer
+        ↓
+        User
+        ↓
+        OS
+    ```
+
+2. **Multi-User Operating System:** *A multi-user OS allows multiple users to access system resources, either simultaneously or through separate sessions. Linux and Unix care commonly associates with multi-user environments.*
+
+    ```txt
+    User A ──┐
+    User B ──┼──→ Operating System
+    User C ──┘
+    ```
+
+3. **Single-Tasking Operating System:** *A single-tasking OS is designed to execute essentially one task at a time.*
+
+    ```txt
+    Task A
+    ↓
+    Finish
+    ↓
+    Task B
+    ```
+
+4. **Multitaking Operating System:** *A multitasking OS allows multiple programs/processes to make progress during the same period.*
+
+    ```txt
+    Chrome
+    VS Code
+    Python
+    Music
+    ↓
+    Operating System
+    ```
+
+    *The OS schedule CPU time among processes.*
+
+    ```txt
+    Time →
+    ────────────────────────────
+
+    CPU: A A B B C A B C C A
+    ```
+
+    *It can appear as though everything is running simultaneously, even when a single CPU core is rapidly switching between tasks.*
+
+5. **Multiprocessing Operating System:** *A multiprocessing OS supports systems with multiple processing units/CPU cores and can execute multiple processes/threads concurrently across those resources.*
+
+    ```txt
+    CPU
+    ├── Core 1 → Process A
+    ├── Core 2 → Process B
+    ├── Core 3 → Process C
+    └── Core 4 → Process D
+    ```
+
+6. **Real-Time Operating System (RTOS):** *A real-time operating system is designed to provide predictable responses within specified timing constraints. Examples include Medical devices, Automotive control systems, Industrial controllers, Robotics, Aerospace systems.*
+
+    ```txt
+    Sensor detects event
+        ↓
+    RTOS
+        ↓
+    Process event within required time
+        ↓
+    Controller responds
+    ```
+
+7. **Distributed Operating System:** *A distributed OS is designed to coordinate resources and activities across multiple networked computers, presenting aspects of the distributed system as an integrated environment.*
+
+    ```txt
+    Computer A ──┐
+    Computer B ──┼──→ Distributed System
+    Computer C ──┘
+    ```
+
+8. **Embedded Operating System:** *An embedded OS is designed for specialized devices with specific functions and resource constraints. Examples include Smart appliances, Routers, IoT devices, Automotive systems, Industrail controllers.*
+
+    ```txt
+    Embedded Device
+        ↓
+    Embedded OS
+        ↓
+    Specific Function
+    ```
+
+---
+
+| Type            | Main idea                                      |
+| --------------- | ---------------------------------------------- |
+| Single-user     | Primarily one user at a time                   |
+| Multi-user      | Supports multiple users/sessions               |
+| Single-tasking  | One task at a time                             |
+| Multitasking    | Multiple tasks make progress                   |
+| Multiprocessing | Uses multiple processing resources             |
+| Real-time       | Predictable response within timing constraints |
+| Distributed     | Coordinates across multiple computers          |
+| Embedded        | Designed for specialized devices               |
+
+---
+
+### **Kernel**
+
+**
 
 
 
