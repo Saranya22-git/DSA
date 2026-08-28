@@ -3929,7 +3929,7 @@ Operating System
 
 ### **Kernel**
 
-**
+*The kernel is the core component of an operating system that manages hardware resources and provides essential services to programs.*
 
 
 
