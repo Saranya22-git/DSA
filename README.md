@@ -4016,6 +4016,89 @@ Kernel
 
 **System Calls**
 
+*A system call is a mechanism through which a user-level program requests a service from the operating system/kernel.*
+
+```txt
+Program
+   ↓
+System Call
+   ↓
+Kernel
+   ↓
+Hardware/resource
+```
+
+*Suppose a program wants to read a file*
+
+```txt
+Application
+     ↓
+read() system call
+     ↓
+Kernel
+     ↓
+File system
+     ↓
+Storage
+```
+
+---
+
+**User Mode vs Kernel Mode**
+
+**User Mode:** *Normal applications generally run here. For example Chrome, Python, VS Code. They have restritced access to hardware and sensitive system resources.*
+
+**Kernel Mode:** *The kernel runs with higher privileges and can access protected system resources.*
+
+```txt
+User Mode
+   ↓
+System Call
+   ↓
+Kernel Mode
+   ↓
+Hardware / Protected Resources
+```
+
+---
+
+**Kernel vs Operating System**
+
+**Operating System:** *The complete system software environment.*
+
+**Kernel:** *The core component responsible for fundamental resource management and hardware interaction.*
+
+```txt
+Operating System
+│
+├── Kernel
+├── System Services
+├── Utilities
+├── Libraries
+└── Other Components
+```
+
+---
+
+**Kernel vs Shell**
+
+**Kernel:** *Core component that interacts with hardware and manage resources.*
+
+**Shell:** *A user interface that allows users to interact with the operating system, often through commands.*
+
+```txt
+User
+ ↓
+Shell
+ ↓
+Operating System / Kernel
+ ↓
+Hardware
+```
+
+**Examples of Shell:** *Bash, PowerShell*
+
+---
 
 
 
