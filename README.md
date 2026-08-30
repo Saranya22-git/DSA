@@ -3931,6 +3931,93 @@ Operating System
 
 *The kernel is the core component of an operating system that manages hardware resources and provides essential services to programs.*
 
+---
+
+**Why do we need a Kernel?**
+
+- *Suppose Python wants to create a file.*
+- *Python doesn't normally directly control the SSD hardware.*
+- *Instead*
+```txt
+Python Program
+      ↓
+Operating System
+      ↓
+Kernel
+      ↓
+Storage Driver / Hardware
+      ↓
+SSD
+```
+- *The kernel handles the low-level resource management required to perform the operation.*
+
+---
+
+**What does the Kernel manage?**
+
+```txt
+Kernel
+├── Process Management
+├── Memory Management
+├── Device Management
+├── File/System I/O
+└── CPU Scheduling
+```
+
+---
+
+1. **Process Management:** *The kernel manages processes. For example Chrome, Python, VS Code. The kernel helps create processes, terminate processes, schedule processes, manage process resources.*
+
+2. **Memory Management:** *The kernel manages memory allocation and protection. For example*
+
+    ```txt
+    Process A → Memory
+    Process B → Memory
+    Process C → Memory
+    ```
+
+    *The kernel helps ensure that processes have appropriate access to memory.*
+
+3. **Device Management:** *The kernel manages interactions with hardware devices through appropriate mechanisms, including device drivers.*
+
+    ```txt
+    Application
+        ↓
+    Kernel
+        ↓
+    Device Driver
+        ↓
+    Keyboard / Disk / Network / GPU
+    ```
+
+4. **File/System I/O:** *When a program needs to read or write data, the request ultimately goes through operating system mechanisms managed by the kernel.*
+
+    ```txt
+    Python
+    ↓
+    Read file
+    ↓
+    Kernel
+    ↓
+    File system / storage
+    ↓
+    Data
+    ```
+
+5. **CPU Scheduling:** *Multiple processes may need CPU time. The kernel decides which runnable work gets CPU time according to the operating system's scheduling mechanisms.*
+
+    ```txt
+    Process A ─┐
+    Process B ─┼→ Kernel → CPU
+    Process C ─┘
+    ```
+
+---
+
+**System Calls**
+
+
+
 
 
 
