@@ -72,6 +72,7 @@ Hey!!!
     - [**Program**](#program)
     - [**Thread**](#thread)
     - [**Process vs Thread**](#process-vs-thread)
+    - [**Multitasking**](#multitasking)
 
 
 # **Computer and Programming Foundations**
@@ -4541,6 +4542,10 @@ One Process
 ```
 - *The threads can share resources of the same process.*
 - *Therefore, threads are generally lighter-weight than processes.*
+
+---
+
+### **Multitasking**
 
 
 
