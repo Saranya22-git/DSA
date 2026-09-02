@@ -68,6 +68,7 @@ Hey!!!
     - [**Operating System**](#operating-system)
     - [**Types of Operating Systems**](#types-of-operating-systems)
     - [**Kernel**](#kernel)
+    - [**Process**](#process)
 
 
 # **Computer and Programming Foundations**
@@ -4099,6 +4100,289 @@ Hardware
 **Examples of Shell:** *Bash, PowerShell*
 
 ---
+
+### **Process**
+
+*A process is a program that is currently being executed, along with the resources and execution state associated with it.*
+
+---
+
+**Program vs Process**
+
+**Program:** *Passive code*
+
+**Process:** *Program in execution*
+
+*Suppose you have a Python file*
+
+```python
+print("Hello")
+```
+
+- *The .py file stored on your SSD is a Program.*
+- *When you execute it*
+```txt
+Python program
+      ↓
+   Execute
+      ↓
+   Process
+```
+- *The running process has things such as Code, Data, Execution state, Memory, Resources.*
+
+---
+
+**Example:** *You have ```chrome.exe``` stored on your computer. That's a program. When you open Chrome*
+
+```txt
+chrome.exe
+   ↓
+Operating System
+   ↓
+Running process
+```
+
+*The OS creates/manages a process for the running application.*
+
+---
+
+**What does a process contain?**
+
+```txt
+Process
+├── Program Code
+├── Data
+├── Stack
+├── Heap
+├── CPU/Execution State
+└── Resources
+```
+
+---
+
+**Process has an Address Space**
+
+*A process generally has its own virtual address space.*
+
+```txt
+Process A
+┌─────────────────┐
+│ Code            │
+│ Data            │
+│ Heap            │
+│ Stack           │
+└─────────────────┘
+
+Process B
+┌─────────────────┐
+│ Code            │
+│ Data            │
+│ Heap            │
+│ Stack           │
+└─────────────────┘
+```
+
+*This isolation helps prevent one process from directly accessing another process's memory under normal OS protection mechanisms.*
+
+---
+
+**Process States**
+
+*A process doesn't simply remain "running" all the time. It can move through different states.*
+
+```txt
+New
+ ↓
+Ready
+ ↓
+Running
+ ↓
+Terminated
+```
+
+*There can also be a*
+
+```txt
+Running
+   ↓
+Waiting / Blocked
+   ↓
+Ready
+```
+
+---
+
+**What do these States mean?**
+
+1. **New:** *The process is being created.*
+
+    ```txt
+    Program
+    ↓
+    Process creation
+    ↓
+    New
+    ```
+
+2. **Ready:** *The process is ready to run but is waiting for CPU time.*
+
+    ```txt
+    Ready
+    ↓
+    Waiting for CPU
+    ```
+
+3. **Running:** *The process is currently executing on a CPU.*
+
+    ```txt
+    CPU
+    ↓
+    Running Process
+    ```
+
+4. **Waiting/Blocked:**  *The process cannot continue until some event/resource becomes available.*
+
+    *For example it may be waiting for*
+
+    ```txt
+    File I/O
+    Network response
+    Input
+    Resource
+    ```
+
+    ```txt
+    Running
+    ↓
+    Waiting for I/O
+    ↓
+    I/O completes
+    ↓
+    Ready
+    ```
+
+5. **Terminal:** *The process has finished execution.*
+
+    ```txt
+    Running
+    ↓
+    Finished
+    ↓
+    Terminated
+    ```
+
+---
+
+**Process State Diagram**
+
+```txt
+             ┌──────────┐
+             │   New    │
+             └────┬─────┘
+                  ↓
+             ┌──────────┐
+        ┌───→│  Ready   │←─────────┐
+        │    └────┬─────┘          │
+        │         ↓                │
+        │    ┌──────────┐          │
+        │    │ Running  │          │
+        │    └──┬───┬───┘          │
+        │       │   │              │
+        │       │   ↓              │
+        │       │ Waiting ─────────┘
+        │       │
+        │       ↓
+        │  ┌───────────┐
+        └──│Terminated │
+           └───────────┘
+```
+
+---
+
+**Who manages Processes?**
+
+- *The Operating System, particularly the kernel manages processes.*
+- *It handles things such as*
+    
+```txt
+Process creation
+Process scheduling
+Process termination
+Resource allocation
+Process isolation
+```
+
+```txt
+Processes
+   ↓
+Kernel
+   ↓
+CPU / Memory / Resources
+```
+
+---
+
+**Process Control Block (PCB)**
+
+- *The OS maintains information about each process in a structure commonly called as PCB (Process Control Block).*
+- *A PCB can contain information such as*
+
+```txt
+PCB
+├── Process ID (PID)
+├── Process state
+├── Program counter
+├── CPU register information
+├── Scheduling information
+└── Resource information
+```
+
+**Process ID:** *Every process is associated with an identifier called as Process ID (PID).*
+
+*For example*
+```txt
+Process A → PID 101
+Process B → PID 102
+Process C → PID 103
+```
+
+*The exact PID format varies by Operating System.*
+
+---
+
+**Context Switching**
+
+- *Suppose CPU - Process A*
+- *The OS needs to switch to Process B*
+- *The OS saves relevant execution information for A and loads the relevant information for B*
+- *This is called Context Switching*
+
+---
+
+**Process Creation**
+
+*A process can create another process.*
+
+```txt
+Parent Process
+      ↓
+Child Process
+```
+
+*This relationship is common in operating system.*
+
+*For example*
+
+```txt
+Parent
+  ├── Child 1
+  └── Child 2
+```
+
+*The exact process-creation mechanism differs between operating systems.*
+
+---
+
 
 
 
