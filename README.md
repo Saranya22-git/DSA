@@ -69,6 +69,7 @@ Hey!!!
     - [**Types of Operating Systems**](#types-of-operating-systems)
     - [**Kernel**](#kernel)
     - [**Process**](#process)
+    - [**Program**](#program)
 
 
 # **Computer and Programming Foundations**
@@ -4382,6 +4383,38 @@ Parent
 *The exact process-creation mechanism differs between operating systems.*
 
 ---
+
+### **Program**
+
+*A program is a set of instructions written to perform a specific task.*
+
+---
+
+**Program vs Process**
+
+**Program:** *A program is passive. It is a set of instructions stored somewhere, such as on an SSD.*
+
+```txt
+Python file
+     ↓
+Stored on SSD
+     ↓
+Program
+```
+
+**Process:** *When that program is executed, it becomes a running process.*
+
+```txt
+Program
+   ↓
+Execute
+   ↓
+Process
+```
+
+---
+
+
 
 
 
