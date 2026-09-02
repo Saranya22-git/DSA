@@ -70,6 +70,7 @@ Hey!!!
     - [**Kernel**](#kernel)
     - [**Process**](#process)
     - [**Program**](#program)
+    - [\*\*\*\*](#)
 
 
 # **Computer and Programming Foundations**
@@ -4413,6 +4414,39 @@ Process
 ```
 
 ---
+
+**Does a program have its own memory?**
+
+- *A program stored on disk is simply code/data.*
+- *Once it is executed as a process, the OS provides the process with a virtual address space and associated resources.*
+
+```txt
+Program on Storage
+        ↓
+     Execute
+        ↓
+     Process
+        ↓
+Memory + Execution State
+```
+
+---
+
+**Can One program create Multiple Processes?**
+
+*Yes. Suppose Program = Calculator. You start it multiple times. Each running instance is a separate process.*
+
+```txt
+Calculator Program
+       │
+       ├── Process 1
+       ├── Process 2
+       └── Process 3
+```
+
+---
+
+### ****
 
 
 
