@@ -71,6 +71,7 @@ Hey!!!
     - [**Process**](#process)
     - [**Program**](#program)
     - [**Thread**](#thread)
+    - [**Process vs Thread**](#process-vs-thread)
 
 
 # **Computer and Programming Foundations**
@@ -4490,6 +4491,56 @@ Process
 
 ---
 
+### **Process vs Thread**
+
+**Process:** *A process is a running instance of a program.*
+
+**Thread:** *A thread is an execution unit within a process.*
+
+---
+
+**Differences**
+
+| Process                                                    | Thread                                                        |
+| ---------------------------------------------------------- | ------------------------------------------------------------- |
+| Independent unit of execution                              | Execution unit within a process                               |
+| Has its own virtual address space                          | Threads of the same process share the process's address space |
+| Processes are more isolated                                | Threads are less isolated from each other                     |
+| Creating/switching processes generally has more overhead   | Creating/switching threads generally has less overhead        |
+| Communication between processes often needs IPC mechanisms | Threads can communicate through shared process resources      |
+| Failure is generally more isolated                         | A serious thread failure can affect the whole process         |
+
+---
+
+**Example:** *Imagine a browser process*
+
+```txt
+Browser Process
+│
+├── Thread 1 → User interface
+├── Thread 2 → Webpage work
+├── Thread 3 → Network work
+└── Thread 4 → Audio
+```
+
+*All these threads belong to the same process. They can share resources belonging to that process.*
+
+---
+
+**Why are Threads Lighter?**
+
+- *Suppose we need to perform two related tasks.*
+- *Using separate processes Process 1 and Process 2*
+- *Each process needs its own execution environment and address space.*
+- *Using threads*
+```txt
+One Process
+│
+├── Thread 1
+└── Thread 2
+```
+- *The threads can share resources of the same process.*
+- *Therefore, threads are generally lighter-weight than processes.*
 
 
 
