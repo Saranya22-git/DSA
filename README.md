@@ -70,7 +70,7 @@ Hey!!!
     - [**Kernel**](#kernel)
     - [**Process**](#process)
     - [**Program**](#program)
-    - [\*\*\*\*](#)
+    - [**Thread**](#thread)
 
 
 # **Computer and Programming Foundations**
@@ -4446,8 +4446,49 @@ Calculator Program
 
 ---
 
-### ****
+### **Thread**
 
+*A thread is the smallest unit of execution within a process.*
+
+OR
+
+*A process can contain one or more threads, and threads perform the actual execution of tasks within the process.*
+
+**Example:** *Suppose you open a web browser*
+
+```txt
+Browser Process
+│
+├── Thread 1 → Handle user input
+├── Thread 2 → Load a webpage
+├── Thread 3 → Play audio
+└── Thread 4 → Download a file
+```
+
+*These threads belong to the same process.*
+
+---
+
+**Process → Thread relationship**
+
+```txt
+Process
+   │
+   ├── Thread 1
+   ├── Thread 2
+   └── Thread 3
+```
+
+- *A process is a container for execution, while threads are execution units inside that process.*
+- *A process can have One thread (single-threaded process) and Multiple threads (multithreaded process)*
+
+---
+
+**Do threads have their own memory?**
+
+*Threads belonging to the same process share the process's resources/address space, but each thread has its own execution state, such as its own program counter and CPU register state.*
+
+---
 
 
 
