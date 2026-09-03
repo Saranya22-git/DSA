@@ -75,6 +75,7 @@ Hey!!!
     - [**Multitasking**](#multitasking)
     - [**Multiprocessing**](#multiprocessing)
     - [**Multithreading**](#multithreading)
+    - [**CPU Scheduling**](#cpu-scheduling)
 
 
 # **Computer and Programming Foundations**
@@ -4683,7 +4684,39 @@ Browser Process
 
 ---
 
+**Multithreading vs Multiprocessing**
 
+**Multithreading:** *Multiple threads work within the same process.*
+
+```txt
+One Process
+│
+├── Thread 1
+├── Thread 2
+└── Thread 3
+```
+
+**Multiprocessing:** *Multiple processes use multiple processing resources.*
+
+```txt
+Process 1 → Core 1
+Process 2 → Core 2
+Process 3 → Core 3
+```
+
+| Multithreading                                    | Multiprocessing                                              |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| Multiple threads                                  | Multiple processes                                           |
+| Threads belong to processes                       | Processes are separate execution units                       |
+| Threads in same process share process resources   | Processes have separate virtual address spaces               |
+| Generally lower overhead                          | Generally higher overhead                                    |
+| Useful for concurrent tasks within an application | Useful when separate processes need to execute independently |
+
+---
+
+### **CPU Scheduling**
+
+**
 
 
 
