@@ -73,6 +73,7 @@ Hey!!!
     - [**Thread**](#thread)
     - [**Process vs Thread**](#process-vs-thread)
     - [**Multitasking**](#multitasking)
+    - [**Multiprocessing**](#multiprocessing)
 
 
 # **Computer and Programming Foundations**
@@ -4565,7 +4566,38 @@ Edit a document
 
 ---
 
+**Are all tasks literally running at the exact same time?**
 
+- *Not necessarily*
+- *On a single CPU core, only one instruction stream can execute at an instant. The OS can rapidly switch between tasks*
+    ```txt
+    Time →
+    ──────────────────────────────>
+
+    Task A → Task B → Task C → Task A → Task B
+    ```
+- *Because switching happens very quickly it appears that everything is happening simultaneously.*
+- *This is called concurrency*
+
+---
+
+**What if the Computer has multiple CPU cores?**
+
+- *Then multiple tasks can actually execute in parallel on different cores*
+- *For example*
+    ```txt
+    Core 1 → Task A
+    Core 2 → Task B
+    Core 3 → Task C
+    Core 4 → Task D
+    ```
+- *That's parallelism*
+- **Concurrency:** *Multiple tasks make progress over the same period*
+- **Parallelism:** *Multiple tasks literally execute at the same time using multiple processing resources.*
+
+---
+
+### **Multiprocessing**
 
 
 
