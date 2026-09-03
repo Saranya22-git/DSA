@@ -74,6 +74,7 @@ Hey!!!
     - [**Process vs Thread**](#process-vs-thread)
     - [**Multitasking**](#multitasking)
     - [**Multiprocessing**](#multiprocessing)
+    - [**Multithreading**](#multithreading)
 
 
 # **Computer and Programming Foundations**
@@ -4597,7 +4598,71 @@ Edit a document
 
 ---
 
+**Example:** *Suppose you're using your computer*
+
+```txt
+Chrome → browsing
+Spotify → playing music
+File Manager → copying a file
+VS Code → running Python
+```
+
+*The operating system coordinates these activities and allocates CPU time and other resources. That's multitasking.*
+
+---
+
 ### **Multiprocessing**
+
+*Multiprocessing is the use of multiple processing units (typically CPU cores) to execute multiple processes concurrently or in parallel.*
+
+*For example, suppose your computer has 4 CPU cores:*
+
+```txt
+Core 1 → Process A
+Core 2 → Process B
+Core 3 → Process C
+Core 4 → Process D
+```
+
+*Multiple processes can execute in parallel.*
+
+---
+
+**Example:** *Suppose you're doing this*
+
+```txt
+Chrome        → Process 1
+VS Code       → Process 2
+Spotify       → Process 3
+Python        → Process 4
+```
+
+*On a multi-core CPU, different processes can execute on different cores.*
+
+```txt
+              CPU
+       ┌──────┼──────┐
+       ↓      ↓      ↓
+     Core 1 Core 2 Core 3 Core 4
+       ↓      ↓      ↓      ↓
+      P1     P2     P3     P4
+```
+
+*This is multiprocessing*
+
+---
+
+**Multiprocessing vs Multitasking**
+
+**Multitasking:** *Multiple tasks making progress during the same period.*
+
+**Multiprocessing:** *Using multiple processing units to execute multiple processes.*
+
+---
+
+### **Multithreading**
+
+**
 
 
 
