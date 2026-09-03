@@ -4906,6 +4906,23 @@ P2 waits for P1
 
 ### **File System**
 
+*A file system is the method of an operating system uses to organize, store, name and manage files and directories on a storage device.*
+
+*For example, when you create*
+
+```txt
+Documents
+│
+├── resume.pdf
+├── notes.txt
+└── project.docx
+```
+
+*The operating system uses a file system to manage these files and directories.*
+
+---
+
+
 
 
 
