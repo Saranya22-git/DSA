@@ -76,6 +76,7 @@ Hey!!!
     - [**Multiprocessing**](#multiprocessing)
     - [**Multithreading**](#multithreading)
     - [**CPU Scheduling**](#cpu-scheduling)
+    - [**Deadlock**](#deadlock)
 
 
 # **Computer and Programming Foundations**
@@ -4745,6 +4746,85 @@ Process B
 ```
 
 ---
+
+**Important Terms**
+
+1. **Ready Process:** *A process that is ready to execute but waiting for CPU time.*
+
+    **Example:**
+    ```txt
+    Process A → Ready
+    Process B → Ready
+    Process C → Ready
+    ```
+
+    *They wait in a ready queue.*
+
+2. **CPU Scheduler:** *The CPU scheduler is the OS component that selects a process/thread from the ready queue to run.*
+
+    ```txt
+    Ready Queue
+        │
+        ↓
+    CPU Scheduler
+        │
+        ↓
+    Selected Process
+        │
+        ↓
+        CPU
+    ```
+
+3. **Scheduling Algorithm:** *The OS uses a scheduling strategy/algorithm to decide which process should run next.*
+
+*Common example include:*
+- **FCFS** *First Come, First Served*
+- **SJF** *Shortest Job First*
+- **Round Robin** 
+- **Priority Scheduling**
+
+---
+
+**Example:** *Suppose three processes are waiting*
+
+```txt
+Ready Queue
+
+P1 → P2 → P3
+```
+
+*The scheduler selects P1*
+
+```txt
+P1
+ ↓
+CPU
+```
+
+*After P1 finishes or gives up the CPU, the scheduler can select another process*
+
+```txt
+P2
+ ↓
+CPU
+```
+
+*then*
+
+```txt
+P3
+ ↓
+CPU
+```
+
+*This allows multiple processes to make progress*
+
+---
+
+### **Deadlock**
+
+**
+
 
 
 
