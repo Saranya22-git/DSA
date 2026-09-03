@@ -4547,6 +4547,24 @@ One Process
 
 ### **Multitasking**
 
+*Multitasking is the ability of an operating system to manage and make progress on multiple tasks during the same period of time.*
+
+*For example, on your laptop you might*
+
+```txt
+Listen to music
+       +
+Browse Chrome
+       +
+Download a file
+       +
+Edit a document
+```
+
+*The OS manages all these activities.*
+
+---
+
 
 
 
