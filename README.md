@@ -5166,6 +5166,87 @@ Your Computer
 
 ### **Types of Networks**
 
+**What are Types of Networks?**
+
+*Networks can be classified based on the geographical area they cover.*
+
+*The three important types are*
+
+```txt
+LAN → Small area
+MAN → City / metropolitan area
+WAN → Large geographical area
+```
+
+```txt
+Small ───────────────→ Large
+
+LAN       MAN        WAN
+🏠        🏙️          🌍
+```
+
+---
+
+1. **Local Area Network (LAN):** *A LAN connects devices within a small geographical area.*
+
+    **Examples:**
+    - *Home*
+    - *Office*
+    - *School*
+    - *Computer Lab*
+
+    ```txt
+            Router
+            /  |  \
+            /   |   \
+    Laptop PC   Phone
+    ```
+
+    *All these devices can be connected within your home.*
+
+2. **Metropolitan Area Network (MAN):** *A MAN cover a large area than a LAN, typically a city or metropolitan region.*
+
+    *For example, imagine several locations belonging to an organization across a city.*
+
+    ```txt
+    Office A ─────┐
+                │
+    Office B ─────┼── MAN
+                │
+    Office C ─────┘
+    ```
+
+3. **Wide Area Network (WAN):** *A WAN covers a large geographical area, potentially across cities, countries or continents.*
+
+    **Example:**
+    ```txt
+    City A
+    │
+    │
+    City B
+    │
+    │
+    Country B
+    │
+    │
+    Country C
+    ```
+
+    *A well-known example is the Internet, which connects networks across the world.*
+
+---
+
+**LAN vs MAN vs WAN**
+
+| Feature        | LAN                | MAN                            | WAN               |
+| -------------- | ------------------ | ------------------------------ | ----------------- |
+| Full form      | Local Area Network | Metropolitan Area Network      | Wide Area Network |
+| Coverage       | Small              | City/metropolitan              | Very large        |
+| Example        | Home network       | City-wide organization network | Internet          |
+| Relative scope | Smallest           | Medium                         | Largest           |
+
+---
+
 
 
 
