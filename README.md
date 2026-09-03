@@ -78,6 +78,7 @@ Hey!!!
     - [**CPU Scheduling**](#cpu-scheduling)
     - [**Deadlock**](#deadlock)
     - [**File System**](#file-system)
+  - [\*\*\*\*](#)
 
 
 # **Computer and Programming Foundations**
@@ -4922,8 +4923,107 @@ Documents
 
 ---
 
+**Why do we need a File System?**
 
+- *Imagine an SSD containing thousands of files*
+- *Without an organized method the OS would have difficulty answering questions like*
 
+```txt
+Where is resume.pdf?
+Where is photo.jpg?
+Which files are inside Documents?
+How large is this file?
+Who can access this file?
+```
+
+- *The file system provides the structure and metadata needed to manage them.*
+
+---
+
+**Files and Directories**
+
+*A file system generally organizes data using*
+
+**File:** *A file stores data*
+
+**Example:**
+
+```txt
+resume.pdf
+photo.jpg
+data.csv
+program.exe
+notes.txt
+```
+
+**Directory:** *A directory (folder) organizes files and other directories.*
+
+**Example:**
+
+```txt
+Documents
+│
+├── Resume
+│   └── resume.pdf
+│
+└── Projects
+    ├── project1.py
+    └── project2.py
+```
+
+---
+
+**What does the File System Manage?**
+
+*At a basic level, it manages things such as*
+- *File Names*
+- *Directories/folders*
+- *File locations on storage*
+- *File sizes*
+- *File metadata*
+- *Access permissions*
+- *Free and used storage space*
+
+*For example, a file may have metadata such as*
+
+```txt
+File: resume.pdf
+Size: 2 MB
+Location: Documents/
+Permissions: ...
+```
+
+---
+
+**Examples of File Systems**
+
+| File System | Common association                         |
+| ----------- | ------------------------------------------ |
+| **NTFS**    | Windows                                    |
+| **FAT32**   | USB drives, older/widely supported storage |
+| **exFAT**   | Flash drives and removable storage         |
+| **ext4**    | Linux                                      |
+| **APFS**    | Apple devices                              |
+
+---
+
+**File System vs Storage Device**
+
+**Storage device:** *The physical device that stores data SSD, HDD, USB drive.*
+
+**File System:** *The organization/management structure used on that storage.*
+
+```txt
+SSD
+ ↓
+File System
+ ↓
+Folders + Files
+```
+
+---
+
+## ****
 
 
 
