@@ -4662,7 +4662,30 @@ Python        → Process 4
 
 ### **Multithreading**
 
-**
+*Multithreading is the execution or management of multiple threads within a process.*
+
+OR
+
+*Multithreading is one process having multiple threads that can work on different tasks.*
+
+**Example:**
+
+```txt
+Browser Process
+│
+├── Thread 1 → Handle user input
+├── Thread 2 → Load webpage
+├── Thread 3 → Download data
+└── Thread 4 → Play audio
+```
+
+*All these threads belong to the same browser process.*
+
+---
+
+
+
+
 
 
 
