@@ -77,6 +77,7 @@ Hey!!!
     - [**Multithreading**](#multithreading)
     - [**CPU Scheduling**](#cpu-scheduling)
     - [**Deadlock**](#deadlock)
+    - [**File System**](#file-system)
 
 
 # **Computer and Programming Foundations**
@@ -4823,7 +4824,88 @@ CPU
 
 ### **Deadlock**
 
-**
+*Deadlock is a situation where two or more processes are permanently waiting for resources held by each other, so none of them can continue.*
+
+OR
+
+*Deadlock is nothing but everyone is waiting and nobody can move forward.*
+
+---
+
+**Example:** *Suppose there are 2 resources ```Resource A``` ```Resource B``` and 2 processes ```P1``` ```P2```.*
+
+*Initially*
+
+```txt
+P1 → holds Resource A
+P2 → holds Resource B
+```
+
+*Now*
+
+```txt
+P1 → needs Resource B
+P2 → needs Resource A
+```
+
+*So*
+
+```txt
+P1 ──holds──→ A
+P1 ──waiting→ B
+
+P2 ──holds──→ B
+P2 ──waiting→ A
+```
+
+*Neither can continue*
+
+```txt
+P1 waits for P2
+      ↕
+P2 waits for P1
+```
+
+*That's a deadlock*
+
+---
+
+**Four conditions for Deadlock**
+
+*A deadlock can occur when these four conditions exist together*
+
+1. **Mutual Exclusion:** *A resource can be used by only one process at a time.*
+
+    ```txt
+    P1 → Resource A
+    P2 → cannot use A simultaneously
+    ```
+
+2. **Hold and Wait:** *A process is holding one resource while waiting for another.*
+   
+    ```txt
+    P1
+    │
+    ├── holds A
+    └── waits for B
+    ```
+
+3. **No Preemption:** *A resource cannot simply be forcibly taken away from the process holding it. The process must release it itself.*
+   
+4. **Circular Wait:** *There is a circular chain of processes waiting for each other. The waiting forms a circle.*
+
+    ```txt
+    P1 → waits for P2
+    P2 → waits for P3
+    P3 → waits for P1
+    ```
+
+*All four conditions must be present for a classic deadlock to occur. If the system prevents at least one of these conditions, deadlock can be prevented.*
+
+---
+
+### **File System**
+
 
 
 
