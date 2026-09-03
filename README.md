@@ -78,7 +78,9 @@ Hey!!!
     - [**CPU Scheduling**](#cpu-scheduling)
     - [**Deadlock**](#deadlock)
     - [**File System**](#file-system)
-  - [\*\*\*\*](#)
+  - [**Computer Networks**](#computer-networks)
+    - [**Network**](#network)
+    - [**Types of Networks**](#types-of-networks)
 
 
 # **Computer and Programming Foundations**
@@ -5023,7 +5025,147 @@ Folders + Files
 
 ---
 
-## ****
+## **Computer Networks**
+
+### **Network**
+
+*A computer network is a collection of two or more devices connected together so they can communicate and share data or resources.*
+
+*For example*
+
+```txt
+Laptop ─────── Router ─────── Phone
+                  │
+                  └────────── Smart TV
+```
+
+*These devices can communicate through the network.*
+
+---
+
+**What can devices share?**
+
+*A network allows devices to exchange things such as*
+- *Data*
+- *Files*
+- *Messages*
+- *Internet access*
+- *Printers and other resources*
+- *Services*
+
+*For example, when you send a file from your laptop to another computer*
+
+```txt
+Laptop
+  │
+  │ File
+  ↓
+Network
+  │
+  ↓
+Another Computer
+```
+
+---
+
+**Example:** *Internet*
+
+*The Internet is a massive network of interconnected networks.*
+
+*Your laptop might connect like this*
+
+```txt
+Laptop
+   ↓
+Wi-Fi Router
+   ↓
+ISP
+   ↓
+Internet
+   ↓
+Google / YouTube / Website Server
+```
+
+*When you open a website, your device communicates with another computer/server through a network.*
+
+---
+
+**Network does not necessarily mean Internet**
+
+- *You can have a network without Internet access*
+- *For example*
+
+```txt
+Computer A ─── Computer B
+      │
+      └────── Printer
+```
+
+- *These devices can communicate with each other even if there is no connection to the internet.*
+- *So Network ≠ Internet*
+
+---
+
+**Basic Components of a Network**
+
+1. **Devices/Nodes:** *Devices connected to the network. A device participating in a network can be called a node.*
+
+    **Examples:**
+    ```txt
+    Laptop
+    Phone
+    Server
+    Printer
+    Router
+    ```
+
+2. **Communication Medium:** *The path thorugh which data travels.*
+
+    **Examples:**
+    ```txt
+    Wired → Ethernet cable
+    Wireless → Wi-Fi
+    ```
+
+3. **Network Devices:** *Devices that help connect or manage communication*
+
+    **Examples:**
+    ```txt
+    Router
+    Switch
+    Access Point
+    ```
+
+---
+
+**Network Communication**
+
+*Suppose your browser requests a webpage*
+
+```txt
+Your Computer
+      │
+      │ Request
+      ↓
+    Network
+      │
+      ↓
+ Web Server
+      │
+      │ Response
+      ↓
+    Network
+      │
+      ↓
+Your Computer
+```
+
+*This basic ```request → response``` pattern is fundamental to web applications.*
+
+---
+
+### **Types of Networks**
+
 
 
 
