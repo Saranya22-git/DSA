@@ -4716,7 +4716,35 @@ Process 3 → Core 3
 
 ### **CPU Scheduling**
 
-**
+*CPU scheduling is the process of selecting which ready process or thread should get the CPU to execute next.*
+
+*Suppose several processes are ready*
+
+```txt
+Ready Queue
+
+Process A
+Process B
+Process C
+Process D
+```
+
+*But the CPU needs to choose which one gets to execute.*
+
+```txt
+Ready Queue
+    │
+    ↓
+ CPU Scheduler
+    │
+    ↓
+Process B
+    │
+    ↓
+   CPU
+```
+
+---
 
 
 
