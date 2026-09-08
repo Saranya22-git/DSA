@@ -81,6 +81,9 @@ Hey!!!
   - [**Computer Networks**](#computer-networks)
     - [**Network**](#network)
     - [**Types of Networks**](#types-of-networks)
+    - [**LAN**](#lan)
+    - [**MAN**](#man)
+    - [**WAN**](#wan)
 
 
 # **Computer and Programming Foundations**
@@ -5247,9 +5250,173 @@ LAN       MAN        WAN
 
 ---
 
+### **LAN**
 
+*LAN (Local Area Network) is a network that connects devices within a relatively small geographical area, such as home, office, school, or computer lab.*
 
+**Example:**
 
+```txt
+             Router
+           /   |   \
+          /    |    \
+     Laptop   PC   Phone
+```
+
+*All these devices can communicate through the local network.*
+
+---
+
+**Example:** *Home Wi-Fi*
+
+*Suppose your home has*
+
+```txt
+             Wi-Fi Router
+            /     |      \
+           /      |       \
+      Laptop    Phone     TV
+```
+
+*This is a LAN. The devices can communicate locally, and the router may also provide them access to the Internet.*
+
+*Wi-Fi is a technology used to connect devices wirelessly the resulting local network can be a LAN.*
+
+---
+
+**Example:** *Office LAN*
+
+*An office may have*
+
+```txt
+              Network
+                 │
+       ┌─────────┼─────────┐
+       ↓         ↓         ↓
+      PC 1      PC 2      PC 3
+       │         │         │
+       └─────────┼─────────┘
+                 ↓
+              Printer
+```
+
+*Employees can access shared resources such as Printers, Files, Internal applications, Servers within the organization's local network.*
+
+---
+
+**Characteristics**
+
+1. **Small geographical coverage:** *LAN typically covers Home, Office, School, Building, Campus.*
+2. **High-Speed local communication:** *Because devices are relatively close and the network is designed for local communication, LANs can provide high data rates.*
+3. **Usually privately managed:** *A home or organization can manage its own LAN.*
+4. **Wired or Wireless:** *LANs can use Wired  → Ethernet, Wireless → Wi-Fi.*
+
+---
+
+### **MAN**
+
+*MAN (Metropolitan Area Network) is a network that connects devices or multiple LANs across a city or metropolitan area.*
+
+**Example:** *Imagine a university has multiple campuses located across the same city.*
+
+```txt
+Campus A ── LAN ──┐
+                  │
+Campus B ── LAN ──┼── MAN
+                  │
+Campus C ── LAN ──┘
+```
+
+*The individual campuses can have their own LAN's, while a larger network connects those locations across the city. That larger network can be considered a MAN.*
+
+---
+
+**LAN vs MAN**
+
+*The main difference is geographical coverage.*
+
+**LAN:**
+
+```txt
+One office/building
+       ↓
+      LAN
+```
+
+**MAN:**
+
+```txt
+Multiple locations across a city
+                ↓
+               MAN
+```
+
+*LAN is smaller, MAN covers a metropolitan/city-scale area.*
+
+---
+
+### **WAN**
+
+*WAN (Wide Area Network) is a network that connects devices or smaller networks across a large geographical area, such as multiple cities, countries, or continents.*
+
+**Example:** *Imagine a company has office in different cities*
+
+```txt
+      Office — Eluru
+            │
+            │
+            WAN
+            │
+            │
+      Office — Hyderabad
+            │
+            │
+            WAN
+            │
+            │
+      Office — Bengaluru
+```
+
+*Each office can have its own LAN, while the WAN connects those geographically separated networks.*
+
+```txt
+LAN ──┐
+      │
+LAN ──┼── WAN
+      │
+LAN ──┘
+```
+
+---
+
+**Internet as an Example**
+
+*The Internet is commonly used as an example of a WAN because it connects networks across the world.*
+
+```txt
+Home LAN
+   │
+   ↓
+Internet / WAN
+   │
+   ├── Network in another city
+   ├── Network in another country
+   └── Network on another continent
+```
+
+*The Internet is a global network of interconnected networks.*
+
+---
+
+**LAN vs MAN vs WAN**
+
+| Feature       | LAN         | MAN                          | WAN                       |
+| ------------- | ----------- | ---------------------------- | ------------------------- |
+| Coverage      | Small area  | City/metropolitan area       | Large geographical area   |
+| Example       | Home/office | Multiple locations in a city | Multiple cities/countries |
+| Relative size | Smallest    | Medium                       | Largest                   |
+
+---
 
 
 
