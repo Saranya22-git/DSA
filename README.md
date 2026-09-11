@@ -86,6 +86,7 @@ Hey!!!
     - [**WAN**](#wan)
     - [**IP Address**](#ip-address)
     - [**MAC Address**](#mac-address)
+    - [**DNS**](#dns)
 
 
 # **Computer and Programming Foundations**
@@ -5555,6 +5556,83 @@ Internet
 ---
 
 ### **MAC Address**
+
+*A MAC (Media Access Control) address is a hardware-level address associated with a network interface and used to identify that interface on a local network.*
+
+*For example*
+
+```txt
+Laptop Wi-Fi interface
+        ↓
+MAC: 3C:52:82:AB:10:7F
+```
+
+*A MAC address is normally represented using hexadecimal numbers.*
+
+---
+
+**Why do we need a MAC Address?**
+
+*Suppose your laptop and phone are connected to the same Wi-Fi network*
+
+```txt
+Laptop ───┐
+          │
+        Router
+          │
+Phone ────┘
+```
+
+*When devices communicate on the local network the MAC address helps idemtify the network interface that should receive the local-network frame.*
+
+```txt
+Local Network
+      ↓
+MAC Address
+      ↓
+Identify local network interface
+```
+
+---
+
+**MAC Address Format**
+
+*A commonly seen MAC address has 48 bits (6 bytes)*
+
+**Example:** *```3C:52:82:AB:10:7F```*
+
+*There are six hexadecimal groups*
+
+*```3C : 52 : 82 : AB : 10 : 7F```*
+
+*Each group represents 8 bits. Therefore*
+
+*```6 × 8 = 48 bits```*
+
+*You may also see formats such as ```3C-52-82-AB-10-7F```*
+
+*The separators can differ, but the address represents the same 48-bit value.*
+
+---
+
+**MAC Address vs IP Address**
+
+| IP Address                                    | MAC Address                                                     |
+| --------------------------------------------- | --------------------------------------------------------------- |
+| Logical network address                       | Link-layer/hardware address associated with a network interface |
+| Used for IP networking                        | Used for local network communication                            |
+| Can change depending on network/configuration | Generally associated with the network interface                 |
+| IPv4 = 32 bits                                | Common MAC = 48 bits                                            |
+| IPv6 = 128 bits                               | Commonly written in hexadecimal                                 |
+
+---
+
+*A device can have multiple network interfaces, and each interface can have its own MAC address.*
+
+---
+
+### **DNS**
+
 
 
 
