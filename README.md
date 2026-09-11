@@ -86,7 +86,7 @@ Hey!!!
     - [**WAN**](#wan)
     - [**IP Address**](#ip-address)
     - [**MAC Address**](#mac-address)
-    - [**DNS**](#dns)
+    - [**DNS (Domain Name System)**](#dns-domain-name-system)
 
 
 # **Computer and Programming Foundations**
@@ -5631,7 +5631,120 @@ Identify local network interface
 
 ---
 
-### **DNS**
+### **DNS (Domain Name System)**
+
+*DNS (Domain Name System) is a system that translates human-readable domain names into IP addresses.*
+
+*For example, instead of remembering a server's IP address, you can use ```google.com``` DNS helps find the corresponding IP address.*
+
+---
+
+**What happens when you enter a website?**
+
+*Suppose you type ```www.example.com```. Your browser needs to find the server's IP address.*
+
+```txt
+Browser
+   ↓
+www.example.com
+   ↓
+DNS lookup
+   ↓
+IP Address
+   ↓
+Connect to server
+   ↓
+Website
+```
+
+*So*
+
+```txt
+Domain Name
+     ↓
+    DNS
+     ↓
+ IP Address
+```
+
+---
+
+**Does DNS store every IP address in one place?**
+
+*No. DNS is a distributed and hierarchical system. There are different types of DNS servers invloved in resolving names.*
+
+```txt
+Your Device
+     ↓
+DNS Resolver
+     ↓
+DNS infrastructure
+     ↓
+IP Address
+```
+
+---
+
+**DNS Resolution**
+
+*The process of finding the IP address for a domain name is called DNS resolution.*
+
+```txt
+google.com
+    ↓
+DNS Resolution
+    ↓
+IP address
+```
+
+*Then your device can communicate with the destination.*
+
+**Example:** *Suppose you enter ```www.example.com```*
+
+```txt
+1. User enters domain
+          ↓
+2. Browser/OS needs IP
+          ↓
+3. DNS resolution
+          ↓
+4. IP address obtained
+          ↓
+5. Client communicates with server
+```
+
+*DNS is therefore involved before the client can normally connect to the server using the domain name.*
+
+---
+
+**Domain Name vs IP Address**
+
+```txt
+Domain Name
+↓
+Human-friendly name
+
+IP Address
+↓
+Network address used for IP communication
+```
+
+**Example:**
+```txt
+google.com
+    ↓
+DNS
+    ↓
+IP address
+```
+
+---
+
+
+
+
+
+
 
 
 
