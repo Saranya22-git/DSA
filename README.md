@@ -84,6 +84,7 @@ Hey!!!
     - [**LAN**](#lan)
     - [**MAN**](#man)
     - [**WAN**](#wan)
+    - [**IP Address**](#ip-address)
 
 
 # **Computer and Programming Foundations**
@@ -5417,6 +5418,138 @@ Internet / WAN
 | Relative size | Smallest    | Medium                       | Largest                   |
 
 ---
+
+### **IP Address**
+
+*An IP (Internet Protocol) address is a logical address assigned to a device or network interface so that it can be identified and communicated with on an IP network.*
+
+*For example*
+
+```txt
+Laptop → 192.168.1.10
+Phone  → 192.168.1.11
+```
+
+*These addresses help network communication determine where data should be delivered.*
+
+---
+
+**Why do we need an IP Address?**
+
+*Imagine sending a letter. You need an address to tell the postal system where the letter should go. Similarly*
+
+```txt
+Sender
+  ↓
+IP Address
+  ↓
+Network
+  ↓
+Destination
+```
+
+*Suppose your laptop wants to communicate with a server*
+
+```txt
+Your Laptop
+IP: 192.168.1.10
+      │
+      │ Request
+      ↓
+   Network
+      │
+      ↓
+Server
+IP: 203.x.x.x
+```
+
+*The IP addressing system helps identify the network location associated with the destination.*
+
+---
+
+**Two main versions of IP**
+
+```txt
+IPv4
+IPv6
+```
+
+1. **IPv4:** *IPv4 uses 32 bits. It is normally written as four decimal numbers separated by dots.*
+
+    **Example:** *```192.168.1.10``` Each part can range from ```0 → 255``` So an IPv4 address looks like ```A.B.C.D```*
+
+2. **IPv6:** *IPv6 uses 128 bits. It was introduced in large part to provide a much larger address space than IPv4.*
+
+    **Example:** *```2001:db8:85a3::8a2e:370:7334``` IPv6 uses hexadecimal notation and colons.*
+
+---
+
+**IPv4 vs IPv6**
+
+| Feature       | IPv4           | IPv6          |
+| ------------- | -------------- | ------------- |
+| Address size  | 32-bit         | 128-bit       |
+| Example       | `192.168.1.10` | `2001:db8::1` |
+| Notation      | Decimal        | Hexadecimal   |
+| Address space | Smaller        | Much larger   |
+
+---
+
+**Private IP vs Public IP**
+
+**Private IP:** *Used for communication inside a private network, such as your home or office LAN.*
+
+**Example:**
+
+```txt
+Laptop → 192.168.1.10
+Phone  → 192.168.1.11
+```
+
+*These are typical private IPv4 addresses*
+
+```txt
+Home LAN
+│
+├── Laptop → 192.168.1.10
+├── Phone  → 192.168.1.11
+└── TV     → 192.168.1.12
+```
+
+*Private addresses are not directly routable across the public internet.*
+
+---
+
+**Public IP:** *A public IP address is used for communication over the public internet.*
+
+*For example*
+
+```txt
+Home Network
+     ↓
+Router
+     ↓
+Public IP
+     ↓
+Internet
+```
+
+*Your router commonly represents your home network to the public internet using a public IP address assigned by your Internet service provider.*
+
+---
+
+**Does every device have only one IP?**
+
+*Not neccessarily. A device can have*
+- *Multiple network interfaces*
+- *Multiple IP addresses*
+- *Different addresses for different networks*
+
+---
+
+
+
+
 
 
 
