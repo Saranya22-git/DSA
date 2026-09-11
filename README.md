@@ -85,6 +85,7 @@ Hey!!!
     - [**MAN**](#man)
     - [**WAN**](#wan)
     - [**IP Address**](#ip-address)
+    - [**MAC Address**](#mac-address)
 
 
 # **Computer and Programming Foundations**
@@ -5546,6 +5547,14 @@ Internet
 - *Different addresses for different networks*
 
 ---
+
+**IMPORTANT**
+
+*IP address can change depending on network/configuration.*
+
+---
+
+### **MAC Address**
 
 
 
