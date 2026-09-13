@@ -5986,6 +5986,67 @@ Web Server
 
 3. **Authentication:** *HTTPS normally uses digital certificates to authenticate the server's identity.*
 
+    *For example when you visit ```https://example.com``` the browser can verify that the server's certificate is valid and associated with the domain.*
+
+    *This helps protect against certain impersonation attacks.*
+
+---
+
+**HTTP vs HTTPS**
+
+| HTTP                                                                    | HTTPS                                    |
+| ----------------------------------------------------------------------- | ---------------------------------------- |
+| HyperText Transfer Protocol                                             | HyperText Transfer Protocol Secure       |
+| No TLS protection                                                       | Uses TLS                                 |
+| Communication is not protected by TLS                                   | Communication is protected by TLS        |
+| Suitable for non-sensitive communication but lacks transport encryption | Used when secure communication is needed |
+| Typically uses port 80                                                  | Typically uses port 443                  |
+
+---
+
+**What is TLS?**
+
+*TLS (Transport Layer Security) is a cryptographic protocol that provides secure communication over a network.*
+
+*HTTP uses TLS*
+
+```txt
+HTTPS
+  ↓
+HTTP + TLS
+  ↓
+Secure communication
+```
+
+---
+
+**HTTPS Example**
+
+*When you visit ```https://www.example.com```*
+
+```txt
+Browser
+   │
+   │ HTTPS
+   ↓
+ TLS-secured connection
+   │
+   ↓
+Web Server
+```
+
+*The browser and server establish a TLS-secured connection and them exchange HTTP messages through it.*
+
+---
+
+**Does HTTPS mean the website itself is trustworthy?**
+
+*No. HTTPS primarily helps secure the connection between your client and the server and authenticate the server's domain through certificates. A malicious website can also use HTTPS.*
+
+---
+
+
+
 
 
 
