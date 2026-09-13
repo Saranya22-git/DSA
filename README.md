@@ -87,6 +87,7 @@ Hey!!!
     - [**IP Address**](#ip-address)
     - [**MAC Address**](#mac-address)
     - [**DNS (Domain Name System)**](#dns-domain-name-system)
+    - [**HTTP**](#http)
 
 
 # **Computer and Programming Foundations**
@@ -5740,6 +5741,96 @@ IP address
 
 ---
 
+### **HTTP**
+
+*HTTP (HyperText Transfer Protocol) is an application-layer protocol used for communication between clients and servers on the web.*
+
+```txt
+Browser (Client)
+       │
+       │ HTTP Request
+       ↓
+    Web Server
+       │
+       │ HTTP Response
+       ↓
+Browser (Client)
+```
+
+---
+
+**What is a Client?**
+
+*A client is the application/device that requests a service or resource.*
+
+**Examples:** 
+
+```txt
+Chrome
+Firefox
+Mobile App
+Python program
+```
+
+*The client sends a request*
+
+---
+
+**What is a Server?**
+
+*A server is a system/application that receives requests and provides resources or services.*
+
+*For example*
+
+```txt
+Client → Request webpage
+              ↓
+           Server
+              ↓
+        Webpage response
+```
+
+---
+
+**HTTP Request and Response**
+
+*HTTP communication commonly follows ```Request → Response```*
+
+**Request:** *The client asks the server for something.*
+
+**Example:**
+
+```txt
+Browser
+   ↓
+"Give me this webpage."
+```
+
+**Response:** *The server sends something back*
+
+```txt
+Server
+   ↓
+"Here is the webpage."
+```
+
+*So*
+
+```txt
+Client
+  │
+  │ Request
+  ↓
+Server
+  │
+  │ Response
+  ↓
+Client
+```
+
+---
+
+**HTTP Methods**
 
 
 
