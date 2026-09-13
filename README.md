@@ -88,6 +88,7 @@ Hey!!!
     - [**MAC Address**](#mac-address)
     - [**DNS (Domain Name System)**](#dns-domain-name-system)
     - [**HTTP**](#http)
+    - [**HTTPS**](#https)
 
 
 # **Computer and Programming Foundations**
@@ -5845,8 +5846,145 @@ Client
 
 ---
 
+**HTTP is Stateless**
 
+*HTTP is stateless, meaning each request is treated independently and HTTP itself does not inherently remember previous requests.*
 
+**Example:**
+
+```txt
+Request 1 → Server
+Request 2 → Server
+Request 3 → Server
+```
+
+*HTTP itself doesn't automatically say ```"Oh, this is the same user who made Request 1."```. Mechanisms such as ```cookies and sessions``` can be used by applications to maintain state across requests.*
+
+---
+
+**HTTP vs HTTPS**
+
+**HTTP:**
+
+```txt
+HTTP
+ ↓
+Communication
+ ↓
+Not encrypted by TLS (Transport Layer Security)
+```
+
+**HTTPS:**
+
+```txt
+HTTPS
+ ↓
+HTTP + TLS
+ ↓
+Encrypted/authenticated connection
+```
+
+*HTTPS is the secure version of HTTP using TLS*
+
+---
+
+**How HTTP fits with DNS**
+
+*Suppose you type ```www.example.com```*
+
+```txt
+1. Domain name
+       ↓
+2. DNS
+       ↓
+3. IP address
+       ↓
+4. HTTP request
+       ↓
+5. Web server
+       ↓
+6. HTTP response
+       ↓
+7. Browser displays result
+```
+
+*So DNS and HTTP perform different jobs*
+
+```txt
+DNS → Finds the network address
+
+HTTP → Defines web request/response communication
+```
+
+---
+
+### **HTTPS**
+
+*HTTPS (HperText Transfer Protocol Secure) is HTTP communication secured using TLS (Transport Layer Security)*
+
+*It protects communication between the client and server eavesdropping and tampering.*
+
+```txt
+HTTP:
+Client ───────────────→ Server
+       readable traffic
+
+HTTPS:
+Client ═══════════════→ Server
+        TLS-secured
+        communication
+```
+
+**Why do we need HTTPS?**
+
+*Imagine you're logging into a website*
+
+```txt
+Username: saranya
+Password: ********
+```
+
+*If the communication were not protected an attacker who can observe the network traffic could potentially capture sensitive information.*
+
+*HTTP uses TLS to provide security for the connection.*
+
+*So*
+
+```txt
+Browser
+   ↓
+HTTPS
+   ↓
+Secure connection
+   ↓
+Web Server
+```
+
+---
+
+**What does HTTPS provide?**
+
+*There are three important security properties*
+
+1. **Confidentiality:** *Helps prevent unauthorized parties from reading the communication.*
+
+    *For example ```You ── encrypted communication ──→ Server``` Someone observing the traffic shouldn't simply be able to read your password or message.*
+
+2. **Integrity:** *Helps detect whether data was modified during transmission*
+
+    ```txt
+    Client
+    ↓
+    Data
+    ↓
+    Network
+    ↓
+    Server
+    ```
+
+    *TLS provides mechanisms that help ensure the received data hasn't been tampered with undetected.*
+
+3. **Authentication:** *HTTPS normally uses digital certificates to authenticate the server's identity.*
 
 
 
