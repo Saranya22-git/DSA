@@ -5832,6 +5832,20 @@ Client
 
 **HTTP Methods**
 
+*HTTP defines methods that indicate what the client wants to do.*
+
+| Method     | Basic purpose             |
+| ---------- | ------------------------- |
+| **GET**    | Retrieve data             |
+| **POST**   | Submit/create data        |
+| **PUT**    | Replace/update a resource |
+| **DELETE** | Delete a resource         |
+
+**Example:** *Suppose we have ```/users``` A client might use ```GET /users``` to request users. ```POST/users``` to create a user. ```PUT /users/10``` to replace/ update user 10. ```DELETE /users/10``` to delete user 10.*
+
+---
+
+
 
 
 
