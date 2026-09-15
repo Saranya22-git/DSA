@@ -89,6 +89,7 @@ Hey!!!
     - [**DNS (Domain Name System)**](#dns-domain-name-system)
     - [**HTTP**](#http)
     - [**HTTPS**](#https)
+    - [**TCP**](#tcp)
 
 
 # **Computer and Programming Foundations**
@@ -6044,6 +6045,63 @@ Web Server
 *No. HTTPS primarily helps secure the connection between your client and the server and authenticate the server's domain through certificates. A malicious website can also use HTTPS.*
 
 ---
+
+### **TCP**
+
+*TCP (Transmission Control Protocol) is a transport-layer protocol that provides reliable, ordered, and connection-oriented communication between two endpoints.*
+
+*TCP makes sure data is delivered reliably and in the correct order.*
+
+---
+
+**Why do we need TCP?**
+
+*Suppose you send ```A B C D E``` During transmission some data may be lost or arrive in a different order*
+
+*TCP handles this by providing mechanisms such as*
+- *Acknowledgments (ACKs)*
+- *Sequence numbers*
+- *Retransmission*
+- *Flow control*
+- *Congestion control*
+
+*So the receiving application gets a reliable, ordered byte stream.*
+
+---
+
+**TCP is Connection-Oriented**
+
+*Before transferring application data, TCP establishes a connection between the two endpoints.*
+
+*Think of it like a phone call*
+
+```txt
+You → Call → Friend
+Friend → Answers
+You ↔ Friend communicate
+```
+
+*Similarly*
+
+```txt
+Client
+   │
+   │ Establish TCP connection
+   ▼
+Server
+   │
+   │
+   ▼
+Data transfer
+```
+
+*This is called connection-oriented communication*
+
+---
+
+**TCP 3-way Handshake**
+
+
 
 
 
