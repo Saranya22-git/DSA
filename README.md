@@ -90,6 +90,7 @@ Hey!!!
     - [**HTTP**](#http)
     - [**HTTPS**](#https)
     - [**TCP**](#tcp)
+    - [**UDP**](#udp)
 
 
 # **Computer and Programming Foundations**
@@ -6101,13 +6102,304 @@ Data transfer
 
 **TCP 3-way Handshake**
 
+*Before data transfer, TCP normally establishes a connection using a 3-way handshake*
 
+```txt
+Client                         Server
 
+   │                              │
+   │ -------- SYN ------------->  │
+   │                              │
+   │ <------ SYN + ACK ---------- │
+   │                              │
+   │ -------- ACK ------------->  │
+   │                              │
+   │       Connection Ready       │
+```
 
+**Step-1:** *SYN*
 
+*Client says "I want to establish a connection" ```Client → SYN → Server```*
 
+**Step-2:** *SYN + ACK*
 
+*Server responds "Okay, I received your request, and I'm ready" ```Server → SYN + ACK → Client```*
 
+**Step-3:** *ACK*
+
+*Client confirms "I received your response" ```Client → ACK → Server``` Now the TCP connection is established*
+
+**Why is it called a 3-way handshake?**
+
+*Because three messages are exchanged to establish the TCP connection*
+
+---
+
+**How does TCP provide reliability?**
+
+*TCP uses several mechanisms*
+
+1. **Sequence Numbers:** *TCP keeps track of the order of transmitted bytes. For example ```Data: A B C D E``` TCP uses sequence information so the receiver can determine the correct order. If the data arrives like ```A B D E C``` TCP can identify that something is out of order.*
+
+2. **Acknowledgments (ACK):** *The receiver sends acknowledgments to indicate that data has been received.*
+
+    ```txt
+    Sender → Data → Receiver
+    Sender ← ACK  ← Receiver
+    ```
+
+3. **Retransmission:** *If TCP determines that data was lost, it can retransmit the missing data*
+
+    ```txt
+    Sender → Data → ❌ Lost
+
+    Sender → Retransmit → Receiver
+    ```
+
+    *This is one of the important reasons TCP is considered reliable*
+
+---
+
+**Flow Control**
+
+*Flow Control prevents a fast sender from overwhelming a slower receiver*
+
+**Example:**
+
+```txt
+Sender:   🚀🚀🚀🚀🚀🚀
+Receiver: 🐢
+```
+
+*If the sender sends data too quickly, the receiver may not be able to process it. TCP uses flow control to regulate how much data can be sent before the receiver needs more.*
+
+*Flow control prevents the sender from overwhelming the receiver*
+
+---
+
+**Congestion Control**
+
+*Congestion Control deals with congestion in the network*
+
+*Imagine too much traffic*
+
+```txt
+Computer → Router → Router → Router
+                  🚗🚗🚗🚗🚗🚗🚗
+```
+
+*The network can become congested. TCP adjusts its sending behavior to help avoid overwhelming the network.*
+
+| Concept                | Protects |
+| ---------------------- | -------- |
+| **Flow Control**       | Receiver |
+| **Congestion Control** | Network  |
+
+---
+
+**TCP is an Ordered Byte Stream**
+
+*TCP provides data as a byte stream. If an application sends ```HELLO``` TCP treats the data as a sequence of bytes and ensures the received byte stream is ordered.*
+
+*TCP does not preserve application message boundaries. TCP = reliable + ordered + byte-stream communication*
+
+---
+
+**Where does TCP fit?**
+
+```txt
+Application Layer
+       ↓
+     HTTP
+     HTTPS
+       ↓
+Transport Layer
+       ↓
+      TCP
+       ↓
+Internet Layer
+       ↓
+       IP
+```
+
+*So*
+- *HTTP/HTTPS → Application layer*
+- *TCP → Transport layer*
+- *IP → Network/Internet layer*
+
+**Example:** *When you access a website*
+
+```txt
+HTTPS
+  ↓
+TCP
+  ↓
+IP
+  ↓
+Network
+```
+
+---
+
+**TCP does not mean "100% guaranteed delivery"**
+
+*TCP provides reliable delivery by detecting loss and retransmitting data when possible, but a connection can still fail.*
+
+*For example, if the network connection completely breaks, TCP cannot magically deliver the data.*
+
+---
+
+### **UDP**
+
+*UDP (User Datagram Protocol) is a transport-layer, connectionless protocol that sends data without establishing a connection first.*
+
+*UDP sends data quickly with low overhead, but it does not provide TCP-style reliability or ordering.*
+
+---
+
+**Why do we need UDP?**
+
+*Not every application needs TCP's reliability mechanisms. Sometimes speed and low delay are more important than retransmitting every lost packet.*
+
+*For example*
+
+```txt
+Live Video
+Gaming
+Voice Calls
+DNS
+```
+
+*If one small piece of a live video is lost, waiting for retransmission may be worse than simply continuing with the next data. So UDP provides a simpler and faster communication approach.*
+
+---
+
+**UDP is Connectionless**
+
+**TCP:**
+
+```txt
+Establish connection
+       ↓
+Transfer data
+       ↓
+Close connection
+```
+
+**UDP:**
+
+```txt
+Send data
+   ↓
+Send data
+   ↓
+Send data
+```
+
+*There is no TCP-style connection establishment before sending data. Therefore, UDP is connectionless.*
+
+---
+
+**Does UDP guarantee delivery?**
+
+*No. UDP does not provide TCP-style*
+
+- *Guaranteed retransmission*
+- *Delivery acknowledgment*
+- *Ordered delivery*
+- *Connection establishment*
+
+*For example*
+
+```txt
+Sender                  Receiver
+
+  A  ------------------> A
+  B  --------X           ❌ Lost
+  C  ------------------> C
+```
+
+*UDP does not automatically retransmit ```B```. The application may implement its own reliability mechanism if needed.*
+
+---
+
+**Does UDP preserve order?**
+
+*UDP does not guarantee that datagrams arrive in the same order they were sent.*
+
+**Example:**
+
+```txt
+Sent: A → B → C
+
+Received: A → C → B
+```
+
+*UDP itself does not reorder them for the application*
+
+---
+
+**UDP has low Overhead**
+
+*UDP has a relatively small and simple transport header compared with TCP. That means less protocol overhead and generally less processing.*
+
+*So*
+
+```txt
+UDP
+ ↓
+Simple
+ ↓
+Low overhead
+ ↓
+Low latency potential
+```
+
+*UDP being faster is not an absolute guarantee. Actual performance depends on the network and application.*
+
+---
+
+**UDP uses Datagrams**
+
+*UDP sents independent units called datagrams*
+
+```txt
+Datagram 1
+Datagram 2
+Datagram 3
+```
+
+*Each datagram is handled independently. TCP in contrast provides a byte stream.*
+
+---
+
+**TCP vs UDP**
+
+| Feature         | TCP                           | UDP                                |
+| --------------- | ----------------------------- | ---------------------------------- |
+| Full form       | Transmission Control Protocol | User Datagram Protocol             |
+| Layer           | Transport                     | Transport                          |
+| Connection      | Connection-oriented           | Connectionless                     |
+| Reliability     | Yes                           | No TCP-style reliability           |
+| Ordering        | Yes                           | No guarantee                       |
+| Retransmission  | Yes                           | No built-in retransmission         |
+| Acknowledgments | Yes                           | No TCP-style ACK mechanism         |
+| Overhead        | Higher                        | Lower                              |
+| Data model      | Byte stream                   | Datagrams                          |
+| Typical use     | Reliable data transfer        | Low-latency / simple communication |
+
+---
+
+**Examples of UDP use**
+
+*Common examples include*
+
+- **Online Gaming:** *Low latency is important. If an old movement update arrives late, receiving it after several newer updates may not be useful.*
+- **Voice/Video Communication:** *For real-time communication, delay can be more noticeable than occasional loss.*
+- **DNS:** *DNS commonly uses UDP for normal queries because the request/response exchange can be lightweight.*
+- **Streaming/Real-Time Applications:** *UDP can be useful where applications prioritize timely delivery.*
+
+---
 
 
 
