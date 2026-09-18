@@ -92,6 +92,8 @@ Hey!!!
     - [**TCP**](#tcp)
     - [**UDP**](#udp)
     - [**Client-Server Architecture**](#client-server-architecture)
+    - [**Socket**](#socket)
+    - [**Ports**](#ports-1)
 
 
 # **Computer and Programming Foundations**
@@ -6616,6 +6618,343 @@ Server
 - **IP** → *handles addressing/route*
 
 ---
+
+### **Socket**
+
+*A socket is a communication endpoint that allows applications to communicate with each other over a network*
+
+```txt
+Application A
+     ↕
+   Socket
+     ↕
+  Network
+     ↕
+   Socket
+     ↕
+Application B
+```
+
+*Think of a socket as the endpoint through which an application sends and receives network data.*
+
+---
+
+**Why do we need a socket?**
+
+*Suppose a browser wants to communicate with a web server. The browser needs some mechanism through which it can*
+
+```txt
+Send data
+   ↓
+Network
+   ↓
+Receive data
+```
+
+*A socket provides that communication endpoint*
+
+---
+
+**Socket and Client-Server Architecture**
+
+```txt
+Client → Request → Server
+Client ← Response ← Server
+```
+
+*Sockets provide the communication endpoints used by applications to exchange this data*
+
+*For example*
+
+```txt
+Client Application
+       │
+     Socket
+       │
+       │ Network
+       │
+     Socket
+       │
+Server Application
+```
+
+---
+
+**Socket and IP Address**
+
+*A socket is commonly associated with ```IP Address + Port```*
+
+*For example ```192.168.1.10 : 8080```*
+
+*Here*
+
+```txt
+192.168.1.10 → IP address
+8080         → Port
+```
+
+---
+
+**Socket uses TCP or UDP**
+
+*Sockets can be used with different transport protocols*
+
+**TCP socket**
+
+```txt
+Application
+    ↓
+TCP Socket
+    ↓
+TCP
+    ↓
+IP
+```
+
+*Provides TCP's connection-oriented, reliable communication*
+
+**UDP socket**
+
+```txt
+Application
+    ↓
+UDP Socket
+    ↓
+UDP
+    ↓
+IP
+```
+
+*Provides UDP's connectionless datagram communication*
+
+*So Socket is not the same thing as TCP or UDP. A socket is the application's communication endpoint, TCP/UDP are transport protocols*
+
+---
+
+**Real-World Example**
+
+*Imagine a chat application*
+
+```txt
+User A
+  ↓
+Chat App
+  ↓
+Socket
+  ↓
+Network
+  ↓
+Socket
+  ↓
+Chat Server
+```
+
+*When User A sends ```"Hello"```. The chat application uses its network communication endpoint to send the data toward the server. The server can then send a response back through its communication endpoint.*
+
+---
+
+**Socket in Programming**
+
+*In programming, operating systems provides socket APIs that applications can use for network communication.*
+
+*A simplified TCP server flow looks like*
+
+```txt
+Create socket
+     ↓
+Bind
+     ↓
+Listen
+     ↓
+Accept connection
+     ↓
+Receive / Send data
+```
+
+*A TCP client commonly does*
+
+```txt
+Create socket
+     ↓
+Connect
+     ↓
+Send / Receive data
+```
+
+---
+
+**Socket vs IP Address**
+
+| IP Address                             | Socket                                         |
+| -------------------------------------- | ---------------------------------------------- |
+| Identifies a network interface/address | Communication endpoint used by an application  |
+| Works at the IP/networking level       | Used by applications for network communication |
+| Example: `192.168.1.10`                | Example endpoint: `192.168.1.10:8080`          |
+
+---
+
+### **Ports**
+
+*A port is a logical communication endpoint used to identify a specific application or network service on a device.*
+
+- *An IP address helps identify the network destination*
+- *A port helps identify which application/service should receive the network traffic*
+
+```txt
+IP Address → Which device/network endpoint?
+Port       → Which service/application?
+```
+
+---
+
+**Why do we need Ports?**
+
+*Imagine one computer is running several network services*
+
+```txt
+Computer
+├── Web Server
+├── Database Server
+├── SSH Server
+└── Other Services
+```
+
+*All of them may use the same IP address. How does incoming traffic reach the correct service? **Ports***
+
+*For example*
+
+```txt
+192.168.1.10:80
+192.168.1.10:443
+192.168.1.10:22
+```
+
+*The IP identifies the network destination, while the port identifies the intended service endpoint*
+
+---
+
+**Common Port Numbers**
+
+|    Port | Common service/protocol |
+| ------- | ----------------------- |
+|  **20** | FTP data                |
+|  **21** | FTP control             |
+|  **22** | SSH                     |
+|  **25** | SMTP                    |
+|  **53** | DNS                     |
+|  **80** | HTTP                    |
+| **443** | HTTPS                   |
+
+---
+
+**Port Number Range**
+
+- *TCP and UDP port numbers range from ```0 → 65535```. They are represented using ```16 bits```*
+- *The broad ranges are ```0-1023 (Well-known ports)```*
+- *Common standard services use this range*
+    **Examples:**
+    ```txt
+    22  → SSH
+    53  → DNS
+    80  → HTTP
+    443 → HTTPS
+    ```
+- *```1024 - 49151 (Registered ports) - Used by various applications and services*
+- *```49152 - 65535 (Dynamic/private ports) - Often used for temporary or dynamically assigned connections*
+
+---
+
+**Ports and TCP/UDP**
+
+*TCP and UDP each have port numbers*
+
+*For example*
+
+```txt
+TCP port 80
+UDP port 53
+```
+
+*The port is part of the transport-layer communication*
+
+```txt
+Application
+    ↓
+TCP / UDP
+    ↓
+IP
+```
+
+---
+
+**Port vs IP Address**
+
+| IP Address                             | Port                                      |
+| -------------------------------------- | ----------------------------------------- |
+| Identifies a network address/interface | Identifies a service/application endpoint |
+| Example: `192.168.1.10`                | Example: `443`                            |
+| Used for network-layer addressing      | Used at transport layer with TCP/UDP      |
+
+*Think of a building*
+
+```txt
+IP Address = Building address
+Port       = Specific room/service
+```
+
+*So ```192.168.1.10:443``` means "Reach this network address and the service associated with port 443"*
+
+---
+
+**Socket + IP + Port**
+
+**Socket:** *Communication endpoint*
+
+**IP + Port:** *Commonly used to identify a network endpoint*
+
+```txt
+Application
+     ↓
+   Socket
+     ↓
+IP Address + Port
+     ↓
+ TCP / UDP
+     ↓
+     IP
+     ↓
+  Network
+```
+
+---
+
+**Example: Opening an HTTPS website**
+
+*Suppose you access a website using HTTPS*
+
+```txt
+Browser
+   ↓
+HTTPS
+   ↓
+Port 443
+   ↓
+TCP
+   ↓
+IP Address
+   ↓
+Server
+```
+
+*Port 443 indicates the conventional HTTPS service endpoint*
+
+---
+
+
+
+
+
+
 
 
 
