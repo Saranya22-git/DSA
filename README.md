@@ -91,6 +91,7 @@ Hey!!!
     - [**HTTPS**](#https)
     - [**TCP**](#tcp)
     - [**UDP**](#udp)
+    - [**Client-Server Architecture**](#client-server-architecture)
 
 
 # **Computer and Programming Foundations**
@@ -6401,7 +6402,220 @@ Datagram 3
 
 ---
 
+### **Client-Server Architecture**
 
+*Client-Server architecture is a network architecture in which a client requests a service or resource, and a server processes the request and provide a response.*
+
+```txt
+Client
+  ↓ Request
+Server
+  ↓ Response
+Client
+```
+
+---
+
+**What is a Client?**
+
+*A client is a device or application that requests a service or resource from a server.*
+
+**Examples:**
+- *Web browser*
+- *Mobile application*
+- *Desktop application*
+
+*For example, when you open a website in Chrome ```Chrome = Client``` Chrome sends a request to the web server*
+
+---
+
+**What is a Server?**
+
+*A server is a computer or software system that provides services or resources to clients*
+
+**Examples:**
+- *Web server*
+- *Database server*
+- *File server*
+- *Application server*
+
+*For example*
+
+```txt
+Browser
+   ↓
+Web Server
+```
+
+*The web server receives the browser's request and sends back the requested response*
+
+---
+
+**How does Client-Server communication work?**
+
+*Consider opening ```example.com```*
+
+```txt
+        Client
+      (Browser)
+          │
+          │ Request
+          ▼
+       Server
+          │
+          │ Response
+          ▼
+        Client
+```
+
+- **Step-1:** *Client sends request*
+
+    ```txt
+    Client → Server
+    ```
+
+    **Example:** *Give me the webpage*
+
+- **Step-2:** *Server processes request*
+
+    *The server may*
+    - *Execute application logic*
+    - *Access a database*
+    - *Retrieve a file*
+    - *Perform some computation*
+
+- **Step-3:** *Server sends response*
+
+    ```txt
+    Server → Client
+    ```
+
+    *The response may contain*
+    - *HTML*
+    - *JSON*
+    - *Images*
+    - *Other data*
+
+- **Step-4:** *Client uses the response*
+
+    *The browser displays the webpage*
+
+---
+
+**Real-World Example - Online Shopping**
+
+*Suppose you open an e-commerce application*
+
+```txt
+Mobile App
+   │
+   │ "Show my orders"
+   ▼
+Application Server
+   │
+   │ Query
+   ▼
+Database Server
+   │
+   │ Data
+   ▼
+Application Server
+   │
+   │ Response
+   ▼
+Mobile App
+```
+
+*Here*
+- *Mobile app → Client*
+- *Application server → server*
+- *Database server → stores data*
+
+---
+
+**Client and Server can both be software**
+
+*A client isn't necessarily a physical computer. A client can be software, and a server can also be software.*
+
+*For example*
+
+```txt
+Chrome Browser → Client software
+
+Web Server     → Server software
+```
+
+*The server software runs on a computer/server machine*
+
+---
+
+**Can one computer be both Client and Server?**
+
+*Yes. A computer can act as a client in one-communication and a server in another.*
+
+*For example*
+
+```txt
+Computer A
+   │
+   └── requests data → Computer B
+                         ↑
+                      Server
+```
+
+*Computer A is the client for that communication but Computer A could also run a server application and receive requests from another computer.*
+
+*So Client and Server describe roles in communication, not necessarily permanent types of machines.*
+
+---
+
+**Client-Server vs Peer-to-Peer**
+
+**Client-Server**
+
+```txt
+Client ──┐
+Client ──┼──→ Server
+Client ──┘
+```
+
+*The server provides services to clients*
+
+**Peer-to-Peer**
+
+```txt
+Peer ↔ Peer
+Peer ↔ Peer
+Peer ↔ Peer
+```
+
+*Devices can communicate directly and can act as both clients and providers*
+
+---
+
+**How it connects to HTTP and TCP**
+
+```txt
+Browser
+   ↓
+HTTP/HTTPS
+   ↓
+TCP
+   ↓
+IP
+   ↓
+Network
+   ↓
+Server
+```
+
+*So when a browser communicates with a web server*
+- **Client-server architecture** → *describes the communication roles*
+- **HTTP/HTTPS** → *application-layer protocol used for web communication*
+- **TCP** → *transport protocol providing reliable communication*
+- **IP** → *handles addressing/route*
+
+---
 
 
 
