@@ -95,6 +95,7 @@ Hey!!!
     - [**Socket**](#socket)
     - [**Ports**](#ports-1)
     - [**Cookies**](#cookies)
+    - [**Sessions**](#sessions)
 
 
 # **Computer and Programming Foundations**
@@ -7169,6 +7170,99 @@ Session data
 ```
 
 ---
+
+### **Sessions**
+
+*A session is a server-side state used to maintain information about a user's unteraction with an application across multiple requests.*
+
+*The main problem it solves it ```HTTP is stateless```*
+
+*For example*
+
+```txt
+Request 1 → Server
+Request 2 → Server
+Request 3 → Server
+```
+
+*The server needs a way to associate these requests with the same user's ongoing interaction. A session helps with that*
+
+---
+
+**Example - Login**
+
+*Suppose you log into a website*
+
+- **Step-1:** *Login*
+
+    ```txt
+    Browser
+    │
+    │ Username + Password
+    ▼
+    Server
+    ```
+
+    *The server verifies your credentials*
+
+- **Step-2:** *Server creates a session*
+
+    ```txt
+    Server
+    │
+    └── Session created
+        session_id = ABC123
+    ```
+
+    *The session can contain information associated with your logged-in state*
+
+- **Step-3:** *Browser receives session identifier*
+
+    *A common implementation is to send the session ID in a cookie*
+
+    ```txt
+    Server
+    │
+    │ Set-Cookie: session_id=ABC123
+    ▼
+    Browser
+    ```
+
+- **Step-4:** *Later request*
+
+    ```txt
+    Browser
+    │
+    │ Request + session_id
+    ▼
+    Server
+    ```
+
+    *The server uses the session ID to find the corresponding session data*
+
+---
+
+**Relationship - Cooke + Selection**
+
+```txt
+             Browser
+                │
+                │ Cookie
+                │ session_id=ABC123
+                ▼
+              Server
+                │
+                │ Look up session
+                ▼
+          Session Data
+```
+
+*Cookie can carry the session identifier, while the session data is maintained on the server*
+
+---
+
+
+
 
 
 
