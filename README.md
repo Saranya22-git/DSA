@@ -94,6 +94,7 @@ Hey!!!
     - [**Client-Server Architecture**](#client-server-architecture)
     - [**Socket**](#socket)
     - [**Ports**](#ports-1)
+    - [**Cookies**](#cookies)
 
 
 # **Computer and Programming Foundations**
@@ -6949,6 +6950,99 @@ Server
 *Port 443 indicates the conventional HTTPS service endpoint*
 
 ---
+
+### **Cookies**
+
+*A cookie is a small piece of data that a website asks the browser to store and send back with later requests to that website.*
+
+```txt
+Website
+   ↓
+"Store this information"
+   ↓
+Browser stores Cookie
+   ↓
+Later request
+   ↓
+Browser sends Cookie
+   ↓
+Website
+```
+
+*Cookies are mainly used to help website remember information between requests.*
+
+---
+
+**Why are cookies needed?**
+
+- *HTTP is stateless. Each HTTP request is treated independently*
+- *For example*
+    ```txt
+    Request 1 → Server
+    Request 2 → Server
+    Request 3 → Server
+    ```
+- *By itself, HTTP doesn't automatically remember that all three requests came from the same user/session*
+- *Cookies can help an application maintain that continuity*
+
+---
+
+**Simple Example - Login**
+
+*Suppose you log into a website*
+
+- **Step-1:** *You send*
+
+    ```txt
+    Username + Password
+            ↓
+        Server
+    ```
+
+- **Step-2:** *The server authenticates you. It may send a cookie to your browser*
+
+    ```txt
+    Server
+    ↓
+    Set-Cookie
+    ↓
+    Browser
+    ```
+
+- **Step-3:** *Your browser stores the cookie*
+- **Step-4:** *When you make another request*
+
+    ```txt
+    Browser
+    ↓
+    Request + Cookie
+    ↓
+    Server
+    ```
+
+*The server can use the cookie information to associate the request with your session or other stored state.*
+
+---
+
+**Where is a Cookie stored?**
+
+*Cookies are stored by the web browser*
+
+*For example*
+
+```txt
+Website
+   ↓
+Browser
+   ↓
+Cookie Storage
+```
+
+*The browser manages cookies according to their attributes and rules*
+
+---
+
+
 
 
 
