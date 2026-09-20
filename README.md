@@ -7042,9 +7042,133 @@ Cookie Storage
 
 ---
 
+**Are Cookies the same as User data?**
 
+- *Not necessarily. A cookie can contain different kinds of information, depending on how the website uses it.*
+- *For example, a cookie might contain ```session_id=ABC123```*
+- *The browser sends that value back to the relevant website*
+- *The actual user information may instead be stored on the server*
 
+---
 
+**Cookie Example**
+
+*Imagine a shopping website. You add an item to your cart. The website may use a cookie to help associate your browser with a particular shopping session.*
+
+```txt
+Browser
+   │
+   │ Cookie: cart/session identifier
+   ▼
+Server
+   │
+   │ Finds associated state
+   ▼
+Shopping Cart
+```
+
+*This allows the website to maintain continuity across requests*
+
+---
+
+**Cookies and Sessions**
+
+**Cookie:** *Usually stored on the client/browser*
+
+**Session:** *Usually represent server-side state associated with a user/session*
+
+*A common pattern is*
+
+```txt
+Browser
+   │
+   │ Cookie: session_id
+   ▼
+Server
+   │
+   │ session_id → find session data
+   ▼
+Session Data
+```
+
+*So a cookie can be used to identify a session*
+
+---
+
+**Types of Cookies**
+
+- **Session Cookie:** *Generally exists only for the current browser session and is removed when the browser session ends, subject to browser behavior*
+- **Persistent Cookie:** *Has an expiration time and can remain stored beyond the current browser session*
+
+```txt
+Session Cookie → temporary
+
+Persistent Cookie → stored until expiration/removal
+```
+
+---
+
+**Important Cookie Attributes**
+
+- **```Expires```/```Max-Age```:** *Controls how long the cookie remains valid*
+- **```Secure```:** *The cookie should only be sent over HTTPS*
+- **```HttpOnly```:** *Helps prevent client-side JavaScript from directly accessing the cookie. This can reduce certain cookie-theft risks such as those involving XSS, though it does not prevent XSS itself*
+- **```SameSite```:** *Controls when cookies are sent in cross-site contexts and is important for reducing certain CSRF risks*
+
+---
+
+**Cookie Flow**
+
+*A common cookie flow looks like this*
+
+```txt
+1. Browser → Request → Server
+
+2. Server → Set-Cookie → Browser
+
+3. Browser stores cookie
+
+4. Browser → Request + Cookie → Server
+
+5. Server uses cookie information
+```
+
+**Example:**
+
+```txt
+Server
+   │
+   │ Set-Cookie: session_id=123
+   ▼
+Browser
+   │
+   │ Cookie: session_id=123
+   ▼
+Server
+```
+
+---
+
+**Cookies are not the same as Sessions**
+
+| Cookie                              | Session                                         |
+| ----------------------------------- | ----------------------------------------------- |
+| Stored/managed by browser           | Usually server-side state                       |
+| Sent with relevant requests         | Represents state associated with a user/session |
+| Can store an identifier             | Can contain associated application state        |
+| Can exist independently of sessions | Often identified using a cookie                 |
+
+```txt
+Cookie
+   ↓
+session_id
+   ↓
+Server
+   ↓
+Session data
+```
+
+---
 
 
 
