@@ -7261,7 +7261,43 @@ Request 3 → Server
 
 ---
 
+**What can a Session maintain?**
 
+*Depending on the application, session state can represent things such as*
+
+```txt
+Logged-in user
+Shopping cart
+User preferences
+Temporary application state
+```
+
+*For example*
+
+```txt
+session_id = ABC123
+
+Server-side session:
+{
+    user_id: 501,
+    logged_in: true,
+    cart_items: 3
+}
+```
+
+*The exact information depends on the application*
+
+---
+
+**Why not store everything in the Cookie?**
+
+*A common session design stores only an identifier in the cookie ```Cookie : session_id = ABC123```*
+
+*The actual session information remains on the server ```Server: ABC123 → User/session information```*
+
+*This means the browser doesn't need to carry all of the application's session state*
+
+---
 
 
 
