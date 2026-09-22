@@ -96,6 +96,7 @@ Hey!!!
     - [**Ports**](#ports-1)
     - [**Cookies**](#cookies)
     - [**Sessions**](#sessions)
+    - [**REST API Basics**](#rest-api-basics)
 
 
 # **Computer and Programming Foundations**
@@ -7150,27 +7151,6 @@ Server
 
 ---
 
-**Cookies are not the same as Sessions**
-
-| Cookie                              | Session                                         |
-| ----------------------------------- | ----------------------------------------------- |
-| Stored/managed by browser           | Usually server-side state                       |
-| Sent with relevant requests         | Represents state associated with a user/session |
-| Can store an identifier             | Can contain associated application state        |
-| Can exist independently of sessions | Often identified using a cookie                 |
-
-```txt
-Cookie
-   ↓
-session_id
-   ↓
-Server
-   ↓
-Session data
-```
-
----
-
 ### **Sessions**
 
 *A session is a server-side state used to maintain information about a user's unteraction with an application across multiple requests.*
@@ -7298,6 +7278,86 @@ Server-side session:
 *This means the browser doesn't need to carry all of the application's session state*
 
 ---
+
+**Session Lifecycle**
+
+*A basic session lifecycle looks like*
+
+```txt
+User visits website
+       ↓
+Session created
+       ↓
+Session ID associated with browser
+       ↓
+Multiple requests
+       ↓
+Server identifies session
+       ↓
+Session ends/expires
+```
+
+*A session can end because of things such as*
+- *Explicit logout*
+- *Expiration/timeout*
+- *Application-specific rules*
+
+---
+
+**Session vs Cookie**
+
+| Cookie                               | Session                              |
+| ------------------------------------ | ------------------------------------ |
+| Stored/managed by browser            | Usually maintained on server         |
+| Small piece of client-side data      | Server-side application state        |
+| Sent with relevant requests          | Associated with a session identifier |
+| Can store preferences or identifiers | Can maintain login/application state |
+| Can exist without a session          | Often identified using a cookie      |
+
+
+**Example:**
+
+```txt
+Browser Cookie: session_id = ABC123
+
+        ↓
+
+Server: ABC123 → Session Data
+```
+
+---
+
+**What happens when you Log Out?**
+
+```txt
+Browser
+   │
+   │ Logout request
+   ▼
+Server
+   │
+   └── Session invalidated
+```
+
+*After that, the previous session should no longer represent an authenticated login. The exact cookie cleanup behavior depends on the application.*
+
+---
+
+**Session Security**
+
+*A session identifier is sensitive. If an attacker obtains a valid session identifier, they may be able to impersonate the associated session.*
+
+*THerefore applications use protections such as*
+- *HTTPS*
+- *Secure cookies*
+- *HttpOnly Cookie*
+- *Appropriate session expiration*
+- *Session ID regeneration in important situations*
+
+---
+
+### **REST API Basics**
+
 
 
 
