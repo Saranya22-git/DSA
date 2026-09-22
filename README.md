@@ -97,6 +97,8 @@ Hey!!!
     - [**Cookies**](#cookies)
     - [**Sessions**](#sessions)
     - [**REST API Basics**](#rest-api-basics)
+  - [**How Computers Actually Work**](#how-computers-actually-work)
+    - [**What happens when you press the Power Button**](#what-happens-when-you-press-the-power-button)
 
 
 # **Computer and Programming Foundations**
@@ -7631,6 +7633,169 @@ DELETE /users/101
 
 ---
 
+## **How Computers Actually Work**
+
+### **What happens when you press the Power Button**
+
+```txt
+Press Power Button
+       ↓
+Power Supply Starts
+       ↓
+CPU Starts
+       ↓
+Firmware Starts
+       ↓
+POST
+       ↓
+Find Boot Device
+       ↓
+Load Bootloader
+       ↓
+Load Operating System
+       ↓
+OS Starts
+       ↓
+You Can Use the Computer
+```
+
+---
+
+**You Press the Power Button**
+
+- *When you press the power button you're essentially giving the computer a signal to start the power-up process.*
+- *The power button itself does not directly start Windows/Linux*
+- *It triggers the system's power-management circuitry*
+
+---
+
+**Power Supply provides power**
+
+*The computer's power supply provides the required electrical power to the different components*
+
+```txt
+Power Supply
+     ↓
+Motherboard
+     ↓
+CPU
+RAM
+Storage
+Other hardware
+```
+
+*The hardware needs stable power before it can begin operating normally*
+
+---
+
+**CPU starts Executing Firmware**
+
+- *Once the hardware has enough power to start, the CPU begins executing instructions from firmware stored on the motherboard.*
+- *The firmware is responsible for performing the initial hardware startup process*
+- *The two firmware technologies are ```BIOS``` ```UEFI```*
+
+---
+
+**Hardware Initialization**
+
+*The system begins initializing essential hardware components*
+
+*For example*
+
+```txt
+CPU
+RAM
+Storage devices
+Keyboard
+Display
+Other hardware
+```
+
+*The computer needs to establish that the essential hardware is available before attempting to load the operating system.*
+
+---
+
+**POST**
+
+*POST = Power-On Self-Test*
+
+*The firmware performs checks on important hardware components*
+
+```txt
+Power On
+   ↓
+POST
+   ↓
+Check essential hardware
+```
+
+*For example, it may check whether required memory and other essential hardware are functioning sufficiently for startup*
+
+*If there is a serious hardware problem, the computer may*
+- *Display an error*
+- *Produce diagnostic beep codes on some systems*
+- *Stop the normal boot process*
+
+---
+
+**Find a Bootable Device**
+
+*After the initial hardware startup, the firmware looks for a device containing something it can use to start the operating system*
+
+```txt
+SSD
+HDD
+USB drive
+Network boot source
+```
+
+*The exact boot order depends on the system configuration. For a normal laptop, it might find the operating system on the SSD.*
+
+---
+
+**Bootloader Loads**
+
+*Once the system identifies an appropriate boot source, it starts the bootloader.*
+
+*The bootloader's job is to help start the operating system*
+
+```txt
+Firmware
+   ↓
+Bootloader
+   ↓
+Operating System
+```
+
+*The bootloader loads or helps load the OS kernel into memory and transfers control toward the operating system*
+
+---
+
+**Operating System loads**
+
+*Now the operating system starts loading*
+
+*For example*
+
+```txt
+Windows
+Linux
+macOS
+```
+
+*The OS initializes its kernel and other required components*
+
+```txt
+Bootloader
+    ↓
+OS Kernel
+    ↓
+OS Initialization
+```
+
+*Once initialization is complete, the system presents the login screen or desktop*
+
+---
 
 
 
