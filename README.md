@@ -99,6 +99,7 @@ Hey!!!
     - [**REST API Basics**](#rest-api-basics)
   - [**How Computers Actually Work**](#how-computers-actually-work)
     - [**What happens when you press the Power Button**](#what-happens-when-you-press-the-power-button)
+    - [**Booting Process**](#booting-process)
 
 
 # **Computer and Programming Foundations**
@@ -7797,9 +7798,242 @@ OS Initialization
 
 ---
 
+**You can now use the Computer**
 
+```txt
+Power Button
+     ↓
+Firmware
+     ↓
+POST
+     ↓
+Boot Device
+     ↓
+Bootloader
+     ↓
+Operating System
+     ↓
+Login/Desktop
+```
 
+*Now you can open applications and use the computer*
 
+---
+
+### **Booting Process**
+
+*Booting is the process of starting a computer and loading the operating system into memory so the computer can be used.*
+
+```txt
+Power ON
+   ↓
+Startup/Initialization
+   ↓
+Find OS
+   ↓
+Load OS
+   ↓
+OS starts
+   ↓
+Computer ready
+```
+
+---
+
+**Why is Booting needed?**
+
+*When the computer is powered on, the operating system is not immediately running*
+
+*The computer first needs to*
+- *Initialize essential hardware*
+- *Run startup checks*
+- *Locate a bootable operating system*
+- *Load the OS*
+- *Transfer control to the OS*
+
+*So booting bridges the gap between*
+
+```txt
+Computer Powered OFF
+        ↓
+Operating System Running
+```
+
+---
+
+**Basic Booting Sequence**
+
+```txt
+Power ON
+   ↓
+Firmware starts
+   ↓
+Hardware initialization
+   ↓
+POST
+   ↓
+Find bootable device
+   ↓
+Bootloader starts
+   ↓
+OS kernel loaded
+   ↓
+OS initialization
+   ↓
+Login/Desktop
+```
+
+---
+
+**Step-1:** *Power ON*
+
+*You press the power button. The system receives power and the hardware begins coming out of its powered-off state.*
+
+```txt
+Power Button
+     ↓
+System Power
+     ↓
+Hardware starts
+```
+
+---
+
+**Step-2:** *Firmware Starts*
+
+*The CPU begins executing instructions provided by the system firmware. The firmware performs the initial startup work.*
+
+```txt
+CPU
+ ↓
+Firmware
+```
+
+*The two major firmware technologies are ```BIOS, UEFI```*
+
+---
+
+**Step-3:** *Hardware Initialization*
+
+*The system initializes the hardware required for startup*
+
+*For example*
+
+```txt
+CPU
+RAM
+Storage
+Display
+Input devices
+```
+
+*The firmware prepares the system so that the boot process can continue.*
+
+---
+
+**Step-4:** *POST*
+
+*The firmware performs POST (Power-On Self-Test). It checks essential hardware needed for startup.*
+
+```txt
+Firmware
+   ↓
+POST
+   ↓
+Hardware checks
+```
+
+---
+
+**Step-5:** *Find a Bootable Device*
+
+*The firmware looks for a configured boot source containing a bootable operating system*
+
+*For example*
+
+```txt
+SSD
+ ↓
+Operating System
+```
+
+*A computer may also be configured to boot from other sources such as*
+
+```txt
+USB
+Network
+Other storage devices
+```
+
+---
+
+**Step-6:** *Bootloader Starts*
+
+*Once a suitable boot source is found, the system starts the bootloader. The bootloader's purpose is to help load the operating system*
+
+```txt
+Firmware
+    ↓
+Bootloader
+    ↓
+OS
+```
+
+---
+
+**Step-7:** *OS Kernel Loads*
+
+*The bootloader loads or helps load the operating system's kernel into memory and transfers control toward the OS*
+
+```txt
+Bootloader
+    ↓
+OS Kernel
+    ↓
+Operating System
+```
+
+*The kernel then begins performing the operating system's initialization*
+
+---
+
+**Step-8:** *Operating System Initializes*
+
+*The OS initializes the components and services needed to provide the usable operating environment*
+
+```txt
+Login Screen
+      ↓
+Desktop
+```
+
+*The computer is ready for normal use*
+
+---
+
+**Cold Boot vs Warm Boot**
+
+**Cold Boot:** *Starting the computer from a powered-off state*
+
+```txt
+OFF
+ ↓
+Power ON
+ ↓
+Boot
+```
+
+**Warm Boot:** *Restarting an already-running computer without completely powering it off.*
+
+```txt
+Running
+   ↓
+Restart
+   ↓
+Boot again
+```
+
+---
 
 
 
