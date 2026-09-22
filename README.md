@@ -7358,8 +7358,278 @@ Server
 
 ### **REST API Basics**
 
+**What is an API?**
 
+*API (Application Programming Interface) is an interface that allows one software application to communicate with another*
 
+```txt
+Frontend
+   ↓
+   API
+   ↓
+Backend
+```
+
+*For example, your frontend might ask the backend "Give me the details of user 101" The backend processes the request and returns data.*
+
+---
+
+**What is REST?**
+
+*REST stands for Representational State Transfer. REST is an architectural style for designing network APIs. A REST API commonly uses HTTP to allow clients to interact with resources.*
+
+```txt
+Client
+   ↓
+HTTP Request
+   ↓
+REST API
+   ↓
+Server
+   ↓
+HTTP Response
+```
+
+---
+
+**What is a REST API?**
+
+*A REST API is an API designed according to REST principles, commonly using HTTP methods to perform operations on resources.*
+
+**Example:**
+
+```txt
+Client
+   ↓
+GET /users/101
+   ↓
+Server
+   ↓
+User data
+```
+
+---
+
+**What is a Resource?**
+
+*In REST, we usually think in terms of resources*
+
+**Examples:**
+
+```txt
+/users
+/products
+/orders
+/students
+```
+
+*A specific resource can be identified like ```/users/101```*
+
+**Meaning:** *User whose ID is 101*
+
+*Another ```/products/25```*
+
+**Meaning:** *Product whose ID is 25*
+
+---
+
+**HTTP Methods in REST**
+
+*REST APIs commonly use*
+
+| HTTP Method | Common purpose            |
+| ----------- | ------------------------- |
+| **GET**     | Retrieve data             |
+| **POST**    | Create/submit data        |
+| **PUT**     | Replace/update a resource |
+| **DELETE**  | Delete a resource         |
+
+**Example:** *Suppose we have ```/users```*
+
+- **GET:** *Retrieve users ```GET /users```*
+- **POST:** *Create a new user ```POST /users```*
+- **PUT:** *Replace/update user 101 ```PUT /users/101```*
+- **DELETE:** *Delete user 101 ```DELETE /users/101```*
+
+---
+
+**REST API Request**
+
+*A request can contain several important parts*
+
+```txt
+GET /users/101 HTTP/1.1
+Host: example.com
+```
+
+```txt
+Method
+   +
+URL/Endpoint
+   +
+Headers
+   +
+Optional Body
+```
+
+---
+
+**REST API Response**
+
+*The server sends a response*
+
+*For example*
+
+```txt
+HTTP 200 OK
+
+{
+    "id": 101,
+    "name": "Saranya"
+}
+```
+
+*A response can contain*
+- *Status code*
+- *Headers*
+- *Response body*
+
+---
+
+**JSON in REST APIs**
+
+*REST APIs commonly exchange data using JSON*
+
+**Example:**
+
+```json
+{
+  "id": 101,
+  "name": "Saranya",
+  "role": "AI Engineer"
+}
+```
+
+*JSON is commonly used because it is easy for applications to parse and exchange.*
+
+---
+
+**REST API Example - Login**
+
+*Imagine a frontend application has a login form*
+
+```txt
+Username
+Password
+```
+
+*The frontend sends ```POST /login``` with data such as*
+
+```json
+{
+  "username": "user123",
+  "password": "********"
+}
+```
+
+*The server verifies the credentials and returns a response*
+
+*For example*
+
+```json
+{
+  "message": "Login successful"
+}
+```
+
+*The exact API design depends on the application*
+
+---
+
+**REST API and Client-Server Architecture**
+
+```txt
+Client
+   │
+   │ REST API Request
+   ▼
+Server
+   │
+   │ Process request
+   ▼
+Database / Application Logic
+   │
+   ▼
+Server
+   │
+   │ REST API Response
+   ▼
+Client
+```
+
+*So REST API is commonly used as the communication interface between a client and backend server.*
+
+---
+
+**Endpoint**
+
+*An endpoint is a specific URL thorugh which an API can be accessed*
+
+**Examples:**
+
+```txt
+GET    /users
+GET    /users/101
+POST   /users
+DELETE /users/101
+```
+
+*These represent differeny API operations/endpoints*
+
+*For example ```GET /products/25``` can represent Get product 25*
+
+---
+
+**REST API Status Codes**
+
+- **```200 OK```:** *Request succeeded*
+- **```201 Created```:** *A resource was successfully created*
+- **```400 Bad Request```:** *The request is invalid*
+- **```401 Unauthorized```:** *Authentication is required or failed*
+- **```403 Forbidden```:** *The server understood the request but refuses to authorize it*
+- **```404 Not Found```:** *Requested resource was not found*
+- **```505 Internal Server Error```:** *Server encountered an unexpected error*
+
+```txt
+200 → Success
+201 → Created
+400 → Bad request
+401 → Authentication problem
+403 → Forbidden
+404 → Not found
+500 → Server error
+```
+
+---
+
+**REST API Full Example**
+
+*Suppose an application manages students*
+
+- *Get all students ```GET /students```*
+- *Get student 101 ```GET /students/101```*
+- *Create a student ```POST /students```*
+  
+    ```json
+    {
+    "name": "Rahul",
+    "age": 22
+    }
+    ```
+- *Update student 101 ```PUT /students/101```*
+- *Delete student 101 ```DELETE /students/101```*
+
+---
 
 
 
