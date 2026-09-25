@@ -103,6 +103,7 @@ Hey!!!
     - [**POST**](#post)
     - [**BIOS**](#bios-1)
     - [**UEFI**](#uefi-1)
+    - [**OS Loading**](#os-loading)
 
 
 # **Computer and Programming Foundations**
@@ -8316,8 +8317,114 @@ Continue boot
 
 ### **UEFI**
 
+**What is UEFI?**
 
+*UEFI (Unified Extensible Firmware Interface) is modern system firmware that initializes hardware and provides the interface between the computer's hardware and the operating system during the boot process*
 
+```txt
+Power ON
+   ↓
+UEFI
+   ↓
+POST / Hardware Initialization
+   ↓
+Find Bootloader
+   ↓
+Operating System
+```
+
+*Think of UEFI as the modern replacement for traditional BIOS firmware*
+
+---
+
+**Why was UEFI introduced?**
+
+*Traditional BIOS has limitations due to its older design*
+
+*UEFI was designed to provide a more modern firmware environment with features such as*
+- *Support for modern hardware*
+- *Support for large boot disks*
+- *A more flexible firmware environment*
+- *Support for modern boot mechanisms such as Secure Boot*
+
+*UEFI is the modern successor to legacy BIOS*
+
+---
+
+**UEFI vs BIOS**
+
+| Feature | Legacy BIOS | UEFI |
+|---|---|---|
+| Type | Traditional firmware | Modern firmware |
+| Boot method | Legacy BIOS boot | UEFI boot |
+| Disk support | More limited by legacy design | Supports modern large disks |
+| Interface | Traditionally text-based | Can provide graphical interfaces |
+| Secure Boot | Not a standard BIOS feature | Supports Secure Boot |
+| Modern systems | Mostly legacy/older systems | Common on modern computers |
+
+---
+
+**UEFI and Secure Boot**
+
+**What is Secure Boot?**
+
+*Secure Boot is a UEFI security feature that helps ensure that only trusted, appropriately signed boot software is executed during startup.*
+
+```txt
+Power ON
+   ↓
+UEFI
+   ↓
+Check boot software
+   ↓
+Trusted?
+  ↙   ↘
+YES    NO
+ ↓      ↓
+Boot   Block/stop
+```
+
+*The purpose is to help prevent unauthorized or modified boot software from running before the OS*
+
+---
+
+**UEFI and Bootloader**
+
+*UEFI can locate and launch a bootloader from a bootable storage device*
+
+```txt
+UEFI
+ ↓
+Bootloader
+ ↓
+OS Kernel
+ ↓
+Operating System
+```
+
+*This differs from the simplified legacy BIOS model, where BIOS typically loads boot code from a boot sector*
+
+---
+
+**UEFI Firmware Settings**
+
+*Just like BIOS firmware setup, UEFI provides configuration options*
+
+*You may see settings related to*
+
+```txt
+Boot order
+Secure Boot
+Hardware configuration
+System date/time
+Security settings
+```
+
+*The exact interface depends on the manufacturer*
+
+---
+
+### **OS Loading**
 
 
 
