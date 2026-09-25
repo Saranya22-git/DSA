@@ -100,6 +100,8 @@ Hey!!!
   - [**How Computers Actually Work**](#how-computers-actually-work)
     - [**What happens when you press the Power Button**](#what-happens-when-you-press-the-power-button)
     - [**Booting Process**](#booting-process)
+    - [**POST**](#post)
+    - [**BIOS**](#bios-1)
 
 
 # **Computer and Programming Foundations**
@@ -8035,6 +8037,135 @@ Boot again
 
 ---
 
+### **POST**
+
+**What is POST?**
+
+*POST (Power-On Self-Test) is a startup diagnostic process performed by the system firmware to check whether essential hardware is functioning sufficiently for the computer to continue booting.*
+
+```txt
+Power ON
+   ↓
+POST
+   ↓
+Check essential hardware
+   ↓
+Continue booting
+```
+
+---
+
+**Why does POST happen?**
+
+- *When you turn on a computer, the operating system cannot simply start immediately*
+- *The system first needs to determine whether essential hardware required for startup is available and functioning*
+- *POST helps detect hardware problems before the operating system loads*
+
+---
+
+**What does POST check?**
+
+*POST checks essential hardware components needed during startup*
+
+*For example*
+
+```txt
+CPU
+RAM
+Keyboard / input hardware
+Display-related hardware
+Storage / boot-related hardware
+```
+
+*The exact checks depend on the computer's firmware and hardware*
+
+*POST is not a complete hardware diagnostic. It performs startup checks needed to determine whether the system can proceed with booting.*
+
+---
+
+**Where does POST happen?**
+
+*POST is performed during the early boot process by the system's firmware*
+
+```txt
+Power ON
+   ↓
+Firmware starts
+   ↓
+POST
+   ↓
+Find bootable device
+   ↓
+Bootloader
+   ↓
+Operating System
+```
+
+*So POST happens before the operating system is loaded*
+
+---
+
+**What happens if POST detects a problem?**
+
+*If an important hardware problem is detected, the computer may not continue with normal booting*
+
+*Depending on the system it may*
+- *Display an error message*
+- *Produce beep code*
+- *Show diagnostic indicators*
+- *Stop the boot process*
+
+**Example:**
+
+```txt
+Power ON
+   ↓
+POST
+   ↓
+RAM problem detected
+   ↓
+Boot may stop
+```
+
+*The exact behavior depends on the motherboard and firmware*
+
+---
+
+**POST vs Booting**
+
+**POST:** *A specific hardware-checking stage during setup*
+
+**Booting:** *The larger overall process of starting the computer and loading the operating system*
+
+```txt
+BOOTING
+│
+├── Firmware starts
+├── POST
+├── Find boot device
+├── Bootloader
+└── OS loading
+```
+
+*POST is part of the Booting process*
+
+---
+
+**POST vs Operating System**
+
+*POST occurs before the OS is running*
+
+```txt
+POST
+ ↓
+Operating System
+```
+
+*For example, if your RAM has a serious hardware problem that prevents startup, the system may detect it during POST before Windows or Linux gets a chance to load.*
+
+---
+
+### **BIOS**
 
 
 
