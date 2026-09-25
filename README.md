@@ -8426,8 +8426,150 @@ Security settings
 
 ### **OS Loading**
 
+**What is OS loading?**
 
+*OS loading is the stage of the boot process in which the operating system's required components, especially its kernel, are loaded from storage into memory and control is transferred to the operating system.*
 
+```txt
+Storage
+   ↓
+Bootloader
+   ↓
+OS Kernel → Memory
+   ↓
+Operating System starts
+```
+
+---
+
+**Where is the Operating System before Loading?**
+
+*When the computer is powered off, the operating system is stored on persistent storage*
+
+*For example*
+
+```txt
+SSD / HDD
+   ↓
+Operating System files
+```
+
+*The OS is not continuously sitting in RAM while the computer is powered off. When you start the computer, the necessary parts are loaded into memory.*
+
+---
+
+**What Loads the OS?**
+
+*The bootloader helps load and start the operating system*
+
+```txt
+UEFI
+  ↓
+Bootloader
+  ↓
+OS Kernel
+  ↓
+Operating System
+```
+
+*The bootloader locates the OS and loads the kernel and other required startup information into memory.*
+
+---
+
+**What is the Kernel?**
+
+*The kernel is the core component of the operating system that manages hardware resources and provides essential services.*
+
+*During OS loading*
+
+```txt
+Storage
+   ↓
+OS Kernel
+   ↓
+RAM
+   ↓
+CPU executes kernel
+```
+
+*Once the kernel starts running, it takes control of the system.*
+
+---
+
+**Why is the OS Loaded into Memory?**
+
+*The CPU needs to execute instructions. RAM provides the working memory from which the operating system and running programs can be accessed efficiently.*
+
+```txt
+SSD
+  ↓
+Load required OS components
+  ↓
+RAM
+  ↓
+CPU executes instructions
+```
+
+```txt
+SSD/HDD → Long-term storage
+RAM     → Working memory
+```
+
+---
+
+**What happens after the Kernel loads?**
+
+*Once the kernel starts executing, it begins initializing the operating system.*
+
+*It can initialize/manage things such as*
+
+```txt
+Memory
+CPU/process management
+Devices
+File systems
+Other OS services
+```
+
+*Then the system continues toward the login screen or desktop*
+
+```txt
+Kernel starts
+    ↓
+OS initialization
+    ↓
+System services
+    ↓
+Login screen / Desktop
+```
+
+---
+
+**Complete Startup Flow**
+
+```txt
+Power Button
+     ↓
+Power supplied
+     ↓
+Firmware (BIOS/UEFI)
+     ↓
+POST
+     ↓
+Find bootable device
+     ↓
+Bootloader
+     ↓
+OS Kernel loaded into RAM
+     ↓
+Kernel starts executing
+     ↓
+OS initialization
+     ↓
+Login / Desktop
+```
+
+---
 
 
 
