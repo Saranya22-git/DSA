@@ -102,6 +102,7 @@ Hey!!!
     - [**Booting Process**](#booting-process)
     - [**POST**](#post)
     - [**BIOS**](#bios-1)
+    - [**UEFI**](#uefi-1)
 
 
 # **Computer and Programming Foundations**
@@ -8241,7 +8242,81 @@ BIOS
 
 **Where is BIOS stored?**
 
-**
+- *BIOS firmware is stored in non-volatile memory on the motherboard*
+- *That means It retains its contents even when the computer is powered off*
+
+---
+
+**BIOS Setup**
+
+*You may have seen a screen like this when pressing a key such as*
+
+```txt
+F2
+DEL
+F10
+```
+
+*during startup*
+
+*That can open the firmware setup interface*
+
+*You may find settings related to*
+
+```txt
+Boot order
+Date/time
+Hardware configuration
+Security settings
+```
+
+*The exact options and key depend on the computer*
+
+---
+
+**BIOS and Boot Order**
+
+*Suppose your computer has*
+
+```txt
+1. USB
+2. SSD
+3. Network
+```
+
+*The firmware can check according to this configured order*
+
+*If there is not bootable USB, it may move on and look at the SSD*
+
+```txt
+USB
+ ↓
+Not bootable
+ ↓
+SSD
+ ↓
+Bootable OS found
+ ↓
+Continue boot
+```
+
+---
+
+**BOOT vs Operating System**
+
+| BIOS | Operating System |
+|---|---|
+| Firmware | System software |
+| Starts very early in boot | Loads after the initial boot stages |
+| Initializes hardware | Manages hardware/resources during normal operation |
+| Helps start the OS | Provides environment for applications |
+| Stored as firmware on motherboard | Stored on a storage device and loaded into memory |
+
+---
+
+### **UEFI**
+
+
 
 
 
