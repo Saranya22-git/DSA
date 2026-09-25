@@ -8167,6 +8167,82 @@ Operating System
 
 ### **BIOS**
 
+*BIOS (Basic Input/Output System) is firmware stored on a computer's motherboard that initializes hardware during startup and helps begin the boot process*
+
+```txt
+Power ON
+   ↓
+BIOS
+   ↓
+Hardware initialization / POST
+   ↓
+Find boot device
+   ↓
+Bootloader
+   ↓
+Operating System
+```
+
+---
+
+**What is Firmware?**
+
+*Firmware is software stored in non-volatile memory that provides low-level instructions for controlling or initializing hardware*
+
+*BIOS is a type of system firmware*
+
+*So*
+
+```txt
+Firmware
+   ↓
+BIOS
+```
+
+*BIOS is not the operating system*
+
+---
+
+**What does BIOS do?**
+
+*BIOS performs important startup tasks such as*
+
+1. **Initializes hardware:** *It helps initialize essential hardware components when the computer starts*
+
+    ```txt
+    CPU
+    RAM
+    Keyboard
+    Storage
+    Display
+    ```
+
+2. **Performs POST:** *BIOS can perform the Power-On Self-Test*
+
+    ```txt
+    BIOS
+    ↓
+    POST
+    ↓
+    Hardware checks
+    ```
+
+3. **Finds a bootable device:** *BIOS follows its configured boot order to find a device from which the operating system can be started*
+
+    ```txt
+    SSD
+    USB
+    Other boot devices
+    ```
+
+4. **Starts the boot process:** *Once a suitable boot device is found, BIOS starts the next stage of the boot process such as loading the bootloader*
+
+---
+
+**Where is BIOS stored?**
+
+**
+
 
 
 
