@@ -105,6 +105,7 @@ Hey!!!
     - [**UEFI**](#uefi-1)
     - [**OS Loading**](#os-loading)
     - [**Fetch Decode Execute Cycle**](#fetch-decode-execute-cycle)
+    - [**Machine Cycle**](#machine-cycle)
 
 
 # **Computer and Programming Foundations**
@@ -8724,6 +8725,84 @@ Instruction 1012
 ```
 
 *Normally the CPU proceeds through instructions but a branch/jump can cause execution to continue from a different address*
+
+---
+
+**Where does the Instruction come from?**
+
+*Ultimately, instructions must be available in memory for the CPU to execute them.*
+
+```txt
+Storage
+   ↓
+Program loaded
+   ↓
+Memory (RAM)
+   ↓
+CPU
+   ↓
+Fetch
+   ↓
+Decode
+   ↓
+Execute
+```
+
+*The OS and programs are loaded into memory, and the CPU executes instructions from memory through this repeated cycle.*
+
+---
+
+**Simple Real Example**
+
+*Suppose a program contains instructions*
+
+```txt
+1. LOAD 5
+2. ADD 3
+3. STORE result
+```
+
+*The CPU repeatedly processes them*
+
+```txt
+Instruction 1
+   ↓
+FETCH → DECODE → EXECUTE
+
+Instruction 2
+   ↓
+FETCH → DECODE → EXECUTE
+
+Instruction 3
+   ↓
+FETCH → DECODE → EXECUTE
+```
+
+*Eventually the desired result is produced*
+
+---
+
+### **Machine Cycle**
+
+*A machine cycle is the sequence of basic operations the CPU performs to process an instruction*
+
+---
+
+**Machine Cycle vs Fetch-Decode-Execute**
+
+**Fetch-Decode-Execute Cycle**
+
+```txt
+FETCH
+  ↓
+DECODE
+  ↓
+EXECUTE
+```
+
+**Machine Cycle:** *Describes the CPU's sequence of operations involved in processing an instruction*
+
+*The CPU repeatedly performs machine cycles to execute program instructions, with fetch, decode, and execute being the core stages.*
 
 ---
 
