@@ -104,6 +104,7 @@ Hey!!!
     - [**BIOS**](#bios-1)
     - [**UEFI**](#uefi-1)
     - [**OS Loading**](#os-loading)
+    - [**Fetch Decode Execute Cycle**](#fetch-decode-execute-cycle)
 
 
 # **Computer and Programming Foundations**
@@ -8571,6 +8572,159 @@ Login / Desktop
 
 ---
 
+### **Fetch Decode Execute Cycle**
 
+*The fetch-decode-execute cycle is the repeated process by which the CPU fetches an instruction from memory, decodes what it means and executes it.*
+
+```txt
+Memory
+  ↓
+FETCH
+  ↓
+DECODE
+  ↓
+EXECUTE
+  ↺
+Repeat
+```
+
+---
+
+**Why does the CPU need this cycle?**
+
+*A program is ultimately made up of instructions that the CPU must execute. For example, imagine an instruction ```ADD 5 + 3```*
+
+*The CPU needs to*
+- *Get the instruction*
+- *Understand the instruction*
+- *Perform the required operation*
+
+*```FETCH → DECODE → EXECUTE```*
+
+---
+
+**Step-1:** *FETCH*
+
+**What is Fetch?**
+
+*Fetch means retrieving the next instruction from memory. The CPU needs to know which instruction to execute next. A special CPU register called the Program Counter (PC) keeps track of the address of the next instruction.*
+
+```txt
+Program Counter
+      ↓
+Memory address
+      ↓
+Instruction
+      ↓
+CPU
+```
+
+*For example ```PC → 1000``` The CPU goes to memory address ```1000``` and fetches the instruction stored there.*
+
+---
+
+**Step-2:** *DECODE*
+
+*After fetching the instruction the CPU needs to understand what that instruction means. This is the decode stage*
+
+```txt
+Fetched Instruction
+       ↓
+     Decode
+       ↓
+"What operation should I perform?"
+```
+
+*For example the instruction might represent ```ADD```*
+
+*The CPU's control logic interprets the instruction and determines what operation needs to be performed*
+
+---
+
+**Step-3:** *EXECUTE*
+
+*Now the CPU performs the operation specified by the instruction*
+
+*For example*
+
+```txt
+Instruction: ADD 5 + 3
+
+       ↓
+
+Execution
+
+       ↓
+
+Result = 8
+```
+
+*The execution could involve*
+- *Arithmetic*
+- *Logic*
+- *Moving data*
+- *Reading/Writing memory*
+- *Changing control flow*
+
+*The exact operation depends on the instruction*
+
+---
+
+**Then the Cycle Repeats**
+
+*After executing one instruction, the CPU moves to the next instruction*
+
+```txt
+FETCH
+  ↓
+DECODE
+  ↓
+EXECUTE
+  ↓
+FETCH
+  ↓
+DECODE
+  ↓
+EXECUTE
+  ↓
+...
+```
+
+*This happens extremely quickly billions of times per second on modern CPUs depending on the processor*
+
+---
+
+**Role of the Program Counter**
+
+*The Program Counter is a CPU register that keeps track of the address of the next instruction to be fetched*
+
+**Example:**
+
+```txt
+PC = 1000
+     ↓
+Fetch instruction at 1000
+     ↓
+Decode
+     ↓
+Execute
+     ↓
+PC moves to next instruction
+```
+
+*The exact behavior can differ from jumps, branches, function calls, etc.,*
+
+*For example*
+
+```txt
+Instruction 1000
+Instruction 1004
+Instruction 1008
+Instruction 1012
+```
+
+*Normally the CPU proceeds through instructions but a branch/jump can cause execution to continue from a different address*
+
+---
 
 
