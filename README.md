@@ -109,6 +109,7 @@ Hey!!!
     - [**How Programs Run**](#how-programs-run)
     - [**Source Code**](#source-code)
     - [**Machine Code**](#machine-code)
+    - [**Bytecode**](#bytecode)
 
 
 # **Computer and Programming Foundations**
@@ -9318,4 +9319,147 @@ Source Code
 
 ### **Machine Code**
 
+*Machine code is the processor-specific set of instructions represented in binary form that a CPU can execute directly.*
+
+```txt
+Source Code
+     ↓
+Translation
+     ↓
+Machine Code
+     ↓
+CPU
+```
+
+*Machine code is the lowest-level instruction representation directly executed by the processor.*
+
+---
+
+**What does Machine Code look like?**
+
+*Machine code is represented as bits ```0 1 0 1 1 0 1 0``` or as a sequence of bytes ```10110000 01100001```*
+
+*These bits correspond to instructions defined by a particular CPU's instruction set architecture (ISA)*
+
+---
+
+**Why does the CPU understand Machine Code?**
+
+*A CPU is designed to recognize a particular set of machine instructions*
+
+*For example, a processor architecture defines instructions for operations such as*
+
+```txt
+ADD
+SUB
+LOAD
+STORE
+JUMP
+COMPARE
+```
+
+*The actual binary encoding of these instructions depends on the processor architecture*
+
+```txt
+Machine Code
+     ↓
+CPU instruction set
+     ↓
+CPU understands and executes it
+```
+
+---
+
+**Machine Code is CPU/Architecture specific**
+
+*Machine code is not universally the same for every CPU architecture*
+
+*For example*
+
+```txt
+x86-64
+ARM64
+```
+
+*have different instruction sets and machine-code encodings*
+
+*Machine code generated for one CPU architecture may not directly run on another architecture*
+
+**Example:**
+
+```txt
+x86-64 machine code
+       ↓
+x86-64 CPU ✅
+
+ARM64 CPU
+       ↓
+May not execute it directly ❌
+```
+
+*This is one reason software needs to be built or provided appropriately for different CPU architectures*
+
+---
+
+**Machine Code vs Source Code**
+
+| Source Code | Machine Code |
+|---|---|
+| Written by programmers | Generated/represented for CPU execution |
+| Human-readable | Difficult for humans to read |
+| Uses languages like Python, C, Java | Uses processor instructions |
+| Generally portable at source level | Architecture-specific |
+| Requires processing before CPU execution | CPU can execute it directly |
+
+**Example:**
+
+**Source Code**
+
+```python
+x = 10
+y = 20
+print(x + y)
+```
+
+**Machine Code**
+
+```txt
+01010100 10101010 ...
+```
+
+*The actual bytes depend on the language implementation, compiler/runtime and target CPU architecture*
+
+---
+
+**Machine Code vs Assembly Language**
+
+**Machine Code:** *Binary/byte-level instruction encoding directly executable by the processor*
+
+```txt
+10110000 01100001
+```
+
+**Assembly Language:** *Human-readable textual representation of processor instructions*
+
+*For example*
+
+```asm
+MOV
+ADD
+SUB
+```
+
+*So*
+
+```txt
+Machine Code
+     ↕
+Assembly Language
+```
+
+*Assembly is much easier for humans to read, but it is still closely tied to a particular CPU architecture*
+
+---
+
+### **Bytecode**
 
