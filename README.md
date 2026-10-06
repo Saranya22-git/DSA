@@ -9463,3 +9463,16 @@ Assembly Language
 
 ### **Bytecode**
 
+*Bytecode is an intermediate form of program instructions generated from source code, designed to be executed by a virtual machine or runtime rather than directly by the physical CPU.*
+
+```txt
+Source Code
+     ↓
+  Bytecode
+     ↓
+Virtual Machine / Runtime
+     ↓
+Machine Instructions
+     ↓
+CPU
+```
