@@ -8806,4 +8806,160 @@ EXECUTE
 
 ---
 
+**Step-1:** *Fetch*
+
+*The CPU gets the next instruction from memory*
+
+```txt
+Program Counter
+      ↓
+Memory
+      ↓
+Instruction
+      ↓
+CPU
+```
+
+*The Program Counter (PC) tells the CPU where the next instruction is located.*
+
+**Step-2:** *Decode*
+
+*The CPU determines what the fetched instruction means*
+
+```txt
+Instruction
+    ↓
+Decode
+    ↓
+Determine operation
+```
+
+*For example the instruction might tell the CPU to*
+
+```txt
+ADD
+SUBTRACT
+MOVE DATA
+COMPARE
+```
+
+*The CPU's control logic determines what needs to happen*
+
+- **Step-3:** *Execute*
+
+*The CPU performs the operation*
+
+*For example*
+
+```txt
+5 + 3
+ ↓
+ALU
+ ↓
+8
+```
+
+*The ALU (Arithmetic Logic Unit) performs arithmetic and logical operations*
+
+*For example*
+- *Addition*
+- *Subtraction*
+- *Comparisons*
+- *Logical operations*
+
+---
+
+**What happens after Execution?**
+
+*After executing the instruction the CPU moves toward processing the next instruction*
+
+```txt
+Fetch
+  ↓
+Decode
+  ↓
+Execute
+  ↓
+Next instruction
+  ↓
+Fetch
+  ↓
+Decode
+  ↓
+Execute
+  ↓
+...
+```
+
+*This continues while the program is executing*
+
+---
+
+**Example:**
+
+*Suppose a program contains ```ADD 5, 3```*
+
+*The CPU performs*
+
+```txt
+FETCH
+  ↓
+Get ADD instruction
+  ↓
+DECODE
+  ↓
+Understand "ADD"
+  ↓
+EXECUTE
+  ↓
+ALU performs addition
+  ↓
+Result = 8
+```
+
+*Then the CPU proceeds to the next instruction*
+
+---
+
+**Important CPU Components**
+
+- **Program Counter (PC):** *Keeps track of the address of the next instruction*
+- **Control Unit (CU):** *Helps control and coordinate instruction processing*
+- **ALU:** *Performs arithmetic and logical operations*
+- **Registers:** *Small, fast storage locations inside the CPU used to hold values, instructions, addresses, and intermediate results*
+
+```txt
+              CPU
+        ┌───────────────┐
+        │ Control Unit  │
+        │      ↓        │
+        │   Registers   │
+        │      ↓        │
+        │      ALU      │
+        └───────────────┘
+```
+
+---
+
+```txt
+          ┌─────────────┐
+          │    FETCH    │
+          └──────┬──────┘
+                 ↓
+          ┌─────────────┐
+          │   DECODE    │
+          └──────┬──────┘
+                 ↓
+          ┌─────────────┐
+          │   EXECUTE   │
+          └──────┬──────┘
+                 ↓
+           Next instruction
+                 │
+                 └──────────→ FETCH
+```
+
+---
+
+
 
