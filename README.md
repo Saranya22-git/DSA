@@ -108,6 +108,7 @@ Hey!!!
     - [**Machine Cycle**](#machine-cycle)
     - [**How Programs Run**](#how-programs-run)
     - [**Source Code**](#source-code)
+    - [**Machine Code**](#machine-code)
 
 
 # **Computer and Programming Foundations**
@@ -9276,5 +9277,45 @@ System.out.println("Hello");
 *All three can express a similar operation but their source code syntax is different.*
 
 ---
+
+**What happens to Source Code?**
+
+*The next stage depends on the programming language and its implementation*
+
+```txt
+Source Code
+     ↓
+Language Processing
+     ↓
+Machine-level execution
+```
+
+*Different languages may use*
+- *Compilation*
+- *Interpretation*
+- *Bytecode + virtual machine/runtime*
+- *A combination of these*
+
+---
+
+**Is Source Code stored on the computer?**
+
+*Yes. When you create a Python file such as ```program.py``` the source code is stored as a file on persistent storage.*
+
+*For example*
+
+```txt
+SSD
+ ↓
+program.py
+ ↓
+Source Code
+```
+
+*When you run the program the operating system and language runtime/compiler/interpreter process it according to that language's execution model.*
+
+---
+
+### **Machine Code**
 
 
