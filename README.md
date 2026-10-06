@@ -9216,4 +9216,65 @@ REPEAT
 
 ### **Source Code**
 
+*Source code is the human-readable code written by a programmer in a programming language.*
+
+*For example in Python*
+
+```python
+x = 10
+y = 20
+
+print(x + y)
+```
+
+*This is the source code. It is written using the rules and syntax of a programming language.*
+
+---
+
+**Why is it called "Source" code?**
+
+*Because it is the original form of the program written by the programmer.*
+
+```txt
+Programmer
+    ↓
+Source Code
+    ↓
+Translation / Execution
+    ↓
+Machine-level instructions
+    ↓
+CPU
+```
+
+*So source code is the starting point from which the executable behavior of a program is produced.*
+
+---
+
+**Source Code depends on the Programming Language**
+
+*Different languages have different syntax*
+
+**Python**
+
+```python
+print("Hello")
+```
+
+**C**
+
+```python
+printf("Hello")
+```
+
+**Java**
+
+```python
+System.out.println("Hello");
+```
+
+*All three can express a similar operation but their source code syntax is different.*
+
+---
+
 
