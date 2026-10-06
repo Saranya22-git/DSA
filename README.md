@@ -106,6 +106,8 @@ Hey!!!
     - [**OS Loading**](#os-loading)
     - [**Fetch Decode Execute Cycle**](#fetch-decode-execute-cycle)
     - [**Machine Cycle**](#machine-cycle)
+    - [**How Programs Run**](#how-programs-run)
+    - [**Source Code**](#source-code)
 
 
 # **Computer and Programming Foundations**
@@ -8961,5 +8963,257 @@ Result = 8
 
 ---
 
+### **How Programs Run**
+
+```txt
+Source Code
+    ↓
+Translation
+    ↓
+Executable / Bytecode
+    ↓
+Program Loaded into Memory
+    ↓
+CPU Executes Instructions
+    ↓
+Program Produces Output
+```
+
+---
+
+- **Step-1:** *Programmer writes source code*
+
+    *A programmer writes code in a programming language such as*
+
+    ```txt
+    Python
+    Java
+    C
+    C++
+    JavaScript
+    ```
+
+    **Example:**
+
+    ```python
+    print("Hello")
+    ```
+
+    *This is source code. It is written in a form that humans can understand relatively easily.*
+
+- **Step-2:** *Source code must be processed*
+
+    *The CPU does not directly understand Python, Java, C++, etc., source code. The source code has to go through the language's execution/translation mechanism*
+
+    *Depending on the language this can involve*
+
+    ```txt
+    Compiler
+    Interpreter
+    Virtual Machine
+    Bytecode
+    ```
+
+- **Step-3:** *Program becomes CPU-Executable Instructions*
+
+    *The instructions that the CPU executes are represented in machine code appropriate for the processor architecture*
+
+    ```txt
+    Human-readable code
+            ↓
+    Translation / execution mechanism
+            ↓
+    Machine-level instructions
+            ↓
+    CPU
+    ```
+
+    *Machine code consists of instructions that the processor can execute*
+
+- **Step-4:** *Program is loaded into memory*
+
+    *Before the CPU can execute a running program, the required program code and data need to be available in memory*
+
+    ```txt
+    Storage
+    ↓
+    Program loaded
+    ↓
+    RAM
+    ↓
+    CPU
+    ```
+
+    *For example when you launch an application*
+
+    ```txt
+    Application stored on SSD
+            ↓
+    Operating system loads required parts
+            ↓
+    Memory
+            ↓
+    CPU executes instructions
+    ```
+
+- **Step-5:** *CPU Executes instructions*
+
+    ```txt
+    Program
+    ↓
+    Instructions in memory
+    ↓
+    CPU
+    ↓
+    Fetch
+    ↓
+    Decode
+    ↓
+    Execute
+    ↓
+    Repeat
+    ```
+
+    *The CPU repeatedly process instructions*
+
+- **Step-6:** *Program Interacts with the OS*
+
+    *A running program usually needs resources from the operating system*
+
+    *For example*
+
+    ```txt
+    Program
+    ↓
+    "I need to read a file"
+    ↓
+    Operating System
+    ↓
+    File system / Storage
+    ```
+
+    *or*
+
+    ```txt
+    Program
+    ↓
+    "I need network communication"
+    ↓
+    Operating System
+    ↓
+    Network hardware
+    ```
+
+    *The OS manages access to hardware and system resources*
+
+---
+
+**Simple Example**
+
+*Running Python*
+
+*Suppose you write*
+
+```python
+x = 10
+y = 20
+print(x + y)
+```
+
+```txt
+Python Source Code
+        ↓
+Python execution mechanism
+        ↓
+Instructions executed by Python runtime
+        ↓
+CPU executes lower-level machine instructions
+        ↓
+Output: 30
+```
+
+---
+
+**Program vs Process**
+
+**Program:** *A program is a passive set of instructions stored somewhere such as on storage*
+
+**Process:** *A process is a program that is currently executing along with its execution state and resources*
+
+```txt
+Program
+  ↓
+Started by OS
+  ↓
+Process
+  ↓
+Instructions execute
+```
+
+**Example:**
+
+```txt
+Chrome application files
+        ↓
+Launch Chrome
+        ↓
+Chrome process
+        ↓
+CPU executes instructions
+```
+
+---
+
+**Where does RAM fit?**
+
+```txt
+        STORAGE
+           ↓
+      Program files
+           ↓
+          RAM
+           ↓
+          CPU
+           ↓
+   Fetch → Decode → Execute
+```
+
+- **Storage** → *keeps program files persistently*
+- **RAM** → *holds the working program/data while running*
+- **CPU** → *executes instructions*
+
+---
+
+```txt
+PRESS POWER
+     ↓
+FIRMWARE
+     ↓
+POST
+     ↓
+BOOT DEVICE
+     ↓
+BOOTLOADER
+     ↓
+OS KERNEL
+     ↓
+OPERATING SYSTEM
+     ↓
+PROGRAM STARTS
+     ↓
+PROGRAM LOADED INTO MEMORY
+     ↓
+CPU FETCHES INSTRUCTIONS
+     ↓
+DECODE
+     ↓
+EXECUTE
+     ↓
+REPEAT
+```
+
+---
+
+### **Source Code**
 
 
