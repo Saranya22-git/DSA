@@ -111,6 +111,7 @@ Hey!!!
     - [**Machine Code**](#machine-code)
     - [**Bytecode**](#bytecode)
     - [**Compiler**](#compiler)
+    - [**Interpreter**](#interpreter)
 
 
 # **Computer and Programming Foundations**
@@ -9655,6 +9656,39 @@ C          | Object or machine code
 C++        | Object or machine code
 Java       | Bytecode (.class files)
 
+*A compiler does not always produce machine code directly. The java compiler for example produce bytecode that runs on the Java Virtual Machine (JVM)*
+
 ---
+
+**Compilation Error**
+
+*A compilation error occurs when the compiler cannot successfully translate the code because it finds an issue that prevents compilation.*
+
+**Example in C:**
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello World")
+    return 0;
+}
+```
+
+*The semicolon after ```printf("Hello World")``` is missing. A C compiler will report an error for this code.*
+
+---
+
+**Compiler vs Compilation**
+
+**Compiler:** *The software that translates source code*
+
+**Compilation:** *The process of translating source code into another representation*
+
+---
+
+### **Interpreter**
+
+
 
 
