@@ -9599,3 +9599,4 @@ FETCH → DECODE → EXECUTE
 
 ### **Compiler**
 
+*A compiler is a software program that translates source code written in a programming language into another form such as machine code or bytecode so that the program can be executed.*
