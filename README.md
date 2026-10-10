@@ -9600,3 +9600,61 @@ FETCH → DECODE → EXECUTE
 ### **Compiler**
 
 *A compiler is a software program that translates source code written in a programming language into another form such as machine code or bytecode so that the program can be executed.*
+
+---
+
+**Why do we need a compiler?**
+
+*Consider this Python-like example written in C*
+
+```c
+#include <studio.h>
+
+int main() {
+    printf("Hello World");
+    return 0;
+}
+```
+
+*The CPU cannot directly execute this human-readable C source code. It needs instructions in a form supported by the processor.*
+
+*A compiler helps translate the source code into a lower-level form.*
+
+---
+
+**How does a Compiler work?**
+
+```txt
+Source Code
+(Human-readable program written in C, C++, Java, etc.)
+
+        │
+        ▼
+
+Compiler
+(Checks and translates the code)
+
+        │
+        ▼
+
+Translated Output
+(Machine code, object code, or bytecode, depending on the language and compiler)
+```
+
+*A compiler commonly performs these tasks*
+1. **Checks the code:** *Detects issues such as syntax errors and certain semantic errors*
+2. **Translates the code:** *Converts source code into another representation*
+3. **Optimizes the code:** *May improve performance or reduce unneccessary operations*
+4. **Produces output:** *Generates the target representation required by the language's execution process*
+
+*These are simplified stages the exact process depends on the compiler and language*
+
+Language   | What its compiler commonly produces
+-----------|------------------------------------
+C          | Object or machine code
+C++        | Object or machine code
+Java       | Bytecode (.class files)
+
+---
+
+
