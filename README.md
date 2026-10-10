@@ -110,6 +110,7 @@ Hey!!!
     - [**Source Code**](#source-code)
     - [**Machine Code**](#machine-code)
     - [**Bytecode**](#bytecode)
+    - [**Compiler**](#compiler)
 
 
 # **Computer and Programming Foundations**
@@ -9558,4 +9559,43 @@ CPU
 
 ---
 
-****
+**Bytecode vs Source Code**
+
+```txt
+Source Code
+→ Written by programmer
+→ Human-readable
+
+Bytecode
+→ Intermediate representation
+→ Designed for a virtual machine/runtime
+```
+
+**Example:**
+
+```txt
+Java:
+.java → source code
+.class → bytecode
+```
+
+---
+
+```txt
+SOURCE CODE
+     ↓
+BYTECODE
+     ↓
+VIRTUAL MACHINE / RUNTIME
+     ↓
+MACHINE CODE
+     ↓
+CPU
+     ↓
+FETCH → DECODE → EXECUTE
+```
+
+---
+
+### **Compiler**
+
