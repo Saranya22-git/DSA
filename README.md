@@ -9476,3 +9476,86 @@ Machine Instructions
      ↓
 CPU
 ```
+
+*Bytecode sits between source code and machine-level execution*
+
+---
+
+**Example - Java**
+
+*Suppose you write*
+
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}
+```
+
+*This is ```Java Source Code``` The java compiler (javac) compiles it into bytecode.*
+
+```txt
+Hello.java
+    ↓
+javac
+    ↓
+Hello.class
+    ↓
+Java Virtual Machine (JVM)
+    ↓
+Machine instructions
+    ↓
+CPU
+```
+
+*The ```.class``` file contains Java bytecode*
+
+---
+
+**Byte code vs Machine Code**
+
+| Bytecode | Machine Code |
+|---|---|
+| Intermediate representation | Processor-executable instructions |
+| Usually executed by a VM/runtime | Executed directly by CPU |
+| Generally not tied to one physical CPU architecture | CPU-architecture specific |
+| Example: Java bytecode | x86-64 / ARM64 machine instructions |
+
+---
+
+**Is Bytecode Binary?**
+
+*Bytecode is commonly stored in a binary file format, but don't define bytecode simply as "binary"*
+
+```txt
+Java Source
+    ↓
+Java Bytecode
+    ↓
+JVM
+    ↓
+CPU
+```
+
+---
+
+**Is Bytecode directly executed by the CPU?**
+
+*Usually no. The physical CPU does not understand Java Bytecode as its native instruction set*
+
+```txt
+Java Bytecode
+      ↓
+JVM
+      ↓
+Machine instructions
+      ↓
+CPU
+```
+
+*The JVM can interpret bytecode or use JIT (Just-In-Time) compilation to compile parts of it into native machine code during execution.*
+
+---
+
+****
