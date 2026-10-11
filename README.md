@@ -1057,7 +1057,7 @@ Execute
 
 ### **Registers**
 
-*Registers are very small, extremely fast memory locations inside the CPU that temporarily store data, isntructions, memory addresses, and intermediate results while the CPU is executing a program.*
+*Registers are very small, extremely fast memory locations inside the CPU that temporarily store data, instructions, memory addresses, and intermediate results while the CPU is executing a program.*
 
 ---
 
