@@ -112,6 +112,7 @@ Hey!!!
     - [**Bytecode**](#bytecode)
     - [**Compiler**](#compiler)
     - [**Interpreter**](#interpreter)
+    - [**Executable Files**](#executable-files)
 
 
 # **Computer and Programming Foundations**
@@ -9689,6 +9690,53 @@ int main() {
 
 ### **Interpreter**
 
+*An interpreter is a program that executes source code by processing it through a language's execution system, rather than requiring the entire program to be translated into a native executable beforehand.*
 
+---
 
+**Why do we need an Interpreter?**
+
+*Computers CPUs execute machine instructions not human-readable Python code directly.*
+
+*For example*
+
+```python
+print("Hello World!")
+```
+
+*Python needs an execution system to process this code and make its instructions run. The Python interpreter provides that execution environment.*
+
+---
+
+**How does an interpreter work?**
+
+```txt
+Source Code
+Instructions written by the programmer
+        ↓
+Interpreter / Language Runtime
+Processes the program and coordinates execution
+        ↓
+Program Execution
+The program performs its operations
+```
+
+*The exact process depends on the langauge implementation. An interpreter may process source code directly or execute an intermediate representation such as bytecode.*
+
+---
+
+**Compiler vs Interpreter**
+
+| Compiler                                            | Interpreter                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------------ |
+| Translates source code into another representation. | Processes instructions through an execution system.                |
+| May produce machine code, object code, or bytecode. | May execute source code or an intermediate representation.         |
+| Translation may happen before execution.            | Execution involves the interpreter/runtime processing the program. |
+| Example: Java compiler produces bytecode.           | Example: CPython executes Python bytecode.                         |
+
+---
+
+### **Executable Files**
+
+**
 
