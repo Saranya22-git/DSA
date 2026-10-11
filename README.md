@@ -113,6 +113,7 @@ Hey!!!
     - [**Compiler**](#compiler)
     - [**Interpreter**](#interpreter)
     - [**Executable Files**](#executable-files)
+    - [**Runtime**](#runtime)
 
 
 # **Computer and Programming Foundations**
@@ -9738,5 +9739,85 @@ The program performs its operations
 
 ### **Executable Files**
 
-**
+*An executable file is a file containing program instructions in a format that an operating system can load and run provided the system supports that format and the necessary requirements are met.*
+
+**Examples:**
+- *Windows: ```.exe```*
+- *Linux: ELF executable files*
+- *macOS: Mach-O executable files, often packaged inside applications*
+
+---
+
+**Why are executable files needed?**
+
+*Suppose you write a program in C*
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+```
+
+*The source code is human-readable. To run a typical C program the development toolchain translates the code and produces the required output files.*
+
+```txt
+Source Code
+program.c
+
+↓
+
+Compiler and Build Tools
+
+↓
+
+Executable Program
+For example, program.exe on Windows
+
+↓
+
+Operating System Loads and Runs It
+```
+
+*This is a simplified example the exact build process depends on the programming language and operating system.*
+
+---
+
+**How does an executable file run?**
+
+*At a high level*
+- *The user or another program requests that the executable run*
+- *The operating system checks and loads the executable in a supported format*
+- *The OS prepares the process and its required resources*
+- *Execution begins and the CPU carries out instructions*
+
+*An executable file is stored on a storage device. When it runs the operating system creates a process and prepares the program's working memory.*
+
+---
+
+**Executable file vs Source Code**
+
+| Source Code                                                    | Executable File                                                                 |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Written by a programmer in a programming language.             | Prepared in a format that the OS can load and run.                              |
+| Example: `program.c`                                           | Example: `program.exe`                                                          |
+| Usually human-readable.                                        | Usually contains machine-level instructions and supporting program information. |
+| Typically requires a suitable toolchain or runtime to execute. | Can run directly through the OS when the required conditions are met.           |
+
+---
+
+**Does every programming language create an ```.exe``` file?**
+
+*No. The output depends on the language and execution model*
+
+- **C/C++:** *Commonly produce native executables after compilation and linking*
+- **Java:** *The compiler typically produces ```.class``` bytecode files, which run through the JVM. Applications can also be packaged in formats such as JARs*
+- **Python:** *A typical python script uses a Python interpreter to run. It does not ordinarily need a standalone native executable, although packaging tools can create executable applications.*
+
+---
+
+### **Runtime**
+
 
