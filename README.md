@@ -114,6 +114,7 @@ Hey!!!
     - [**Interpreter**](#interpreter)
     - [**Executable Files**](#executable-files)
     - [**Runtime**](#runtime)
+    - [**Execution Flow**](#execution-flow)
 
 
 # **Computer and Programming Foundations**
@@ -9819,5 +9820,85 @@ Operating System Loads and Runs It
 ---
 
 ### **Runtime**
+
+*Runtime is the period during which a program is executing and the term runtime environment refers to the software and resources that support the program's execution.*
+
+---
+
+**Why do we need a runtime environment?**
+
+*A program may need more than CPU instructions to work. It may require software that supports execution, manages program operations, or provides access to system services.*
+
+*For example, a Python program generally needs a Python implementation installed to execute a ```.py``` script*
+
+```python
+print("Hello Saranya")
+```
+
+*When you run this program, the Python implementation processes rge code and produces the output.*
+
+---
+
+**How does runtime work?**
+
+```txt
+Program
+Source code or compiled instructions
+
+↓
+
+Runtime Environment
+Supports the program during execution
+
+↓
+
+Program Executes
+Instructions run and results are produced
+```
+
+*The exact process depends on the programming language and its implementation*
+
+---
+
+**Examples of runtime environment**
+
+- **Python runtime:** *Supports execution of Python programs. In CPython, this includes the Python Virtual Machine that executes bytecode.*
+- **Java Runtime Environment (JRE):** *Provides the JVM and supporting libraries needed to run Java applications*
+- **Node.js runtime:** *Allows JavaScript programs to execute outside a web browser*
+
+---
+
+**Runtime vs Runtime error**
+
+*These terms are related but different*
+
+- **Runtime:** *The period or environment in which a program executes*
+- **Runtime error:** *An error that occurs while a program is executing*
+
+**Example:**
+
+```python
+a = 10
+b = 0
+print(a / b)
+```
+
+*Python raises a ```ZeroDivisionError``` when it attempts tp divide by zero. The code can be syntactically valid but still fail during execution.*
+
+---
+
+**Runtime vs Compiler vs Interpreter**
+
+| Term        | Meaning                                                       |
+| ----------- | ------------------------------------------------------------- |
+| Compiler    | Translates source code into another representation.           |
+| Interpreter | Processes instructions through a language's execution system. |
+| Runtime     | The execution period or the environment supporting execution. |
+
+*A runtime is not necessarily an interpreter. A runtime environment can include libraries, memory management, and other services, some runtimes also include interpreters or just-in-time compilers.*
+
+---
+
+### **Execution Flow**
 
 
