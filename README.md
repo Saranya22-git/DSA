@@ -1348,7 +1348,7 @@ Clothes 3 →                   ███     ███     ███
 **Basic CPU Pipeline Stages:** *A simplified CPU pipeline can have ```Instruction Fetch → Instruction Decode → Execute → Memory Access → Write Back```.*
 
 1. **Instruction Fetch (IF):** *The CPU fetches the next instruction from memory. For example, ```ADD R1, R2, R3```*
-2. **Instruction Decode (ID):** *The CPU determines what the instruction means. The Control Unit interprets it. For ```ADD R1, R2, R3``` CPU understands ```Operation → ADD Operands → R2, R3 Result → R1.*
+2. **Instruction Decode (ID):** *The CPU determines what the instruction means. The Control Unit interprets it. For ```ADD R1, R2, R3``` CPU understands ```Operation → ADD Operands → R2, R3 Result → R1```.*
 3. **Execute (EX):** *The required operation is performed. For example ```R2 + R3```. The ALU performs the calculation.*
 4. **Memory Access(MEM):** *If the instruction needs memory access, the CPU performs a read/write operation. For example ```LOAD R1, [1000]```.*
 5. **Write Back (WB):** *The result is written back to a register. ```R1 = R2 + R3```*
