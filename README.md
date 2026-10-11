@@ -115,6 +115,7 @@ Hey!!!
     - [**Executable Files**](#executable-files)
     - [**Runtime**](#runtime)
     - [**Execution Flow**](#execution-flow)
+  - [**Memory Fundamentals**](#memory-fundamentals)
 
 
 # **Computer and Programming Foundations**
@@ -9900,5 +9901,50 @@ print(a / b)
 ---
 
 ### **Execution Flow**
+
+*Execution Flow is the sequence of steps a computer follows to load, start and execute a program's instructions.*
+
+---
+
+**How does a program execute from beginning to end?**
+
+*Consider this python program*
+
+```python
+a = 10
+b = 20
+result = a + b
+print(result)                               # 30
+```
+
+```txt
+1. Source Code
+Programmer writes Python code
+
+↓
+
+2. Python Implementation
+CPython compiles source code into bytecode
+
+↓
+
+3. Python Runtime
+The Python virtual machine executes bytecode
+
+↓
+
+4. CPU Executes Instructions
+The CPU performs the required operations
+
+↓
+
+5.Output
+30
+```
+
+---
+
+## **Memory Fundamentals**
+
 
 
