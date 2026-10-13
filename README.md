@@ -118,6 +118,7 @@ Hey!!!
   - [**Memory Fundamentals**](#memory-fundamentals)
     - [**Variables**](#variables)
     - [**Objects**](#objects)
+    - [**Memory Addresses**](#memory-addresses)
 
 
 # **Computer and Programming Foundations**
@@ -10030,6 +10031,88 @@ After x = 24
 ---
 
 ### **Objects**
+
+*An object is a unit of data in a program that has an identity, a type, and a value.*
+
+**Examples in Python:**
+
+```python
+age = 22
+name = "Saranya"
+marks = [85, 90, 95]
+```
+
+*These create or refer to object representing*
+- *```22``` - an integer*
+- *```"Saranya"``` - a string object*
+- *```[85, 90, 95]``` - a list object*
+
+*Python manages these objects while your program runs*
+
+---
+
+**What does an object have?**
+
+*An object has three important concepts*
+
+1. **Identity:** *Identifies a particular object during its lifetime*
+2. **Type:** *Describes what kind of object it is, such as an integer, string, or list*
+3. **Value:** *Represents the data contained by the object*
+
+```python
+x = 10
+
+print(type(x))                           # <class 'int'>
+print(id(x))                             # 140706752009416
+print(x)                                 # 10
+```
+
+- *```type(x)``` tells you the object's type*
+- *```id(x)``` returns an identity value that is unique among simultaneously existing objects. In CPython, it commonly corresponds to the object's memory address*
+- *```x``` accesses the value which is ```10```*
+
+---
+
+**Can two variables refer to the same object?**
+
+```python
+a = [10, 20, 30]
+b = a
+
+print(a)                            # [10, 20, 30]
+print(b)                            # [10, 20, 30]
+```
+
+*Here ```b = a``` does not create a separate copy of the list. Both names refer to the same list object.*
+
+```txt
++----------------+     +----------------+
+|       a        |     |       b        |
++----------------+     +----------------+
+          \             /
+           \           /
+            \         /
+             v       v
+
+      One shared list object
+
+         [10, 20, 30]
+```
+
+*You can verify this with*
+
+```python
+a = [10, 20, 30]
+b = a
+
+print(a is b)                           # True
+```
+
+*The ```is``` operator checks whether two names refer to the same object.*
+
+---
+
+### **Memory Addresses**
 
 
 
