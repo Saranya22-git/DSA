@@ -10247,18 +10247,12 @@ print(a is b)                           # False
 
 **Reference vs Memory address**
 
-+---------------------------+----------------------------------+
-| Reference                 | Memory address                   |
-+---------------------------+----------------------------------+
-| A way for a program       | Identifies a location in         |
-| to refer to an object.    | addressable memory.              |
-+---------------------------+----------------------------------+
-| Lets a name access        | Identifies a memory location.    |
-| an object.                |                                  |
-+---------------------------+----------------------------------+
-| Managed by Python in      | Physical addresses are generally |
-| ordinary Python code.     | not needed by Python programmers.|
-+---------------------------+----------------------------------+
+| Reference                                  | Memory Address                                                     |
+| ------------------------------------------ | ------------------------------------------------------------------ |
+| A way for a program to refer to an object. | Identifies a location in addressable memory.                       |
+| Lets a name access an object.              | Identifies a memory location.                                      |
+| Managed by Python in ordinary Python code. | Physical addresses are generally not needed by Python programmers. |
+
 
 ---
 
