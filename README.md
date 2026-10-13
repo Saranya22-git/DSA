@@ -120,6 +120,7 @@ Hey!!!
     - [**Objects**](#objects)
     - [**Memory Addresses**](#memory-addresses)
     - [**References**](#references)
+    - [**Values vs References**](#values-vs-references)
 
 
 # **Computer and Programming Foundations**
@@ -10149,10 +10150,118 @@ Imagine memory as numbered houses
 
 ### **References**
 
+*A reference is a way for a program to refer to an object so that it can access that object.*
 
+```python
+x = [10, 20, 30]
+```
 
+```txt
++----------------------+
+|    Variable name     |
+|          x           |
++----------------------+
+           |
+           v
++----------------------+
+|     List object      |
+|    [10, 20, 30]      |
++----------------------+​‌
+```
 
+*Python manages references to objects internally*
 
+---
 
+**How do references work?**
+
+*Let's use two variables*
+
+```python
+a = [10, 20, 30]
+b = a
+
+print(a)                            # [10, 20, 30]
+print(b)                            # [10, 20, 30]
+print(a is b)                       # True
+```
+
+- *```a``` was bound to a list object*
+- *```b = a``` bound ```b``` to that same object*
+- *Both names can access the same list*
+- *```a is b``` returns ```True``` because they refer to the same object*
+
+```txt
++--------------------+     +--------------------+
+|         a          |     |         b          |
++--------------------+     +--------------------+
+           \                 /
+            \               /
+             \             /
+              \           /
+               v         v
+
+              Same object
+             [10, 20, 30]
+```
+
+---
+
+**What happens if we modify the object?**
+
+```python
+a = [10, 20, 30]
+b = a
+
+b.append(40)
+
+print(a)                        # [10, 20, 30, 40]
+print(b)                        # [10, 20, 30, 40]
+```
+
+*Because both names refer to the same list object. The ```append()``` operation modifies that shared list.*
+
+---
+
+**What happens if we reassign one variable?**
+
+```python
+a = [10, 20, 30]
+b = a
+
+b = [100, 200]
+
+print(a)                                # [10, 20, 30]
+print(b)                                # [100, 200]
+print(a is b)                           # False
+```
+
+*This time ```b = [100, 200]``` binds ```b``` to a different list object. It does not modify the original list.*
+- *```a``` still refers to ```[10, 20, 30]```*
+- *```b``` now refers to ```[100, 200]```*
+
+- *Modifying a shared object can be observed through both names*
+- *Reassigning a name changes which object that name refers to*
+
+---
+
+**Reference vs Memory address**
+
++---------------------------+----------------------------------+
+| Reference                 | Memory address                   |
++---------------------------+----------------------------------+
+| A way for a program       | Identifies a location in         |
+| to refer to an object.    | addressable memory.              |
++---------------------------+----------------------------------+
+| Lets a name access        | Identifies a memory location.    |
+| an object.                |                                  |
++---------------------------+----------------------------------+
+| Managed by Python in      | Physical addresses are generally |
+| ordinary Python code.     | not needed by Python programmers.|
++---------------------------+----------------------------------+
+
+---
+
+### **Values vs References**
 
 
