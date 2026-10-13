@@ -10114,7 +10114,27 @@ print(a is b)                           # True
 
 ### **Memory Addresses**
 
+*A memory address is a value used to identify a location in a computer's addressable memory.*
 
+```txt
+Imagine memory as numbered houses
+
++------------------+      +------------------+
+| Address: 1000    |      | Address: 1004    |
+|                  |      |                  |
+|     Data A       |      |     Data B       |
++------------------+      +------------------+
+
++------------------+      +------------------+
+| Address: 1008    |      | Address: 1012    |
+|                  |      |                  |
+|     Data C       |      |     Data D       |
++------------------+      +------------------+
+```
+
+*Each address identifies a location. The computer uses addresses to access instructions and data.*
+
+---
 
 
 
