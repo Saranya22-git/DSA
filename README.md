@@ -119,6 +119,7 @@ Hey!!!
     - [**Variables**](#variables)
     - [**Objects**](#objects)
     - [**Memory Addresses**](#memory-addresses)
+    - [**References**](#references)
 
 
 # **Computer and Programming Foundations**
@@ -10135,6 +10136,21 @@ Imagine memory as numbered houses
 *Each address identifies a location. The computer uses addresses to access instructions and data.*
 
 ---
+
+**Do memory addresses always stay the same?**
+
+*Not necessarily*
+- *Objects have identities during their lifetimes*
+- *Different objects can have different identities*
+- *After an object is destroyed its identity value may eventually be reused*
+- *Python does not guarantee that an object's identity is its physcial memory address*
+
+---
+
+### **References**
+
+
+
 
 
 
