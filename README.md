@@ -116,6 +116,8 @@ Hey!!!
     - [**Runtime**](#runtime)
     - [**Execution Flow**](#execution-flow)
   - [**Memory Fundamentals**](#memory-fundamentals)
+    - [**Variables**](#variables)
+    - [**Objects**](#objects)
 
 
 # **Computer and Programming Foundations**
@@ -9945,6 +9947,93 @@ The CPU performs the required operations
 ---
 
 ## **Memory Fundamentals**
+
+### **Variables**
+
+*A variable is a named identifier that a program uses to access or work with a value.*
+
+**Examples in Python:**
+
+```python
+age = 22
+name = "Saranya"
+```
+
+*Here*
+- *```age``` is a variable name associated with the integer object ```22```*
+- *```name``` is a variable name associated with the string object ```"Saranya"```*
+
+```txt
++---------------------------+
+|       Variable Name       |
+|                           |
+|           age             |
++---------------------------+
+              |
+              v
++---------------------------+
+|       Value / Object      |
+|                           |
+|            22             |
++---------------------------+
+```
+
+---
+
+**What happens when you create a variable?**
+
+```python
+x = 10
+```
+
+- *Python evaluates the value ```10```*
+- *An integer object representing ```10``` is available*
+- *The name ```x``` is bound to that object*
+- *Your program can use ```x``` to access the value*
+
+*In Python, a variable is not best understood as a box that permanently stores a value. It is a name bound to an object.*
+
+---
+
+**Can a Variable refer to a different value?**
+
+*Yes.In Python, a name can be reassigned*
+
+```python
+x = 10
+x = 24
+
+print(x)                                        # 24
+```
+
+*After the second assignment ```x``` refers to the integer object representing ```24``` rather than the one representing ```10```*
+
+```txt
+Before reassignment
+
+      x  ───►  10
+
+
+After x = 24
+
+      x  ───►  24
+```
+
+---
+
+**Where does a variable live in memory?**
+
+*A variable name and the object it refers to are not necessarily stored in the same place.*
+
+*In Python, a name can refer to an object, and the object's data is managed by Python's memory system. The exact storage location depends on the execution context and implementation.*
+
+---
+
+### **Objects**
+
+
+
+
 
 
 
