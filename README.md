@@ -10258,4 +10258,4 @@ print(a is b)                           # False
 
 ### **Values vs References**
 
-
+**Value:** *A value is the data represented by an object in a program*
